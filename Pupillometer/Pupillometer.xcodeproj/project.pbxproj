@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		838D6CCA1F15B42F00747CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CC91F15B42F00747CA4 /* AppDelegate.swift */; };
+		838D6CCC1F15B42F00747CA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CCB1F15B42F00747CA4 /* ViewController.swift */; };
+		838D6CCF1F15B42F00747CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838D6CCD1F15B42F00747CA4 /* Main.storyboard */; };
+		838D6CD11F15B42F00747CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838D6CD01F15B42F00747CA4 /* Assets.xcassets */; };
+		838D6CD41F15B42F00747CA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838D6CD21F15B42F00747CA4 /* LaunchScreen.storyboard */; };
+		838D6CDF1F15B42F00747CA4 /* PupillometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CDE1F15B42F00747CA4 /* PupillometerTests.swift */; };
+		838D6CEA1F15B42F00747CA4 /* PupillometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CE91F15B42F00747CA4 /* PupillometerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		838D6CDB1F15B42F00747CA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 838D6CBE1F15B42F00747CA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 838D6CC51F15B42F00747CA4;
+			remoteInfo = Pupillometer;
+		};
+		838D6CE61F15B42F00747CA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 838D6CBE1F15B42F00747CA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 838D6CC51F15B42F00747CA4;
+			remoteInfo = Pupillometer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		838D6CC61F15B42F00747CA4 /* Pupillometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pupillometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		838D6CC91F15B42F00747CA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		838D6CCB1F15B42F00747CA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		838D6CCE1F15B42F00747CA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		838D6CD01F15B42F00747CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		838D6CD31F15B42F00747CA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		838D6CD51F15B42F00747CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		838D6CDA1F15B42F00747CA4 /* PupillometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupillometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		838D6CDE1F15B42F00747CA4 /* PupillometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupillometerTests.swift; sourceTree = "<group>"; };
+		838D6CE01F15B42F00747CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		838D6CE51F15B42F00747CA4 /* PupillometerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupillometerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		838D6CE91F15B42F00747CA4 /* PupillometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupillometerUITests.swift; sourceTree = "<group>"; };
+		838D6CEB1F15B42F00747CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		838D6CC31F15B42F00747CA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838D6CD71F15B42F00747CA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838D6CE21F15B42F00747CA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		838D6CBD1F15B42F00747CA4 = {
+			isa = PBXGroup;
+			children = (
+				838D6CC81F15B42F00747CA4 /* Pupillometer */,
+				838D6CDD1F15B42F00747CA4 /* PupillometerTests */,
+				838D6CE81F15B42F00747CA4 /* PupillometerUITests */,
+				838D6CC71F15B42F00747CA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		838D6CC71F15B42F00747CA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				838D6CC61F15B42F00747CA4 /* Pupillometer.app */,
+				838D6CDA1F15B42F00747CA4 /* PupillometerTests.xctest */,
+				838D6CE51F15B42F00747CA4 /* PupillometerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		838D6CC81F15B42F00747CA4 /* Pupillometer */ = {
+			isa = PBXGroup;
+			children = (
+				838D6CC91F15B42F00747CA4 /* AppDelegate.swift */,
+				838D6CCB1F15B42F00747CA4 /* ViewController.swift */,
+				838D6CCD1F15B42F00747CA4 /* Main.storyboard */,
+				838D6CD01F15B42F00747CA4 /* Assets.xcassets */,
+				838D6CD21F15B42F00747CA4 /* LaunchScreen.storyboard */,
+				838D6CD51F15B42F00747CA4 /* Info.plist */,
+			);
+			path = Pupillometer;
+			sourceTree = "<group>";
+		};
+		838D6CDD1F15B42F00747CA4 /* PupillometerTests */ = {
+			isa = PBXGroup;
+			children = (
+				838D6CDE1F15B42F00747CA4 /* PupillometerTests.swift */,
+				838D6CE01F15B42F00747CA4 /* Info.plist */,
+			);
+			path = PupillometerTests;
+			sourceTree = "<group>";
+		};
+		838D6CE81F15B42F00747CA4 /* PupillometerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				838D6CE91F15B42F00747CA4 /* PupillometerUITests.swift */,
+				838D6CEB1F15B42F00747CA4 /* Info.plist */,
+			);
+			path = PupillometerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		838D6CC51F15B42F00747CA4 /* Pupillometer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 838D6CEE1F15B42F00747CA4 /* Build configuration list for PBXNativeTarget "Pupillometer" */;
+			buildPhases = (
+				838D6CC21F15B42F00747CA4 /* Sources */,
+				838D6CC31F15B42F00747CA4 /* Frameworks */,
+				838D6CC41F15B42F00747CA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pupillometer;
+			productName = Pupillometer;
+			productReference = 838D6CC61F15B42F00747CA4 /* Pupillometer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		838D6CD91F15B42F00747CA4 /* PupillometerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 838D6CF11F15B42F00747CA4 /* Build configuration list for PBXNativeTarget "PupillometerTests" */;
+			buildPhases = (
+				838D6CD61F15B42F00747CA4 /* Sources */,
+				838D6CD71F15B42F00747CA4 /* Frameworks */,
+				838D6CD81F15B42F00747CA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				838D6CDC1F15B42F00747CA4 /* PBXTargetDependency */,
+			);
+			name = PupillometerTests;
+			productName = PupillometerTests;
+			productReference = 838D6CDA1F15B42F00747CA4 /* PupillometerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		838D6CE41F15B42F00747CA4 /* PupillometerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 838D6CF41F15B42F00747CA4 /* Build configuration list for PBXNativeTarget "PupillometerUITests" */;
+			buildPhases = (
+				838D6CE11F15B42F00747CA4 /* Sources */,
+				838D6CE21F15B42F00747CA4 /* Frameworks */,
+				838D6CE31F15B42F00747CA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				838D6CE71F15B42F00747CA4 /* PBXTargetDependency */,
+			);
+			name = PupillometerUITests;
+			productName = PupillometerUITests;
+			productReference = 838D6CE51F15B42F00747CA4 /* PupillometerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		838D6CBE1F15B42F00747CA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Chris Hurley";
+				TargetAttributes = {
+					838D6CC51F15B42F00747CA4 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 24SM6522LU;
+						ProvisioningStyle = Automatic;
+					};
+					838D6CD91F15B42F00747CA4 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 24SM6522LU;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 838D6CC51F15B42F00747CA4;
+					};
+					838D6CE41F15B42F00747CA4 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 24SM6522LU;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 838D6CC51F15B42F00747CA4;
+					};
+				};
+			};
+			buildConfigurationList = 838D6CC11F15B42F00747CA4 /* Build configuration list for PBXProject "Pupillometer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 838D6CBD1F15B42F00747CA4;
+			productRefGroup = 838D6CC71F15B42F00747CA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				838D6CC51F15B42F00747CA4 /* Pupillometer */,
+				838D6CD91F15B42F00747CA4 /* PupillometerTests */,
+				838D6CE41F15B42F00747CA4 /* PupillometerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		838D6CC41F15B42F00747CA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838D6CD41F15B42F00747CA4 /* LaunchScreen.storyboard in Resources */,
+				838D6CD11F15B42F00747CA4 /* Assets.xcassets in Resources */,
+				838D6CCF1F15B42F00747CA4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838D6CD81F15B42F00747CA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838D6CE31F15B42F00747CA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		838D6CC21F15B42F00747CA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838D6CCC1F15B42F00747CA4 /* ViewController.swift in Sources */,
+				838D6CCA1F15B42F00747CA4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838D6CD61F15B42F00747CA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838D6CDF1F15B42F00747CA4 /* PupillometerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838D6CE11F15B42F00747CA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838D6CEA1F15B42F00747CA4 /* PupillometerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		838D6CDC1F15B42F00747CA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 838D6CC51F15B42F00747CA4 /* Pupillometer */;
+			targetProxy = 838D6CDB1F15B42F00747CA4 /* PBXContainerItemProxy */;
+		};
+		838D6CE71F15B42F00747CA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 838D6CC51F15B42F00747CA4 /* Pupillometer */;
+			targetProxy = 838D6CE61F15B42F00747CA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		838D6CCD1F15B42F00747CA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				838D6CCE1F15B42F00747CA4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		838D6CD21F15B42F00747CA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				838D6CD31F15B42F00747CA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		838D6CEC1F15B42F00747CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		838D6CED1F15B42F00747CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		838D6CEF1F15B42F00747CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 24SM6522LU;
+				INFOPLIST_FILE = Pupillometer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		838D6CF01F15B42F00747CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 24SM6522LU;
+				INFOPLIST_FILE = Pupillometer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		838D6CF21F15B42F00747CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 24SM6522LU;
+				INFOPLIST_FILE = PupillometerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = chris.PupillometerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pupillometer.app/Pupillometer";
+			};
+			name = Debug;
+		};
+		838D6CF31F15B42F00747CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 24SM6522LU;
+				INFOPLIST_FILE = PupillometerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = chris.PupillometerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pupillometer.app/Pupillometer";
+			};
+			name = Release;
+		};
+		838D6CF51F15B42F00747CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 24SM6522LU;
+				INFOPLIST_FILE = PupillometerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = chris.PupillometerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Pupillometer;
+			};
+			name = Debug;
+		};
+		838D6CF61F15B42F00747CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 24SM6522LU;
+				INFOPLIST_FILE = PupillometerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = chris.PupillometerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Pupillometer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		838D6CC11F15B42F00747CA4 /* Build configuration list for PBXProject "Pupillometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				838D6CEC1F15B42F00747CA4 /* Debug */,
+				838D6CED1F15B42F00747CA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		838D6CEE1F15B42F00747CA4 /* Build configuration list for PBXNativeTarget "Pupillometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				838D6CEF1F15B42F00747CA4 /* Debug */,
+				838D6CF01F15B42F00747CA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		838D6CF11F15B42F00747CA4 /* Build configuration list for PBXNativeTarget "PupillometerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				838D6CF21F15B42F00747CA4 /* Debug */,
+				838D6CF31F15B42F00747CA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		838D6CF41F15B42F00747CA4 /* Build configuration list for PBXNativeTarget "PupillometerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				838D6CF51F15B42F00747CA4 /* Debug */,
+				838D6CF61F15B42F00747CA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 838D6CBE1F15B42F00747CA4 /* Project object */;
+}
