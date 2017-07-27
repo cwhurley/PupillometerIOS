@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76F7A6A31F29116000C51FE1 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6A21F29116000C51FE1 /* history.png */; };
+		76F7A6A51F29129000C51FE1 /* detect.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6A41F29129000C51FE1 /* detect.png */; };
+		76F7A6A71F2912D100C51FE1 /* howtouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6A61F2912D100C51FE1 /* howtouse.png */; };
+		76F7A6A91F29133000C51FE1 /* selectedb.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6A81F29133000C51FE1 /* selectedb.png */; };
+		76F7A6AB1F29152300C51FE1 /* loading6sp.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6AA1F29152300C51FE1 /* loading6sp.png */; };
+		76F7A6AD1F29171F00C51FE1 /* bgc.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6AC1F29171F00C51FE1 /* bgc.png */; };
 		838D6CCA1F15B42F00747CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CC91F15B42F00747CA4 /* AppDelegate.swift */; };
 		838D6CCC1F15B42F00747CA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CCB1F15B42F00747CA4 /* ViewController.swift */; };
 		838D6CCF1F15B42F00747CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838D6CCD1F15B42F00747CA4 /* Main.storyboard */; };
@@ -34,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76F7A6A21F29116000C51FE1 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		76F7A6A41F29129000C51FE1 /* detect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detect.png; sourceTree = "<group>"; };
+		76F7A6A61F2912D100C51FE1 /* howtouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howtouse.png; sourceTree = "<group>"; };
+		76F7A6A81F29133000C51FE1 /* selectedb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedb.png; sourceTree = "<group>"; };
+		76F7A6AA1F29152300C51FE1 /* loading6sp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading6sp.png; sourceTree = "<group>"; };
+		76F7A6AC1F29171F00C51FE1 /* bgc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgc.png; sourceTree = "<group>"; };
 		838D6CC61F15B42F00747CA4 /* Pupillometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pupillometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838D6CC91F15B42F00747CA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838D6CCB1F15B42F00747CA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +109,12 @@
 		838D6CC81F15B42F00747CA4 /* Pupillometer */ = {
 			isa = PBXGroup;
 			children = (
+				76F7A6AA1F29152300C51FE1 /* loading6sp.png */,
+				76F7A6A21F29116000C51FE1 /* history.png */,
+				76F7A6A41F29129000C51FE1 /* detect.png */,
+				76F7A6AC1F29171F00C51FE1 /* bgc.png */,
+				76F7A6A61F2912D100C51FE1 /* howtouse.png */,
+				76F7A6A81F29133000C51FE1 /* selectedb.png */,
 				838D6CC91F15B42F00747CA4 /* AppDelegate.swift */,
 				838D6CCB1F15B42F00747CA4 /* ViewController.swift */,
 				838D6CCD1F15B42F00747CA4 /* Main.storyboard */,
@@ -235,7 +253,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F7A6AD1F29171F00C51FE1 /* bgc.png in Resources */,
+				76F7A6AB1F29152300C51FE1 /* loading6sp.png in Resources */,
+				76F7A6A31F29116000C51FE1 /* history.png in Resources */,
+				76F7A6A91F29133000C51FE1 /* selectedb.png in Resources */,
+				76F7A6A71F2912D100C51FE1 /* howtouse.png in Resources */,
 				838D6CD41F15B42F00747CA4 /* LaunchScreen.storyboard in Resources */,
+				76F7A6A51F29129000C51FE1 /* detect.png in Resources */,
 				838D6CD11F15B42F00747CA4 /* Assets.xcassets in Resources */,
 				838D6CCF1F15B42F00747CA4 /* Main.storyboard in Resources */,
 			);
@@ -514,6 +538,7 @@
 				838D6CF01F15B42F00747CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		838D6CF11F15B42F00747CA4 /* Build configuration list for PBXNativeTarget "PupillometerTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +547,7 @@
 				838D6CF31F15B42F00747CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		838D6CF41F15B42F00747CA4 /* Build configuration list for PBXNativeTarget "PupillometerUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +556,7 @@
 				838D6CF61F15B42F00747CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
