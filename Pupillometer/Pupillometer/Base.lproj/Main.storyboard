@@ -146,13 +146,9 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
 <<<<<<< HEAD
-<<<<<<< HEAD
                     <connections>
                         <outlet property="cameraView" destination="Tu8-G4-Ast" id="hHC-Dq-xEJ"/>
                     </connections>
-=======
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
->>>>>>> 2682192b72996a800ecf321d66d016b5f6df8c5a
 =======
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
 >>>>>>> 2682192b72996a800ecf321d66d016b5f6df8c5a
