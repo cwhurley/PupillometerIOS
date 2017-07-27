@@ -91,13 +91,13 @@
 		76F7A6AE1F29A5B500C51FE1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				76F7A6AA1F29152300C51FE1 /* loading6sp.png */,
 				76F7A6B71F29CCC200C51FE1 /* connectivity-bar.png */,
 				76F7A6B51F29CCB300C51FE1 /* DELETE.png */,
 				76F7A6B31F29CCAD00C51FE1 /* HOWTOUSE.png */,
 				76F7A6B11F29CCA600C51FE1 /* HISTORY.png */,
 				76F7A6AF1F29CC9F00C51FE1 /* DETECT.png */,
 				76F7A6AC1F29171F00C51FE1 /* bgc.png */,
-				76F7A6AA1F29152300C51FE1 /* loading6sp.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
