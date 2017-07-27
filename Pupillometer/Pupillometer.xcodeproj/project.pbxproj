@@ -222,7 +222,7 @@
 				TargetAttributes = {
 					838D6CC51F15B42F00747CA4 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 24SM6522LU;
+						DevelopmentTeam = 75474X5NP9;
 						ProvisioningStyle = Automatic;
 					};
 					838D6CD91F15B42F00747CA4 = {
@@ -451,7 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 24SM6522LU;
+				DEVELOPMENT_TEAM = 75474X5NP9;
 				INFOPLIST_FILE = Pupillometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
@@ -464,7 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 24SM6522LU;
+				DEVELOPMENT_TEAM = 75474X5NP9;
 				INFOPLIST_FILE = Pupillometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
