@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         frontCamera(frontCamera)
         
@@ -77,6 +78,9 @@ class ViewController: UIViewController {
             }
         }
         
+=======
+        // Do any additional setup after loading the view, typically from a nib.
+>>>>>>> 2682192b72996a800ecf321d66d016b5f6df8c5a
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
