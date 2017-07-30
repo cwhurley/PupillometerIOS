@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PoF-Wc-pc7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PoF-Wc-pc7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--history-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="history" id="BYZ-38-t0r" customClass="ViewController" customModule="Pupillometer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="history" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -129,6 +129,14 @@
                                     <action selector="startButton:" destination="Qrg-Ad-Jjb" eventType="touchUpInside" id="ddw-Zy-5bE"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cVY-Wc-p50">
+                                <rect key="frame" x="236" y="518" width="123" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6wd-Fu-OTJ">
+                                <rect key="frame" x="20" y="522" width="124" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -148,16 +156,55 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="cameraView" destination="Tu8-G4-Ast" id="hHC-Dq-xEJ"/>
+                        <outlet property="myImg" destination="cVY-Wc-p50" id="Xk7-AA-bVz"/>
+                        <outlet property="myImg2" destination="6wd-Fu-OTJ" id="y8J-Yt-Hbi"/>
+                        <segue destination="kK8-LV-5eP" kind="show" identifier="segue" id="hOp-EC-yjk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIA-0W-kPI" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="279.19999999999999" y="139.880059970015"/>
         </scene>
+        <!--Edit Image View Controller-->
+        <scene sceneID="wNG-gh-GIB">
+            <objects>
+                <viewController storyboardIdentifier="EditImageViewController" id="kK8-LV-5eP" customClass="EditImageViewController" customModule="Pupillometer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MTI-TR-zHR"/>
+                        <viewControllerLayoutGuide type="bottom" id="13d-RI-Vve"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IRr-vq-cAe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgc.png" translatesAutoresizingMaskIntoConstraints="NO" id="VdQ-gw-G9Z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DCu-6K-Jug">
+                                <rect key="frame" x="67" y="88" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3r7-hY-1gr">
+                                <rect key="frame" x="67" y="260" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstImage" destination="DCu-6K-Jug" id="1pd-AA-7Zf"/>
+                        <outlet property="secondImage" destination="3r7-hY-1gr" id="ULS-4H-WIX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Orm-Og-nNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277.60000000000002" y="927.88605697151434"/>
+        </scene>
         <!--How to use-->
         <scene sceneID="PAA-mX-SYj">
             <objects>
-                <viewController title="How to use" id="Jlc-L2-Sjc" customClass="ViewController" customModule="Pupillometer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="How to use" id="Jlc-L2-Sjc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FzB-io-llF"/>
                         <viewControllerLayoutGuide type="bottom" id="3bh-X8-uny"/>

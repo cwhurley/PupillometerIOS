@@ -18,7 +18,9 @@ class ViewController: UIViewController {
     var stillImageOutput: AVCaptureStillImageOutput = AVCaptureStillImageOutput()
     
     @IBOutlet var cameraView: UIView!
-
+    @IBOutlet weak var myImg: UIImageView!
+    @IBOutlet weak var myImg2: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
@@ -45,10 +47,7 @@ class ViewController: UIViewController {
     
     func frontCamera(_ front:Bool){
         let devices = AVCaptureDevice.devices()
-        
-        
-        
-        
+
         do {
             try captureSession.removeInput(AVCaptureDeviceInput(device: captureDevice))
         }
@@ -76,8 +75,31 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
     }
+    
+    func toggleTorch(on: Bool) {
+        guard let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) else { return }
+        
+        if device.hasTorch {
+            do {
+                try device.lockForConfiguration()
+                
+                if on == true {
+                    device.torchMode = .on
+                } else {
+                    device.torchMode = .off
+                }
+                
+                device.unlockForConfiguration()
+            } catch {
+                print("Torch could not be used")
+            }
+        } else {
+            print("Torch is not available")
+        }
+    }
+
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -87,7 +109,54 @@ class ViewController: UIViewController {
     }
 
     @IBAction func startButton(_ sender: Any) {
+        if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo){
+            stillImageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(imageDataSampleBuffer, error) in let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+                let image = UIImage(data: imageData!)
+                print("image taken: \(String(describing: image))")
+                let test = UIImageView(image: image)
+                test.frame = self.cameraView.frame
+                //self.cameraView.addSubview(test)
+                self.myImg.image = image
+                
+                let when = DispatchTime.now() + 0.5 // change 2 to desired number of seconds
+                DispatchQueue.main.asyncAfter(deadline: when) {
+                self.toggleTorch(on: true)
+                
+                    
+                    let when = DispatchTime.now() + 0.5 // change 2 to desired number of seconds
+                    DispatchQueue.main.asyncAfter(deadline: when) {
+                self.toggleTorch(on: false)
+                }
+                }
+            })
+        }
+        let when = DispatchTime.now() + 5 // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            // Your code with delay
+        
+        if let videoConnection = self.stillImageOutput.connection(withMediaType: AVMediaTypeVideo){
+            self.stillImageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(imageDataSampleBuffer, error) in let imageData2 = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+                let image2 = UIImage(data: imageData2!)
+                print("image taken: \(String(describing: image2))")
+                let test2 = UIImageView(image: image2)
+                test2.frame = self.cameraView.frame
+                //self.cameraView.addSubview(test)
+                self.myImg2.image = image2
+                
+                self.performSegue(withIdentifier: "segue", sender: self)
+            })
+        }
+        
+        }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let EditImageViewController = segue.destination as! EditImageViewController
+        EditImageViewController.firstPassed = myImg.image!
+        EditImageViewController.secondPassed = myImg2.image!
+    }
+    
+    
 
 }
 
