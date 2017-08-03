@@ -21,7 +21,9 @@ class EditImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         firstImage.image = firstPassed
+        firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
         secondImage.image = secondPassed
 
         // Do any additional setup after loading the view.

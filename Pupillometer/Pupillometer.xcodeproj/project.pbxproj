@@ -22,6 +22,7 @@
 		838D6CD41F15B42F00747CA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838D6CD21F15B42F00747CA4 /* LaunchScreen.storyboard */; };
 		838D6CDF1F15B42F00747CA4 /* PupillometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CDE1F15B42F00747CA4 /* PupillometerTests.swift */; };
 		838D6CEA1F15B42F00747CA4 /* PupillometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CE91F15B42F00747CA4 /* PupillometerUITests.swift */; };
+		83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,9 @@
 		838D6CE51F15B42F00747CA4 /* PupillometerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupillometerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		838D6CE91F15B42F00747CA4 /* PupillometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupillometerUITests.swift; sourceTree = "<group>"; };
 		838D6CEB1F15B42F00747CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83960DF81F32A7E30075F490 /* Pupillometer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pupillometer-Bridging-Header.h"; sourceTree = "<group>"; };
+		83960DF91F32A7E30075F490 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,9 @@
 				838D6CD01F15B42F00747CA4 /* Assets.xcassets */,
 				838D6CD21F15B42F00747CA4 /* LaunchScreen.storyboard */,
 				838D6CD51F15B42F00747CA4 /* Info.plist */,
+				83960DF91F32A7E30075F490 /* OpenCVWrapper.h */,
+				83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */,
+				83960DF81F32A7E30075F490 /* Pupillometer-Bridging-Header.h */,
 			);
 			path = Pupillometer;
 			sourceTree = "<group>";
@@ -226,6 +233,7 @@
 					838D6CC51F15B42F00747CA4 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 75474X5NP9;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					838D6CD91F15B42F00747CA4 = {
@@ -303,6 +311,7 @@
 			files = (
 				838D6CCC1F15B42F00747CA4 /* ViewController.swift in Sources */,
 				838D6CCA1F15B42F00747CA4 /* AppDelegate.swift in Sources */,
+				83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */,
 				830504561F2DD43400D132C2 /* EditImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,11 +464,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 75474X5NP9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pupillometer",
+				);
 				INFOPLIST_FILE = Pupillometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -468,11 +484,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 75474X5NP9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pupillometer",
+				);
 				INFOPLIST_FILE = Pupillometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
