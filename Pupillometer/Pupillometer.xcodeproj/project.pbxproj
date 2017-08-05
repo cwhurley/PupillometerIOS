@@ -25,6 +25,7 @@
 		838D6CDF1F15B42F00747CA4 /* PupillometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CDE1F15B42F00747CA4 /* PupillometerTests.swift */; };
 		838D6CEA1F15B42F00747CA4 /* PupillometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CE91F15B42F00747CA4 /* PupillometerUITests.swift */; };
 		83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */; };
+		EB9508581F32E68E00358946 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9508571F32E68E00358946 /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		83960DF81F32A7E30075F490 /* Pupillometer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pupillometer-Bridging-Header.h"; sourceTree = "<group>"; };
 		83960DF91F32A7E30075F490 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		EB9508571F32E68E00358946 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9508581F32E68E00358946 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +140,7 @@
 		838D6CC81F15B42F00747CA4 /* Pupillometer */ = {
 			isa = PBXGroup;
 			children = (
+				EB9508571F32E68E00358946 /* opencv2.framework */,
 				76F7A6AE1F29A5B500C51FE1 /* images */,
 				838D6CC91F15B42F00747CA4 /* AppDelegate.swift */,
 				838D6CCB1F15B42F00747CA4 /* ViewController.swift */,
@@ -474,6 +478,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 75474X5NP9;
+				Deployment = "";
+				"Deployment[arch=*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pupillometer",
@@ -494,6 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 75474X5NP9;
+				Deployment = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pupillometer",

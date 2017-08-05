@@ -16,10 +16,13 @@ class ViewController: UIViewController {
     var captureDevice: AVCaptureDevice?
     var frontCamera: Bool = true
     var stillImageOutput: AVCaptureStillImageOutput = AVCaptureStillImageOutput()
+    let minimumZoom: CGFloat = 1.0
+    let maximumZoom: CGFloat = 3.0
+    var lastZoomFactor: CGFloat = 1.0
     
     @IBOutlet var cameraView: UIView!
-    @IBOutlet weak var myImg: UIImageView!
-    @IBOutlet weak var myImg2: UIImageView!
+    @IBOutlet weak var firstImage: UIImageView!
+    @IBOutlet weak var secondImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +48,7 @@ class ViewController: UIViewController {
         
     }
     
+    // Front camera function
     func frontCamera(_ front:Bool){
         let devices = AVCaptureDevice.devices()
 
@@ -77,6 +81,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // torch function
     func toggleTorch(on: Bool) {
         guard let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) else { return }
         
@@ -108,40 +113,40 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // Start button process
     @IBAction func startButton(_ sender: Any) {
+        
+        // Take first image
         if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo){
             stillImageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(imageDataSampleBuffer, error) in let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
-                let image = UIImage(data: imageData!)
-                print("image taken: \(String(describing: image))")
-                let test = UIImageView(image: image)
-                test.frame = self.cameraView.frame
-                //self.cameraView.addSubview(test)
-                self.myImg.image = image
+                let imageOne = UIImage(data: imageData!)
+                print("image taken: \(String(describing: imageOne))")
+                self.firstImage.image = imageOne
                 
-                let when = DispatchTime.now() + 0.5 // change 2 to desired number of seconds
+                // After 0.5 seconds, turn the torch on
+                let when = DispatchTime.now() + 0.5
                 DispatchQueue.main.asyncAfter(deadline: when) {
                 self.toggleTorch(on: true)
                 
-                    
-                    let when = DispatchTime.now() + 0.5 // change 2 to desired number of seconds
+                    // After 0.5 seconds, turn the torch off
+                    let when = DispatchTime.now() + 0.5
                     DispatchQueue.main.asyncAfter(deadline: when) {
                 self.toggleTorch(on: false)
                 }
                 }
             })
         }
-        let when = DispatchTime.now() + 5 // change 2 to desired number of seconds
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            // Your code with delay
         
+        // After 5 seconds...
+        let when = DispatchTime.now() + 5
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            
+        // Take second image
         if let videoConnection = self.stillImageOutput.connection(withMediaType: AVMediaTypeVideo){
             self.stillImageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(imageDataSampleBuffer, error) in let imageData2 = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
-                let image2 = UIImage(data: imageData2!)
-                print("image taken: \(String(describing: image2))")
-                let test2 = UIImageView(image: image2)
-                test2.frame = self.cameraView.frame
-                //self.cameraView.addSubview(test)
-                self.myImg2.image = image2
+                let imageTwo = UIImage(data: imageData2!)
+                print("image taken: \(String(describing: imageTwo))")
+                self.secondImage.image = imageTwo
                 
                 self.performSegue(withIdentifier: "segue", sender: self)
             })
@@ -150,13 +155,44 @@ class ViewController: UIViewController {
         }
     }
     
+    // Send both images to the EditImageViewController page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let EditImageViewController = segue.destination as! EditImageViewController
-        EditImageViewController.firstPassed = myImg.image!
-        EditImageViewController.secondPassed = myImg2.image!
+        EditImageViewController.firstPassed = firstImage.image!
+        EditImageViewController.secondPassed = secondImage.image!
     }
     
     
-
+    // Camera zoom in function
+    @IBAction func testThing(_ pinch: UIPinchGestureRecognizer) {
+        guard let device = captureDevice else { return }
+        
+        // Return zoom value between the minimum and maximum zoom values
+        func minMaxZoom(_ factor: CGFloat) -> CGFloat {
+            return min(min(max(factor, minimumZoom), maximumZoom), device.activeFormat.videoMaxZoomFactor)
+        }
+        
+        func update(scale factor: CGFloat) {
+            do {
+                try device.lockForConfiguration()
+                defer { device.unlockForConfiguration() }
+                device.videoZoomFactor = factor
+            } catch {
+                print("\(error.localizedDescription)")
+            }
+        }
+        
+        let newScaleFactor = minMaxZoom(pinch.scale * lastZoomFactor)
+        
+        switch pinch.state {
+        case .began: fallthrough
+        case .changed: update(scale: newScaleFactor)
+        case .ended:
+            lastZoomFactor = minMaxZoom(newScaleFactor)
+            update(scale: lastZoomFactor)
+        default: break
+        }
+        
+    }
 }
 
