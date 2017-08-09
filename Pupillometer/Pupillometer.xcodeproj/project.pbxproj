@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		764EB5C11F32AE9B00686054 /* STEP1.png in Resources */ = {isa = PBXBuildFile; fileRef = 764EB5C01F32AE9B00686054 /* STEP1.png */; };
-		764EB5C31F32AF1800686054 /* STEP2.png in Resources */ = {isa = PBXBuildFile; fileRef = 764EB5C21F32AF1800686054 /* STEP2.png */; };
 		76F7A6AB1F29152300C51FE1 /* loading6sp.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6AA1F29152300C51FE1 /* loading6sp.png */; };
 		76F7A6AD1F29171F00C51FE1 /* bgc.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6AC1F29171F00C51FE1 /* bgc.png */; };
 		76F7A6B01F29CC9F00C51FE1 /* DETECT.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6AF1F29CC9F00C51FE1 /* DETECT.png */; };
@@ -25,6 +23,10 @@
 		838D6CEA1F15B42F00747CA4 /* PupillometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CE91F15B42F00747CA4 /* PupillometerUITests.swift */; };
 		83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */; };
 		83F202041F3AA16A000CBC36 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F202031F3AA16A000CBC36 /* opencv2.framework */; };
+		83F2020D1F3AA8E5000CBC36 /* step1.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F202091F3AA8E5000CBC36 /* step1.png */; };
+		83F2020E1F3AA8E5000CBC36 /* step2.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F2020A1F3AA8E5000CBC36 /* step2.png */; };
+		83F2020F1F3AA8E5000CBC36 /* step3.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F2020B1F3AA8E5000CBC36 /* step3.png */; };
+		83F202101F3AA8E5000CBC36 /* step4.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F2020C1F3AA8E5000CBC36 /* step4.png */; };
 		EB47F2E01F39F4660044D926 /* FirstCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */; };
 		EB47F2E31F39F47C0044D926 /* SecondCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */; };
 		EB47F2E51F39F9FA0044D926 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */; };
@@ -48,8 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		764EB5C01F32AE9B00686054 /* STEP1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP1.png; sourceTree = "<group>"; };
-		764EB5C21F32AF1800686054 /* STEP2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP2.png; sourceTree = "<group>"; };
 		76F7A6AA1F29152300C51FE1 /* loading6sp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading6sp.png; sourceTree = "<group>"; };
 		76F7A6AC1F29171F00C51FE1 /* bgc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgc.png; sourceTree = "<group>"; };
 		76F7A6AF1F29CC9F00C51FE1 /* DETECT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DETECT.png; sourceTree = "<group>"; };
@@ -74,6 +74,10 @@
 		83960DF91F32A7E30075F490 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		83F202031F3AA16A000CBC36 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		83F202091F3AA8E5000CBC36 /* step1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step1.png; sourceTree = "<group>"; };
+		83F2020A1F3AA8E5000CBC36 /* step2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step2.png; sourceTree = "<group>"; };
+		83F2020B1F3AA8E5000CBC36 /* step3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step3.png; sourceTree = "<group>"; };
+		83F2020C1F3AA8E5000CBC36 /* step4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step4.png; sourceTree = "<group>"; };
 		EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCropViewController.swift; sourceTree = "<group>"; };
 		EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCropViewController.swift; sourceTree = "<group>"; };
 		EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,10 @@
 		76F7A6AE1F29A5B500C51FE1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				83F202091F3AA8E5000CBC36 /* step1.png */,
+				83F2020A1F3AA8E5000CBC36 /* step2.png */,
+				83F2020B1F3AA8E5000CBC36 /* step3.png */,
+				83F2020C1F3AA8E5000CBC36 /* step4.png */,
 				76F7A6AA1F29152300C51FE1 /* loading6sp.png */,
 				76F7A6B71F29CCC200C51FE1 /* connectivity-bar.png */,
 				76F7A6B51F29CCB300C51FE1 /* DELETE.png */,
@@ -115,8 +123,6 @@
 				76F7A6B11F29CCA600C51FE1 /* HISTORY.png */,
 				76F7A6AF1F29CC9F00C51FE1 /* DETECT.png */,
 				76F7A6AC1F29171F00C51FE1 /* bgc.png */,
-				764EB5C01F32AE9B00686054 /* STEP1.png */,
-				764EB5C21F32AF1800686054 /* STEP2.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -297,12 +303,14 @@
 				76F7A6B01F29CC9F00C51FE1 /* DETECT.png in Resources */,
 				838D6CD41F15B42F00747CA4 /* LaunchScreen.storyboard in Resources */,
 				76F7A6B41F29CCAD00C51FE1 /* HOWTOUSE.png in Resources */,
-				764EB5C31F32AF1800686054 /* STEP2.png in Resources */,
+				83F202101F3AA8E5000CBC36 /* step4.png in Resources */,
 				838D6CD11F15B42F00747CA4 /* Assets.xcassets in Resources */,
 				76F7A6B61F29CCB300C51FE1 /* DELETE.png in Resources */,
+				83F2020F1F3AA8E5000CBC36 /* step3.png in Resources */,
+				83F2020D1F3AA8E5000CBC36 /* step1.png in Resources */,
 				76F7A6B81F29CCC200C51FE1 /* connectivity-bar.png in Resources */,
+				83F2020E1F3AA8E5000CBC36 /* step2.png in Resources */,
 				838D6CCF1F15B42F00747CA4 /* Main.storyboard in Resources */,
-				764EB5C11F32AE9B00686054 /* STEP1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
