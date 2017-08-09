@@ -32,7 +32,7 @@ using namespace std;
     
     
     
-    HoughCircles(grayMat, circles, HOUGH_GRADIENT, 10, 150, 250, 30, 3000, 3500);
+    HoughCircles(grayMat, circles, HOUGH_GRADIENT, 40, 1000, 250, 30, 100, 300);
     // change the last two parameters
     // (min_radius & max_radius) to detect larger circles
     cv::Mat testMat;
@@ -41,7 +41,7 @@ using namespace std;
     for( size_t i = 0; i < circles.size(); i++ )
     {
         Vec3i c = circles[i];
-        circle( imageMat, cv::Point(c[0], c[1]), c[2], Scalar(0,0,255), 1, LINE_AA);
+        circle( imageMat, cv::Point(c[0], c[1]), c[2], Scalar(0,0,255), 2, LINE_AA);
         
     }
     

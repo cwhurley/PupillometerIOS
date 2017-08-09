@@ -11,5 +11,7 @@
 #import <opencv2/imgproc/imgproc_c.h>
 
 @interface OpenCVWrapper : NSObject
+
 +(UIImage *) makeGrayFromImage:(UIImage *)image;
+
 @end

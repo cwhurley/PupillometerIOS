@@ -16,7 +16,6 @@
 		76F7A6B41F29CCAD00C51FE1 /* HOWTOUSE.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6B31F29CCAD00C51FE1 /* HOWTOUSE.png */; };
 		76F7A6B61F29CCB300C51FE1 /* DELETE.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6B51F29CCB300C51FE1 /* DELETE.png */; };
 		76F7A6B81F29CCC200C51FE1 /* connectivity-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6B71F29CCC200C51FE1 /* connectivity-bar.png */; };
-		830504561F2DD43400D132C2 /* EditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830504551F2DD43400D132C2 /* EditImageViewController.swift */; };
 		838D6CCA1F15B42F00747CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CC91F15B42F00747CA4 /* AppDelegate.swift */; };
 		838D6CCC1F15B42F00747CA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CCB1F15B42F00747CA4 /* ViewController.swift */; };
 		838D6CCF1F15B42F00747CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838D6CCD1F15B42F00747CA4 /* Main.storyboard */; };
@@ -25,7 +24,10 @@
 		838D6CDF1F15B42F00747CA4 /* PupillometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CDE1F15B42F00747CA4 /* PupillometerTests.swift */; };
 		838D6CEA1F15B42F00747CA4 /* PupillometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CE91F15B42F00747CA4 /* PupillometerUITests.swift */; };
 		83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */; };
-		EB9508581F32E68E00358946 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9508571F32E68E00358946 /* opencv2.framework */; };
+		83F202041F3AA16A000CBC36 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F202031F3AA16A000CBC36 /* opencv2.framework */; };
+		EB47F2E01F39F4660044D926 /* FirstCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */; };
+		EB47F2E31F39F47C0044D926 /* SecondCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */; };
+		EB47F2E51F39F9FA0044D926 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +57,6 @@
 		76F7A6B31F29CCAD00C51FE1 /* HOWTOUSE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOWTOUSE.png; sourceTree = "<group>"; };
 		76F7A6B51F29CCB300C51FE1 /* DELETE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DELETE.png; sourceTree = "<group>"; };
 		76F7A6B71F29CCC200C51FE1 /* connectivity-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bar.png"; sourceTree = "<group>"; };
-		830504551F2DD43400D132C2 /* EditImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditImageViewController.swift; sourceTree = "<group>"; };
 		838D6CC61F15B42F00747CA4 /* Pupillometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pupillometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838D6CC91F15B42F00747CA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838D6CCB1F15B42F00747CA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +73,10 @@
 		83960DF81F32A7E30075F490 /* Pupillometer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pupillometer-Bridging-Header.h"; sourceTree = "<group>"; };
 		83960DF91F32A7E30075F490 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
-		EB9508571F32E68E00358946 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		83F202031F3AA16A000CBC36 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCropViewController.swift; sourceTree = "<group>"; };
+		EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCropViewController.swift; sourceTree = "<group>"; };
+		EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB9508581F32E68E00358946 /* opencv2.framework in Frameworks */,
+				83F202041F3AA16A000CBC36 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,11 +144,10 @@
 		838D6CC81F15B42F00747CA4 /* Pupillometer */ = {
 			isa = PBXGroup;
 			children = (
-				EB9508571F32E68E00358946 /* opencv2.framework */,
+				83F202031F3AA16A000CBC36 /* opencv2.framework */,
 				76F7A6AE1F29A5B500C51FE1 /* images */,
 				838D6CC91F15B42F00747CA4 /* AppDelegate.swift */,
 				838D6CCB1F15B42F00747CA4 /* ViewController.swift */,
-				830504551F2DD43400D132C2 /* EditImageViewController.swift */,
 				838D6CCD1F15B42F00747CA4 /* Main.storyboard */,
 				838D6CD01F15B42F00747CA4 /* Assets.xcassets */,
 				838D6CD21F15B42F00747CA4 /* LaunchScreen.storyboard */,
@@ -152,6 +155,9 @@
 				83960DF91F32A7E30075F490 /* OpenCVWrapper.h */,
 				83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */,
 				83960DF81F32A7E30075F490 /* Pupillometer-Bridging-Header.h */,
+				EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */,
+				EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */,
+				EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */,
 			);
 			path = Pupillometer;
 			sourceTree = "<group>";
@@ -323,8 +329,10 @@
 			files = (
 				838D6CCC1F15B42F00747CA4 /* ViewController.swift in Sources */,
 				838D6CCA1F15B42F00747CA4 /* AppDelegate.swift in Sources */,
+				EB47F2E01F39F4660044D926 /* FirstCropViewController.swift in Sources */,
 				83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */,
-				830504561F2DD43400D132C2 /* EditImageViewController.swift in Sources */,
+				EB47F2E31F39F47C0044D926 /* SecondCropViewController.swift in Sources */,
+				EB47F2E51F39F9FA0044D926 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +493,7 @@
 					"$(PROJECT_DIR)/Pupillometer",
 				);
 				INFOPLIST_FILE = Pupillometer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -506,6 +515,7 @@
 					"$(PROJECT_DIR)/Pupillometer",
 				);
 				INFOPLIST_FILE = Pupillometer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -44,6 +44,8 @@ class ViewController: UIViewController {
         stillImageOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
         if captureSession.canAddOutput(stillImageOutput){
             captureSession.addOutput(stillImageOutput)
+            //captureSession.= OpenCVWrapper.makeGray(from: captureSession.image)
+
         }
         
     }
@@ -119,6 +121,7 @@ class ViewController: UIViewController {
         // Take first image
         if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo){
             stillImageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(imageDataSampleBuffer, error) in let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+
                 let imageOne = UIImage(data: imageData!)
                 print("image taken: \(String(describing: imageOne))")
                 self.firstImage.image = imageOne
@@ -148,7 +151,7 @@ class ViewController: UIViewController {
                 print("image taken: \(String(describing: imageTwo))")
                 self.secondImage.image = imageTwo
                 
-                self.performSegue(withIdentifier: "segue", sender: self)
+                self.performSegue(withIdentifier: "first", sender: self)
             })
         }
         
@@ -157,9 +160,9 @@ class ViewController: UIViewController {
     
     // Send both images to the EditImageViewController page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let EditImageViewController = segue.destination as! EditImageViewController
-        EditImageViewController.firstPassed = firstImage.image!
-        EditImageViewController.secondPassed = secondImage.image!
+        let FirstCropViewController = segue.destination as! FirstCropViewController
+        FirstCropViewController.firstPassed = firstImage.image!
+        FirstCropViewController.secondPassed = secondImage.image!
     }
     
     
