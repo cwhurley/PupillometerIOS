@@ -22,11 +22,12 @@
 		838D6CDF1F15B42F00747CA4 /* PupillometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CDE1F15B42F00747CA4 /* PupillometerTests.swift */; };
 		838D6CEA1F15B42F00747CA4 /* PupillometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CE91F15B42F00747CA4 /* PupillometerUITests.swift */; };
 		83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */; };
-		83F202041F3AA16A000CBC36 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F202031F3AA16A000CBC36 /* opencv2.framework */; };
 		83F2020D1F3AA8E5000CBC36 /* step1.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F202091F3AA8E5000CBC36 /* step1.png */; };
 		83F2020E1F3AA8E5000CBC36 /* step2.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F2020A1F3AA8E5000CBC36 /* step2.png */; };
 		83F2020F1F3AA8E5000CBC36 /* step3.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F2020B1F3AA8E5000CBC36 /* step3.png */; };
 		83F202101F3AA8E5000CBC36 /* step4.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F2020C1F3AA8E5000CBC36 /* step4.png */; };
+		EB0B9F8C1F3FD9B6001D4262 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0B9F8B1F3FD9B6001D4262 /* opencv2.framework */; };
+		EB2608401F3FCF8100DEEFD0 /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB26083F1F3FCF8100DEEFD0 /* ImportViewController.swift */; };
 		EB47F2E01F39F4660044D926 /* FirstCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */; };
 		EB47F2E31F39F47C0044D926 /* SecondCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */; };
 		EB47F2E51F39F9FA0044D926 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */; };
@@ -73,11 +74,12 @@
 		83960DF81F32A7E30075F490 /* Pupillometer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pupillometer-Bridging-Header.h"; sourceTree = "<group>"; };
 		83960DF91F32A7E30075F490 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
-		83F202031F3AA16A000CBC36 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		83F202091F3AA8E5000CBC36 /* step1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step1.png; sourceTree = "<group>"; };
 		83F2020A1F3AA8E5000CBC36 /* step2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step2.png; sourceTree = "<group>"; };
 		83F2020B1F3AA8E5000CBC36 /* step3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step3.png; sourceTree = "<group>"; };
 		83F2020C1F3AA8E5000CBC36 /* step4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step4.png; sourceTree = "<group>"; };
+		EB0B9F8B1F3FD9B6001D4262 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		EB26083F1F3FCF8100DEEFD0 /* ImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
 		EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCropViewController.swift; sourceTree = "<group>"; };
 		EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCropViewController.swift; sourceTree = "<group>"; };
 		EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83F202041F3AA16A000CBC36 /* opencv2.framework in Frameworks */,
+				EB0B9F8C1F3FD9B6001D4262 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +152,7 @@
 		838D6CC81F15B42F00747CA4 /* Pupillometer */ = {
 			isa = PBXGroup;
 			children = (
-				83F202031F3AA16A000CBC36 /* opencv2.framework */,
+				EB0B9F8B1F3FD9B6001D4262 /* opencv2.framework */,
 				76F7A6AE1F29A5B500C51FE1 /* images */,
 				838D6CC91F15B42F00747CA4 /* AppDelegate.swift */,
 				838D6CCB1F15B42F00747CA4 /* ViewController.swift */,
@@ -164,6 +166,7 @@
 				EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */,
 				EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */,
 				EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */,
+				EB26083F1F3FCF8100DEEFD0 /* ImportViewController.swift */,
 			);
 			path = Pupillometer;
 			sourceTree = "<group>";
@@ -254,7 +257,7 @@
 				TargetAttributes = {
 					838D6CC51F15B42F00747CA4 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 75474X5NP9;
+						DevelopmentTeam = AZ2BFERURX;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -341,6 +344,7 @@
 				83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */,
 				EB47F2E31F39F47C0044D926 /* SecondCropViewController.swift in Sources */,
 				EB47F2E51F39F9FA0044D926 /* ResultsViewController.swift in Sources */,
+				EB2608401F3FCF8100DEEFD0 /* ImportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 75474X5NP9;
+				DEVELOPMENT_TEAM = AZ2BFERURX;
 				Deployment = "";
 				"Deployment[arch=*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -503,7 +507,7 @@
 				INFOPLIST_FILE = Pupillometer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
+				PRODUCT_BUNDLE_IDENTIFIER = tom.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -516,7 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 75474X5NP9;
+				DEVELOPMENT_TEAM = AZ2BFERURX;
 				Deployment = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,7 +529,7 @@
 				INFOPLIST_FILE = Pupillometer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
+				PRODUCT_BUNDLE_IDENTIFIER = tom.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
