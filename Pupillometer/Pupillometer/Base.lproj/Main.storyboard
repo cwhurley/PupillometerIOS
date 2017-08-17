@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PoF-Wc-pc7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PoF-Wc-pc7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -146,6 +146,10 @@
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="step1.png" translatesAutoresizingMaskIntoConstraints="NO" id="j3D-9I-wcj">
                                 <rect key="frame" x="67" y="45" width="240" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eyeoutline.png" translatesAutoresizingMaskIntoConstraints="NO" id="5b5-0w-gWc">
+                                <rect key="frame" x="77" y="233" width="221" height="155"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16d-i6-r2r">
@@ -449,7 +453,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Qrg-Ad-Jjb" kind="show" id="S60-yz-ECx"/>
+                                    <segue destination="PoF-Wc-pc7" kind="show" id="PeD-8z-mLQ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="step4.png" translatesAutoresizingMaskIntoConstraints="NO" id="1VY-II-0TA">
@@ -578,13 +582,13 @@
         <image name="HISTORY.png" width="30" height="30"/>
         <image name="HOWTOUSE.png" width="30" height="30"/>
         <image name="bgc.png" width="375" height="597"/>
+        <image name="eyeoutline.png" width="100" height="100"/>
         <image name="step1.png" width="272" height="51"/>
         <image name="step2.png" width="272" height="51"/>
         <image name="step3.png" width="272" height="51"/>
         <image name="step4.png" width="272" height="51"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NYB-Yu-fpk"/>
-        <segue reference="S60-yz-ECx"/>
+        <segue reference="6z7-dL-FMf"/>
     </inferredMetricsTieBreakers>
 </document>

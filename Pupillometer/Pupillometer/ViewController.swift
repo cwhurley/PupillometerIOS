@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     let maximumZoom: CGFloat = 3.0
     var lastZoomFactor: CGFloat = 1.0
     
+    
     @IBOutlet var cameraView: UIView!
     @IBOutlet weak var firstImage: UIImageView!
     @IBOutlet weak var secondImage: UIImageView!
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         frontCamera(frontCamera)
-        
+        lowLight(on: true)
         if captureDevice != nil {
             beginSession()
         }
@@ -83,6 +84,32 @@ class ViewController: UIViewController {
         }
     }
     
+    func lowLight(on: Bool) {
+        guard let device2 = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) else { return }
+        
+        if device2.hasTorch {
+            do {
+                try device2.lockForConfiguration()
+                
+                if on == true {
+                    //device2.torchMode = .on
+                    try  device2.setTorchModeOnWithLevel(0.1)
+                    //device.setTorchModeOnWithLevel(Float(lightLevel)/Float(maxLightLevel))
+                    
+                } else {
+                    device2.torchMode = .on
+                }
+                
+                device2.unlockForConfiguration()
+            } catch {
+                print("Torch could not be used")
+            }
+        } else {
+            print("Torch is not available")
+        }
+    }
+    
+    
     // torch function
     func toggleTorch(on: Bool) {
         guard let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) else { return }
@@ -93,6 +120,9 @@ class ViewController: UIViewController {
                 
                 if on == true {
                     device.torchMode = .on
+                   //try  device.setTorchModeOnWithLevel(0.1)
+                    //device.setTorchModeOnWithLevel(Float(lightLevel)/Float(maxLightLevel))
+
                 } else {
                     device.torchMode = .off
                 }
@@ -117,7 +147,6 @@ class ViewController: UIViewController {
 
     // Start button process
     @IBAction func startButton(_ sender: Any) {
-        
         // Take first image
         if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo){
             stillImageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(imageDataSampleBuffer, error) in let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
