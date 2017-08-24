@@ -36,7 +36,7 @@ using namespace std;
     
     // Filter by Area.
     params.filterByArea = true;
-    params.minArea = 300;
+    params.minArea = 200;
     
     // Filter by Circularity
     params.filterByCircularity = true;
@@ -75,7 +75,7 @@ using namespace std;
     // the size of the circle corresponds to the size of blob
     
     Mat im_with_keypoints;
-    drawKeypoints( grayMat, keypoints, im_with_keypoints, Scalar(0,0,255), DrawMatchesFlags::DRAW_RICH_KEYPOINTS );
+    drawKeypoints( grayMat, keypoints, im_with_keypoints, Scalar(0,255,0), DrawMatchesFlags::DRAW_RICH_KEYPOINTS );
     
     for(int i=0; i<keypoints.size(); i++){
         //circle(out, keyPoints[i].pt, 20, cvScalar(255,0,0), 10);

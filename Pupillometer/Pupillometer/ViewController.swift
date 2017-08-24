@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     let maximumZoom: CGFloat = 3.0
     var lastZoomFactor: CGFloat = 1.0
     
-    var seconds = 60 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var seconds = 5 //This variable will hold a starting value of seconds. It could be any amount above 0.
     var timer = Timer()
     var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
     
@@ -36,12 +36,12 @@ class ViewController: UIViewController {
         timerLabel.isHidden = true
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         frontCamera(frontCamera)
-        lowLight(on: true)
         if captureDevice != nil {
             beginSession()
         }
 
     }
+    
     
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
@@ -100,32 +100,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func lowLight(on: Bool) {
-        guard let device2 = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) else { return }
-        
-        if device2.hasTorch {
-            do {
-                try device2.lockForConfiguration()
-                
-                if on == true {
-                    //device2.torchMode = .on
-                    try  device2.setTorchModeOnWithLevel(0.1)
-                    //device.setTorchModeOnWithLevel(Float(lightLevel)/Float(maxLightLevel))
-                    
-                } else {
-                    device2.torchMode = .on
-                }
-                
-                device2.unlockForConfiguration()
-            } catch {
-                print("Torch could not be used")
-            }
-        } else {
-            print("Torch is not available")
-        }
-    }
-    
-    
+       
     // torch function
     func toggleTorch(on: Bool) {
         guard let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) else { return }

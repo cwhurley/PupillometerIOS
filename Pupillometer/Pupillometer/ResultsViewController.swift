@@ -10,11 +10,15 @@
 import UIKit
 import CoreData
 
-class ResultsViewController: UIViewController, UITextFieldDelegate {
+class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
     
-    @IBOutlet weak var firstImage: UIImageView!
-    @IBOutlet weak var secondImage: UIImageView!
+    //@IBOutlet weak var firstImage: UIImageView!
+   // @IBOutlet weak var secondImage: UIImageView!
     
+    @IBOutlet weak var firstScroll: UIScrollView!
+    @IBOutlet weak var secondScroll: UIScrollView!
+    var firstImage = UIImageView()
+    var secondImage = UIImageView()
     @IBOutlet var nameText: UITextField!
     @IBOutlet var ageText: UITextField!
     @IBOutlet var genderText: UITextField!
@@ -33,11 +37,127 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstScroll.tag = 1
+        secondScroll.tag = 2
+        
 
-            firstImage.image = firstPassed
-            secondImage.image = secondPassed
+
+
+        firstImage.frame = CGRect(x: 0, y: 0, width: firstScroll.frame.size.width, height: firstScroll.frame.size.height)
+        firstImage.image = firstPassed
+        secondImage.frame = CGRect(x: 0, y: 0, width: secondScroll.frame.size.width, height: secondScroll.frame.size.height)
+        secondImage.image = secondPassed
+        
+        
+        firstScroll.addSubview(firstImage)
+        secondScroll.addSubview(secondImage)
+        
+        
+        firstImage.contentMode = UIViewContentMode.center
+        secondImage.contentMode = UIViewContentMode.center
+        
+        firstImage.frame = CGRect(x: 0, y: 0, width: firstPassed.size.width, height: firstPassed.size.height)
+        firstScroll.contentSize = firstPassed.size
+        //firstScroll.center =
+        secondImage.frame = CGRect(x: 0, y: 0, width: secondPassed.size.width, height: secondPassed.size.height)
+        secondScroll.contentSize = secondPassed.size
+        
+        let scrollViewFrame1 = firstScroll.frame
+        let scaleWidth1 = scrollViewFrame1.size.width / firstScroll.contentSize.width
+        let scaleHeight1 = scrollViewFrame1.size.height / firstScroll.contentSize.height
+        let minScale1 = min(scaleHeight1, scaleWidth1)
+        
+        let scrollViewFrame = secondScroll.frame
+        let scaleWidth = scrollViewFrame.size.width / secondScroll.contentSize.width
+        let scaleHeight = scrollViewFrame.size.height / secondScroll.contentSize.height
+        let minScale = min(scaleHeight, scaleWidth)
+        
+        
+        firstScroll.minimumZoomScale = minScale1
+        firstScroll.maximumZoomScale = 1
+        firstScroll.zoomScale = minScale1
+        
+
+        
+        secondScroll.minimumZoomScale = minScale
+        secondScroll.maximumZoomScale = 1
+        secondScroll.zoomScale = minScale
+        
+        centerScrollViewContents1()
+        centerScrollViewContents2()            //firstImage.image = firstPassed
+            //secondImage.image = secondPassed
         // Do any additional setup after loading the view.
     }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        if scrollView.tag == 1 {
+            firstScroll.delegate = self
+            return firstImage
+        }
+        else{
+            secondScroll.delegate = self
+            return secondImage
+        }
+    }
+    
+    func centerScrollViewContents1(){
+        
+     
+            let boundsSize = firstScroll.bounds.size
+            var contentsFrame = firstImage.frame
+            
+            if contentsFrame.size.width < boundsSize.width{
+                contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
+            }else{
+                contentsFrame.origin.x = 0
+            }
+            
+            if contentsFrame.size.height < boundsSize.height {
+                
+                contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
+            }else{
+                contentsFrame.origin.y = 0
+            }
+            
+            firstImage.frame = contentsFrame
+  
+
+    }
+    
+    func centerScrollViewContents2(){
+        
+
+            let boundsSize = secondScroll.bounds.size
+            var contentsFrame = secondImage.frame
+            
+            if contentsFrame.size.width < boundsSize.width{
+                contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
+            }else{
+                contentsFrame.origin.x = 0
+            }
+            
+            if contentsFrame.size.height < boundsSize.height {
+                
+                contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
+            }else{
+                contentsFrame.origin.y = 0
+            }
+            
+            secondImage.frame = contentsFrame
+        
+    }
+
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+      
+            centerScrollViewContents1()
+     
+            centerScrollViewContents2()
+        
+    }
+    
+
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -45,7 +165,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        scrollView.setContentOffset(CGPoint(x: 0,y: 240), animated: true)
+        scrollView.setContentOffset(CGPoint(x: 0,y: 200), animated: true)
     }
     
     
@@ -79,8 +199,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate {
             newPerson.setValue(self.genderText!.text, forKey: "gender")
             newPerson.setValue(self.eyeText!.text, forKey: "eye")
             newPerson.setValue(self.notesText!.text, forKey: "notes")
-            newPerson.setValue(self.firstImage!.image, forKey: "firstImage")
-            newPerson.setValue(self.secondImage!.image, forKey: "secondImage")
+            newPerson.setValue(self.firstImage.image, forKey: "firstImage")
+            newPerson.setValue(self.secondImage.image, forKey: "secondImage")
 
             
             do {
