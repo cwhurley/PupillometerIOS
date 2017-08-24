@@ -62,7 +62,7 @@ class HistoryTableViewController: UIViewController, UITableViewDelegate, UITable
     }
     
      func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "People"
+        return "RECORED HISTORY"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
