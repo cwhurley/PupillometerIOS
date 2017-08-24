@@ -20,13 +20,20 @@ class ViewController: UIViewController {
     let maximumZoom: CGFloat = 3.0
     var lastZoomFactor: CGFloat = 1.0
     
+    var seconds = 60 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var timer = Timer()
+    var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
     
+    
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet var cameraView: UIView!
     @IBOutlet weak var firstImage: UIImageView!
     @IBOutlet weak var secondImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        timerLabel.isHidden = true
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         frontCamera(frontCamera)
         lowLight(on: true)
@@ -34,6 +41,15 @@ class ViewController: UIViewController {
             beginSession()
         }
 
+    }
+    
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    func updateTimer() {
+        seconds -= 1     //This will decrement(count down)the seconds.
+        timerLabel.text = "\(seconds)" //This will update the label.
     }
     
     func beginSession(){
@@ -147,6 +163,11 @@ class ViewController: UIViewController {
 
     // Start button process
     @IBAction func startButton(_ sender: Any) {
+        
+        self.runTimer()
+        startButton.isHidden = true
+        timerLabel.isHidden = false
+        
         // Take first image
         if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo){
             stillImageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(imageDataSampleBuffer, error) in let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)

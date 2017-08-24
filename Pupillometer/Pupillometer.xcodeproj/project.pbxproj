@@ -269,7 +269,7 @@
 				TargetAttributes = {
 					838D6CC51F15B42F00747CA4 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = AUWN9RB58T;
+						DevelopmentTeam = AZ2BFERURX;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -513,7 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = AUWN9RB58T;
+				DEVELOPMENT_TEAM = AZ2BFERURX;
 				Deployment = "";
 				"Deployment[arch=*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -523,7 +523,7 @@
 				INFOPLIST_FILE = Pupillometer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = josh.Pupillometer;
+				PRODUCT_BUNDLE_IDENTIFIER = tom.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -536,7 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = AUWN9RB58T;
+				DEVELOPMENT_TEAM = AZ2BFERURX;
 				Deployment = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -545,7 +545,7 @@
 				INFOPLIST_FILE = Pupillometer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = josh.Pupillometer;
+				PRODUCT_BUNDLE_IDENTIFIER = tom.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
