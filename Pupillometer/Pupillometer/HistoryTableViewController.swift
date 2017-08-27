@@ -54,7 +54,7 @@ class HistoryTableViewController: UIViewController, UITableViewDelegate, UITable
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
         let name = PersonData[indexPath.row]
-        cell.textLabel?.text = name.name
+        cell.textLabel?.text = "\(name.name!) - \(name.date!)"
         
         
         return cell

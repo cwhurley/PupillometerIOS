@@ -16,6 +16,7 @@
 using namespace cv;
 using namespace std;
 
+NSArray *hello;
 @implementation OpenCVWrapper : NSObject
 
 +(UIImage *) makeGrayFromImage:(UIImage *)image;
@@ -94,8 +95,6 @@ using namespace std;
 
 +(NSString *) Results
 {
-    
-    return @"test";
 }
 
 @end

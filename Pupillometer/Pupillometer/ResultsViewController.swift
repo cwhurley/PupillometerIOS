@@ -19,6 +19,10 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     @IBOutlet weak var secondScroll: UIScrollView!
     var firstImage = UIImageView()
     var secondImage = UIImageView()
+    var firstResult = 0.0
+    var secondResult = 0.0
+    var difference = 0.0
+    var result = ""
     @IBOutlet var nameText: UITextField!
     @IBOutlet var ageText: UITextField!
     @IBOutlet var genderText: UITextField!
@@ -27,6 +31,9 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     
     @IBOutlet var scrollView: UIScrollView!
     
+    @IBOutlet weak var firstResultLabel: UILabel!
+    @IBOutlet weak var secondResultLabel: UILabel!
+    @IBOutlet weak var differenceLabel: UILabel!
     
     
         var firstPassed = UIImage()
@@ -38,21 +45,22 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        result = formatter.string(from: date)
+
+        
         firstScroll.tag = 1
         secondScroll.tag = 2
         
-
-
-
         firstImage.frame = CGRect(x: 0, y: 0, width: firstScroll.frame.size.width, height: firstScroll.frame.size.height)
         firstImage.image = firstPassed
         secondImage.frame = CGRect(x: 0, y: 0, width: secondScroll.frame.size.width, height: secondScroll.frame.size.height)
         secondImage.image = secondPassed
         
-        
         firstScroll.addSubview(firstImage)
         secondScroll.addSubview(secondImage)
-        
         
         firstImage.contentMode = UIViewContentMode.center
         secondImage.contentMode = UIViewContentMode.center
@@ -180,16 +188,19 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
         scrollView.setContentOffset(CGPoint(x: 0,y: 0), animated: true)
     }
     
-    
-
 
     @IBAction func detectButton(_ sender: Any) {
-            firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
-            //firstImage.transform = firstImage.transform.rotated(by: CGFloat(M_PI_2))
+        firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
+        firstResult = OpenCVWrapper.firstResult()
         secondImage.image = OpenCVWrapper.makeGray(from: secondImage.image)
-            //secondImage.transform = secondImage.transform.rotated(by: CGFloat(M_PI_2))
-        let test = OpenCVWrapper.results()
-        print(test)
+        secondResult = OpenCVWrapper.firstResult()
+        difference = firstResult - secondResult
+        
+        firstResultLabel.text = String(format: "%.2f", firstResult)
+        secondResultLabel.text = String(format: "%.2f", secondResult)
+        differenceLabel.text = String(format: "%.2f", difference)
+        
+
     }
     
     @IBAction func saveButton(_ sender: Any) {
@@ -201,8 +212,12 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
             newPerson.setValue(self.genderText!.text, forKey: "gender")
             newPerson.setValue(self.eyeText!.text, forKey: "eye")
             newPerson.setValue(self.notesText!.text, forKey: "notes")
+            newPerson.setValue(self.firstResult, forKey: "firstResult")
+            newPerson.setValue(self.secondResult, forKey: "secondResult")
+            newPerson.setValue(self.difference, forKey: "difference")
             newPerson.setValue(self.firstImage.image, forKey: "firstImage")
             newPerson.setValue(self.secondImage.image, forKey: "secondImage")
+            newPerson.setValue(self.result, forKey: "date")
 
             
             do {
