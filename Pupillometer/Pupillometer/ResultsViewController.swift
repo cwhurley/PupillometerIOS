@@ -188,6 +188,8 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
             //firstImage.transform = firstImage.transform.rotated(by: CGFloat(M_PI_2))
         secondImage.image = OpenCVWrapper.makeGray(from: secondImage.image)
             //secondImage.transform = secondImage.transform.rotated(by: CGFloat(M_PI_2))
+        let test = OpenCVWrapper.results()
+        print(test)
     }
     
     @IBAction func saveButton(_ sender: Any) {

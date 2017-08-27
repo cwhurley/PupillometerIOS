@@ -36,7 +36,7 @@ using namespace std;
     
     // Filter by Area.
     params.filterByArea = true;
-    params.minArea = 200;
+    params.minArea = 300;
     
     // Filter by Circularity
     params.filterByCircularity = true;
@@ -59,7 +59,6 @@ using namespace std;
     
     // Storage for blobs
     vector<KeyPoint> keypoints;
-    
     
     
     //cv::Canny(grayMat, grayMat, 30, 60);
@@ -91,6 +90,12 @@ using namespace std;
     // Show blobs
     
     return MatToUIImage(im_with_keypoints);
+}
+
++(NSString *) Results
+{
+    
+    return @"test";
 }
 
 @end

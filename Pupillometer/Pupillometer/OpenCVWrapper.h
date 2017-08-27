@@ -13,5 +13,5 @@
 @interface OpenCVWrapper : NSObject
 
 +(UIImage *) makeGrayFromImage:(UIImage *)image;
-
++(NSString *) Results;
 @end
