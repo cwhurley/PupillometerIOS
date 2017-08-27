@@ -17,10 +17,15 @@ using namespace cv;
 using namespace std;
 
 NSArray *hello;
+double point;
+double point2;
+double difference;
+
 @implementation OpenCVWrapper : NSObject
 
 +(UIImage *) makeGrayFromImage:(UIImage *)image;
 {
+    
     // Read image
     Mat src, src_gray;
     cv::Mat imageMat;
@@ -78,23 +83,45 @@ NSArray *hello;
     drawKeypoints( grayMat, keypoints, im_with_keypoints, Scalar(0,255,0), DrawMatchesFlags::DRAW_RICH_KEYPOINTS );
     
     for(int i=0; i<keypoints.size(); i++){
+        //double point;
         //circle(out, keyPoints[i].pt, 20, cvScalar(255,0,0), 10);
         //cout<<keyPoints[i].response<<endl;
         //cout<<keyPoints[i].angle<<endl;
-        cout<<keypoints[i].size<<endl;
+        //keypoints[i].size;
+        
+        point = keypoints[i].size;
+        
         //cout<<keypoints[i].pt.x<<endl;
         //cout<<keypoints[i].pt.y<<endl;
        // cout<<keypoints[i].   <<endl;
     }
     
+    difference = point - point2;
     
     // Show blobs
     
     return MatToUIImage(im_with_keypoints);
 }
 
-+(NSString *) Results
++(double) firstResult
 {
+    double firstResult;
+    firstResult = point;
+    //NSString *test;
+    //test = hello;
+    return firstResult;
+}
+
++(double) secondResult
+{
+    double secondResult;
+    secondResult = point2;
+    return secondResult;
+}
+
++(double) difference
+{
+    return difference;
 }
 
 @end
