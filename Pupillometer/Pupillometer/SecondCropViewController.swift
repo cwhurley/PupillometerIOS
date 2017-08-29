@@ -100,8 +100,11 @@ class SecondCropViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "results")
+        {
         let ResultsViewController = segue.destination as! ResultsViewController
         ResultsViewController.firstPassed = firstImage.image!
         ResultsViewController.secondPassed = secondImage.image!
+        }
     }
 }

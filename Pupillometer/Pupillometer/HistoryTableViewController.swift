@@ -17,6 +17,8 @@ class HistoryTableViewController: UIViewController, UITableViewDelegate, UITable
     
     var PersonData:[Person] = []
     var removePerson = Person()
+    var firstImage = UIImageView()
+    var secondImage = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

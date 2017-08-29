@@ -83,56 +83,21 @@ class PersonPageViewController: UIViewController, MFMailComposeViewControllerDel
         composeVC.setToRecipients([""])
         composeVC.setSubject("")
         composeVC.setMessageBody(
-            "To \n \n Name: \(personData.name!) \n Age: \(personData.age!) \n Gender: \(personData.gender!) \n Eye: \(personData.eye!) \n First: \(first) \n Second: \(second) \n Difference: \(diff) \n Notes: \(personData.notes!)" ,
+            "To \n \n Name: \(personData.name!) \n Date: \(personData.date!) \n Age: \(personData.age!) \n Gender: \(personData.gender!) \n Eye: \(personData.eye!) \n First: \(first) \n Second: \(second) \n Difference: \(diff) \n Notes: \(personData.notes!) \n The first and second images are added to this email." ,
             isHTML: false)
-        //let imageData: NSData = UIImagePNGRepresentation(firstImage.image!)! as NSData
-        //composeVC.addAttachmentData(imageData as Data, mimeType: "image/png", fileName: firstImage)
-        //let imageData: NSData = UIImagePNGRepresentation(firstImage.image!)! as NSData
-       // email.addAttachmentData(imageData, mimeType: "image/png", fileName: firstImage)
+        let imageData: NSData = UIImagePNGRepresentation(firstImage.image!)! as NSData
+        let imageData2: NSData = UIImagePNGRepresentation(secondImage.image!)! as NSData
+        composeVC.addAttachmentData(imageData as Data, mimeType: "image/png", fileName: "firstImage")
+        composeVC.addAttachmentData(imageData2 as Data, mimeType: "image/png", fileName: "secondImage")
         
+
         // Present the view controller modally.
         self.present(composeVC, animated: true, completion: nil)
         
         
         
         
-//        let mailComposeViewController = configuredMailComposeViewController()
-//        if MFMailComposeViewController.canSendMail() {
-//            self.present(mailComposeViewController, animated: true, completion: nil)
-//        let alertController = UIAlertController(title: "Send Email", message: "Send this persons data through email", preferredStyle: .alert)
-        
-//        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
-//            alert -> Void in
-//            
-//            let emailTextField = alertController.textFields![0] as UITextField
-//            let subjectTextField = alertController.textFields![1] as UITextField
-//            
-//            self.email = emailTextField.text!
-//            self.subject = subjectTextField.text!
-//            
-//        })
-        
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
-//            (action : UIAlertAction!) -> Void in
-//            
-//        })
-//        
-//        alertController.addTextField { (textField : UITextField!) -> Void in
-//            textField.placeholder = "Recipients Email"
-//        }
-//        alertController.addTextField { (textField : UITextField!) -> Void in
-//            textField.placeholder = "Subject Title"
-//        }
-//        
-//        alertController.addAction(saveAction)
-//        alertController.addAction(cancelAction)
-        
-//        self.present(alertController, animated: true, completion: nil)
-//    
-//        } else {
-//            self.showSendMailErrorAlert()
-//        }
-//    }
+
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController,
@@ -143,37 +108,6 @@ class PersonPageViewController: UIViewController, MFMailComposeViewControllerDel
         controller.dismiss(animated: true, completion: nil)
     }
     
-//    func configuredMailComposeViewController() -> MFMailComposeViewController {
-//        let mailComposerVC = MFMailComposeViewController()
-//        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-//        
-//        mailComposerVC.setToRecipients([email])
-//        mailComposerVC.setSubject(subject)
-//        mailComposerVC.setMessageBody(personData.name!, isHTML: false)
-//        
-//        return mailComposerVC
-//    }
-    
-//    func showSendMailErrorAlert() {
-//        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-//        sendMailErrorAlert.show()
-//    }
-    
-    // MARK: MFMailComposeViewControllerDelegate
-    
-//    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
-//        controller.dismiss(animated: true, completion: nil)
-//        
-//    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

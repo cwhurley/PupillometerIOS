@@ -71,9 +71,12 @@ class ImportViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     // Send both images to the EditImageViewController page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "imports")
+        {
         let FirstCropViewController = segue.destination as! FirstCropViewController
         FirstCropViewController.firstPassed = firstImage.image!
         FirstCropViewController.secondPassed = secondImage.image!
+        }
     }
 
 }

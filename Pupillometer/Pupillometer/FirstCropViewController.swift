@@ -96,13 +96,19 @@ class FirstCropViewController: UIViewController, UIScrollViewDelegate {
         
         UIGraphicsEndImageContext()
         
+        
             self.performSegue(withIdentifier: "second", sender: self)
+        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "second")
+        {
         let SecondCropViewController = segue.destination as! SecondCropViewController
         SecondCropViewController.firstPassed = firstImage.image!
         SecondCropViewController.secondPassed = secondImage.image!
+        }
+        
     }
     
 

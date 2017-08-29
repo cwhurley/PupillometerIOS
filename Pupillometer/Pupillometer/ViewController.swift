@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     let maximumZoom: CGFloat = 3.0
     var lastZoomFactor: CGFloat = 1.0
     
-    var seconds = 5 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var seconds = 6 //This variable will hold a starting value of seconds. It could be any amount above 0.
     var timer = Timer()
     var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
     
@@ -34,12 +34,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timerLabel.isHidden = true
+        firstImage.isHidden = true
+        secondImage.isHidden = true
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         frontCamera(frontCamera)
-        if captureDevice != nil {
+        if captureDevice != nil
+        {
             beginSession()
         }
-
     }
     
     
@@ -48,8 +50,8 @@ class ViewController: UIViewController {
     }
     
     func updateTimer() {
-        seconds -= 1     //This will decrement(count down)the seconds.
-        timerLabel.text = "\(seconds)" //This will update the label.
+        seconds -= 1
+        timerLabel.text = "\(seconds)"
     }
     
     func beginSession(){
@@ -59,42 +61,44 @@ class ViewController: UIViewController {
         previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         captureSession.startRunning()
         stillImageOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
-        if captureSession.canAddOutput(stillImageOutput){
+        if captureSession.canAddOutput(stillImageOutput)
+        {
             captureSession.addOutput(stillImageOutput)
-            //captureSession.= OpenCVWrapper.makeGray(from: captureSession.image)
-
         }
-        
     }
     
     // Front camera function
     func frontCamera(_ front:Bool){
         let devices = AVCaptureDevice.devices()
 
-        do {
+        do
+        {
             try captureSession.removeInput(AVCaptureDeviceInput(device: captureDevice))
         }
-        catch {
+        catch
+        {
             print("error")
         }
         
-        for device in devices!{
-            
-            if((device as AnyObject).hasMediaType(AVMediaTypeVideo)){
-                if front{
-                    if (device as AnyObject).position == AVCaptureDevicePosition.back {
+        for device in devices!
+        {
+            if((device as AnyObject).hasMediaType(AVMediaTypeVideo))
+            {
+                if front
+                {
+                    if (device as AnyObject).position == AVCaptureDevicePosition.back
+                    {
                         captureDevice = device as? AVCaptureDevice
-                        
-                        do {
+                        do
+                        {
                             try captureSession.addInput(AVCaptureDeviceInput(device: captureDevice))
-                            
                         }
-                        catch {
+                        catch
+                        {
                             
                         }
                         break
                     }
-                    
                 }
             }
         }
@@ -105,24 +109,28 @@ class ViewController: UIViewController {
     func toggleTorch(on: Bool) {
         guard let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) else { return }
         
-        if device.hasTorch {
-            do {
+        if device.hasTorch
+        {
+            do
+            {
                 try device.lockForConfiguration()
-                
-                if on == true {
+                if on == true
+                {
                     device.torchMode = .on
-                   //try  device.setTorchModeOnWithLevel(0.1)
-                    //device.setTorchModeOnWithLevel(Float(lightLevel)/Float(maxLightLevel))
-
-                } else {
+                }
+                else
+                {
                     device.torchMode = .off
                 }
-                
                 device.unlockForConfiguration()
-            } catch {
+            }
+            catch
+            {
                 print("Torch could not be used")
             }
-        } else {
+        }
+        else
+        {
             print("Torch is not available")
         }
     }
@@ -133,7 +141,6 @@ class ViewController: UIViewController {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // Start button process
@@ -167,10 +174,12 @@ class ViewController: UIViewController {
         
         // After 5 seconds...
         let when = DispatchTime.now() + 5
-        DispatchQueue.main.asyncAfter(deadline: when) {
+        DispatchQueue.main.asyncAfter(deadline: when)
+        {
             
         // Take second image
-        if let videoConnection = self.stillImageOutput.connection(withMediaType: AVMediaTypeVideo){
+        if let videoConnection = self.stillImageOutput.connection(withMediaType: AVMediaTypeVideo)
+        {
             self.stillImageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(imageDataSampleBuffer, error) in let imageData2 = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
                 let imageTwo = UIImage(data: imageData2!)
                 print("image taken: \(String(describing: imageTwo))")
@@ -179,7 +188,6 @@ class ViewController: UIViewController {
                 self.performSegue(withIdentifier: "first", sender: self)
             })
         }
-        
         }
     }
     
@@ -196,23 +204,30 @@ class ViewController: UIViewController {
         guard let device = captureDevice else { return }
         
         // Return zoom value between the minimum and maximum zoom values
-        func minMaxZoom(_ factor: CGFloat) -> CGFloat {
+        func minMaxZoom(_ factor: CGFloat) -> CGFloat
+        {
             return min(min(max(factor, minimumZoom), maximumZoom), device.activeFormat.videoMaxZoomFactor)
         }
         
-        func update(scale factor: CGFloat) {
-            do {
+        func update(scale factor: CGFloat)
+        {
+            do
+            {
                 try device.lockForConfiguration()
-                defer { device.unlockForConfiguration() }
+                defer { device.unlockForConfiguration()
+                }
                 device.videoZoomFactor = factor
-            } catch {
+            }
+            catch
+            {
                 print("\(error.localizedDescription)")
             }
         }
         
         let newScaleFactor = minMaxZoom(pinch.scale * lastZoomFactor)
         
-        switch pinch.state {
+        switch pinch.state
+        {
         case .began: fallthrough
         case .changed: update(scale: newScaleFactor)
         case .ended:
@@ -220,10 +235,6 @@ class ViewController: UIViewController {
             update(scale: lastZoomFactor)
         default: break
         }
-        
     }
-    
-    
-
 }
 

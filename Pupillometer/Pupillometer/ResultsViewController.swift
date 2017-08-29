@@ -47,7 +47,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
         
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
+        formatter.dateFormat = "EEEE, MMM d, yyyy"
         result = formatter.string(from: date)
 
         
@@ -96,6 +96,16 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
         centerScrollViewContents2()            //firstImage.image = firstPassed
             //secondImage.image = secondPassed
         // Do any additional setup after loading the view.
+        
+        firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
+        firstResult = OpenCVWrapper.firstResult()
+        secondImage.image = OpenCVWrapper.makeGray(from: secondImage.image)
+        secondResult = OpenCVWrapper.firstResult()
+        difference = firstResult - secondResult
+        
+        firstResultLabel.text = String(format: "%.2f", firstResult)
+        secondResultLabel.text = String(format: "%.2f", secondResult)
+        differenceLabel.text = String(format: "%.2f", difference)
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -189,19 +199,19 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     }
     
 
-    @IBAction func detectButton(_ sender: Any) {
-        firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
-        firstResult = OpenCVWrapper.firstResult()
-        secondImage.image = OpenCVWrapper.makeGray(from: secondImage.image)
-        secondResult = OpenCVWrapper.firstResult()
-        difference = firstResult - secondResult
-        
-        firstResultLabel.text = String(format: "%.2f", firstResult)
-        secondResultLabel.text = String(format: "%.2f", secondResult)
-        differenceLabel.text = String(format: "%.2f", difference)
-        
-
-    }
+//    @IBAction func detectButton(_ sender: Any) {
+//        firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
+//        firstResult = OpenCVWrapper.firstResult()
+//        secondImage.image = OpenCVWrapper.makeGray(from: secondImage.image)
+//        secondResult = OpenCVWrapper.firstResult()
+//        difference = firstResult - secondResult
+//        
+//        firstResultLabel.text = String(format: "%.2f", firstResult)
+//        secondResultLabel.text = String(format: "%.2f", secondResult)
+//        differenceLabel.text = String(format: "%.2f", difference)
+//        
+//
+//    }
     
     @IBAction func saveButton(_ sender: Any) {
         

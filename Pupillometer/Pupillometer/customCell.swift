@@ -10,10 +10,9 @@ import UIKit
 
 class customCell: UITableViewCell {
     
-    @IBOutlet weak var matchName: UILabel!
-    @IBOutlet weak var team1: UILabel!
-    @IBOutlet weak var team2: UILabel!
-    @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var imageOne: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var heightConstraintSecondView: NSLayoutConstraint!
@@ -21,10 +20,12 @@ class customCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
         
         // Configure the view for the selected state
     }

@@ -33,6 +33,15 @@
 		EB47F2E51F39F9FA0044D926 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */; };
 		EB8FC6661F542B83009E30BC /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8FC6651F542B83009E30BC /* HowToViewController.swift */; };
 		EB8FC6681F542D4F009E30BC /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8FC6671F542D4F009E30BC /* customCell.swift */; };
+		EB8FC6721F556E73009E30BC /* STEP_2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC6691F556E73009E30BC /* STEP_2.PNG */; };
+		EB8FC6731F556E73009E30BC /* STEP_3.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC66A1F556E73009E30BC /* STEP_3.PNG */; };
+		EB8FC6741F556E73009E30BC /* STEP_4.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC66B1F556E73009E30BC /* STEP_4.PNG */; };
+		EB8FC6751F556E73009E30BC /* STEP_5.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC66C1F556E73009E30BC /* STEP_5.PNG */; };
+		EB8FC6761F556E73009E30BC /* STEP_6.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC66D1F556E73009E30BC /* STEP_6.PNG */; };
+		EB8FC6771F556E73009E30BC /* STEP_7.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC66E1F556E73009E30BC /* STEP_7.PNG */; };
+		EB8FC6781F556E73009E30BC /* STEP_8.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC66F1F556E73009E30BC /* STEP_8.PNG */; };
+		EB8FC6791F556E73009E30BC /* STEP_9.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC6701F556E73009E30BC /* STEP_9.PNG */; };
+		EB8FC67A1F556E73009E30BC /* STEP_10.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC6711F556E73009E30BC /* STEP_10.PNG */; };
 		EBB042441F49273100061432 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB042431F49273100061432 /* HistoryTableViewController.swift */; };
 		EBB042471F49322200061432 /* Pupillometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBB042451F49322200061432 /* Pupillometer.xcdatamodeld */; };
 		EBB042491F4937E000061432 /* PersonPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB042481F4937E000061432 /* PersonPageViewController.swift */; };
@@ -91,6 +100,15 @@
 		EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		EB8FC6651F542B83009E30BC /* HowToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
 		EB8FC6671F542D4F009E30BC /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
+		EB8FC6691F556E73009E30BC /* STEP_2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_2.PNG; sourceTree = "<group>"; };
+		EB8FC66A1F556E73009E30BC /* STEP_3.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_3.PNG; sourceTree = "<group>"; };
+		EB8FC66B1F556E73009E30BC /* STEP_4.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_4.PNG; sourceTree = "<group>"; };
+		EB8FC66C1F556E73009E30BC /* STEP_5.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_5.PNG; sourceTree = "<group>"; };
+		EB8FC66D1F556E73009E30BC /* STEP_6.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_6.PNG; sourceTree = "<group>"; };
+		EB8FC66E1F556E73009E30BC /* STEP_7.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_7.PNG; sourceTree = "<group>"; };
+		EB8FC66F1F556E73009E30BC /* STEP_8.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_8.PNG; sourceTree = "<group>"; };
+		EB8FC6701F556E73009E30BC /* STEP_9.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_9.PNG; sourceTree = "<group>"; };
+		EB8FC6711F556E73009E30BC /* STEP_10.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_10.PNG; sourceTree = "<group>"; };
 		EBB042431F49273100061432 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		EBB042461F49322200061432 /* Pupillometer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pupillometer.xcdatamodel; sourceTree = "<group>"; };
 		EBB042481F4937E000061432 /* PersonPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPageViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +144,15 @@
 		76F7A6AE1F29A5B500C51FE1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EB8FC6691F556E73009E30BC /* STEP_2.PNG */,
+				EB8FC66A1F556E73009E30BC /* STEP_3.PNG */,
+				EB8FC66B1F556E73009E30BC /* STEP_4.PNG */,
+				EB8FC66C1F556E73009E30BC /* STEP_5.PNG */,
+				EB8FC66D1F556E73009E30BC /* STEP_6.PNG */,
+				EB8FC66E1F556E73009E30BC /* STEP_7.PNG */,
+				EB8FC66F1F556E73009E30BC /* STEP_8.PNG */,
+				EB8FC6701F556E73009E30BC /* STEP_9.PNG */,
+				EB8FC6711F556E73009E30BC /* STEP_10.PNG */,
 				833861F61F45270000C279CF /* eyeoutline.png */,
 				83F202091F3AA8E5000CBC36 /* step1.png */,
 				83F2020A1F3AA8E5000CBC36 /* step2.png */,
@@ -319,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76F7A6AD1F29171F00C51FE1 /* bgc.png in Resources */,
+				EB8FC6771F556E73009E30BC /* STEP_7.PNG in Resources */,
 				76F7A6AB1F29152300C51FE1 /* loading6sp.png in Resources */,
 				76F7A6B21F29CCA600C51FE1 /* HISTORY.png in Resources */,
 				76F7A6B01F29CC9F00C51FE1 /* DETECT.png in Resources */,
@@ -326,12 +354,20 @@
 				76F7A6B41F29CCAD00C51FE1 /* HOWTOUSE.png in Resources */,
 				83F202101F3AA8E5000CBC36 /* step4.png in Resources */,
 				833861F71F45270000C279CF /* eyeoutline.png in Resources */,
+				EB8FC6741F556E73009E30BC /* STEP_4.PNG in Resources */,
+				EB8FC6781F556E73009E30BC /* STEP_8.PNG in Resources */,
 				838D6CD11F15B42F00747CA4 /* Assets.xcassets in Resources */,
+				EB8FC6751F556E73009E30BC /* STEP_5.PNG in Resources */,
 				76F7A6B61F29CCB300C51FE1 /* DELETE.png in Resources */,
+				EB8FC6731F556E73009E30BC /* STEP_3.PNG in Resources */,
+				EB8FC6721F556E73009E30BC /* STEP_2.PNG in Resources */,
 				83F2020F1F3AA8E5000CBC36 /* step3.png in Resources */,
 				83F2020D1F3AA8E5000CBC36 /* step1.png in Resources */,
+				EB8FC67A1F556E73009E30BC /* STEP_10.PNG in Resources */,
 				76F7A6B81F29CCC200C51FE1 /* connectivity-bar.png in Resources */,
+				EB8FC6791F556E73009E30BC /* STEP_9.PNG in Resources */,
 				83F2020E1F3AA8E5000CBC36 /* step2.png in Resources */,
+				EB8FC6761F556E73009E30BC /* STEP_6.PNG in Resources */,
 				838D6CCF1F15B42F00747CA4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
