@@ -31,6 +31,8 @@
 		EB47F2E01F39F4660044D926 /* FirstCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */; };
 		EB47F2E31F39F47C0044D926 /* SecondCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */; };
 		EB47F2E51F39F9FA0044D926 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */; };
+		EB8FC6661F542B83009E30BC /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8FC6651F542B83009E30BC /* HowToViewController.swift */; };
+		EB8FC6681F542D4F009E30BC /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8FC6671F542D4F009E30BC /* customCell.swift */; };
 		EBB042441F49273100061432 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB042431F49273100061432 /* HistoryTableViewController.swift */; };
 		EBB042471F49322200061432 /* Pupillometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBB042451F49322200061432 /* Pupillometer.xcdatamodeld */; };
 		EBB042491F4937E000061432 /* PersonPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB042481F4937E000061432 /* PersonPageViewController.swift */; };
@@ -87,6 +89,8 @@
 		EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCropViewController.swift; sourceTree = "<group>"; };
 		EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCropViewController.swift; sourceTree = "<group>"; };
 		EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		EB8FC6651F542B83009E30BC /* HowToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
+		EB8FC6671F542D4F009E30BC /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 		EBB042431F49273100061432 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		EBB042461F49322200061432 /* Pupillometer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pupillometer.xcdatamodel; sourceTree = "<group>"; };
 		EBB042481F4937E000061432 /* PersonPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPageViewController.swift; sourceTree = "<group>"; };
@@ -178,7 +182,9 @@
 				EB26083F1F3FCF8100DEEFD0 /* ImportViewController.swift */,
 				EBB042431F49273100061432 /* HistoryTableViewController.swift */,
 				EBB042481F4937E000061432 /* PersonPageViewController.swift */,
+				EB8FC6651F542B83009E30BC /* HowToViewController.swift */,
 				EBB042451F49322200061432 /* Pupillometer.xcdatamodeld */,
+				EB8FC6671F542D4F009E30BC /* customCell.swift */,
 			);
 			path = Pupillometer;
 			sourceTree = "<group>";
@@ -354,6 +360,8 @@
 				EBB042441F49273100061432 /* HistoryTableViewController.swift in Sources */,
 				838D6CCC1F15B42F00747CA4 /* ViewController.swift in Sources */,
 				838D6CCA1F15B42F00747CA4 /* AppDelegate.swift in Sources */,
+				EB8FC6681F542D4F009E30BC /* customCell.swift in Sources */,
+				EB8FC6661F542B83009E30BC /* HowToViewController.swift in Sources */,
 				EB47F2E01F39F4660044D926 /* FirstCropViewController.swift in Sources */,
 				83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */,
 				EB47F2E31F39F47C0044D926 /* SecondCropViewController.swift in Sources */,
