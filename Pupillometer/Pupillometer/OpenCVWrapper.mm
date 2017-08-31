@@ -5,6 +5,8 @@
 //  Created by Chris Hurley on 3/8/17.
 //  Copyright © 2017 Chris Hurley. All rights reserved.
 //
+//https://www.learnopencv.com/blob-detection-using-opencv-python-c/
+
 
 #include "opencv2/imgcodecs.hpp"
 #include "opencv2/highgui/highgui.hpp"
@@ -39,28 +41,35 @@ double difference;
     // Change thresholds
     params.minThreshold = 10;
     params.maxThreshold = 200;
+    //params.thresholdStep = 0;
     
     // Filter by Area.
     params.filterByArea = true;
-    params.minArea = 300;
+    params.minArea = 400;
+    //params.maxArea = 0;
     
     // Filter by Circularity
     params.filterByCircularity = true;
     params.minCircularity = 0.1;
+    //params.maxCircularity = 0;
     
     // Filter by Convexity
     params.filterByConvexity = true;
-    params.minConvexity = 0.50;
+    params.minConvexity = 0.4;
+    //params.maxConvexity = 0;
     
     // Filter by Inertia
     params.filterByInertia = true;
-    params.minInertiaRatio = 0.5;
+    params.minInertiaRatio = 0.1;
+    //params.maxInertiaRatio = 0;
     
     params.filterByColor = true;
     params.blobColor = 0;
     
     
     params.minDistBetweenBlobs = 300;
+    
+
     
     
     // Storage for blobs
@@ -90,6 +99,7 @@ double difference;
         //keypoints[i].size;
         
         point = keypoints[i].size;
+        
         
         //cout<<keypoints[i].pt.x<<endl;
         //cout<<keypoints[i].pt.y<<endl;
