@@ -1003,6 +1003,19 @@
                                         <color key="textColor" red="0.99489795918367352" green="0.98979591836734693" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm2-qi-1vs">
+                                        <rect key="frame" x="299" y="16" width="68" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Manuel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="manuelButton:" destination="0of-1u-J7S" eventType="touchUpInside" id="njP-mW-uAN"/>
+                                            <segue destination="1kO-7z-Fn5" kind="show" identifier="manuel" id="ea0-QR-THE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="blw-re-kHs" firstAttribute="top" secondItem="1VY-II-0TA" secondAttribute="bottom" constant="2" id="3e7-ze-jC6"/>
@@ -1095,6 +1108,7 @@
                         <outlet property="firstResultLabel" destination="U7E-vr-9rv" id="ted-dx-cBZ"/>
                         <outlet property="firstScroll" destination="blw-re-kHs" id="k8n-5c-Iqm"/>
                         <outlet property="genderText" destination="CFL-W8-Ucx" id="k9a-CF-LVk"/>
+                        <outlet property="manuelButton" destination="Bm2-qi-1vs" id="qPd-5p-NwY"/>
                         <outlet property="nameText" destination="nC7-oc-7HK" id="Raq-JM-Ryy"/>
                         <outlet property="notesText" destination="CKE-9M-xPJ" id="QVq-1z-fE4"/>
                         <outlet property="scrollView" destination="55d-4o-9Ry" id="kp9-XX-fqr"/>
@@ -1105,6 +1119,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvq-zd-IN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1280.8" y="1871.5142428785609"/>
+        </scene>
+        <!--Slider View Controller-->
+        <scene sceneID="E4f-9P-8Tl">
+            <objects>
+                <viewController id="1kO-7z-Fn5" customClass="sliderViewController" customModule="Pupillometer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pcp-4M-ise"/>
+                        <viewControllerLayoutGuide type="bottom" id="aYs-OG-lhy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Y4-FF-33u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nVE-i5-Coh">
+                                <rect key="frame" x="67" y="65" width="240" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfb-Ys-KPw">
+                                <rect key="frame" x="145" y="36" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Eg-Me-2fp">
+                                <rect key="frame" x="65" y="239" width="244" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="circularity1Slider:" destination="1kO-7z-Fn5" eventType="valueChanged" id="vVK-kV-ADG"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3aI-wo-JEh">
+                                <rect key="frame" x="65" y="274" width="244" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="convexity1Slider:" destination="1kO-7z-Fn5" eventType="valueChanged" id="Apr-1a-vEI"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PN0-Hi-e0U">
+                                <rect key="frame" x="65" y="308" width="244" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="inertia1Slider:" destination="1kO-7z-Fn5" eventType="valueChanged" id="lbM-9z-BtH"/>
+                                </connections>
+                            </slider>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fr9-Ul-7KF">
+                                <rect key="frame" x="67" y="373" width="240" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="b2l-Eg-x80">
+                                <rect key="frame" x="65" y="548" width="244" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="circularity2Slider:" destination="1kO-7z-Fn5" eventType="valueChanged" id="wWD-Kc-po7"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MHB-cX-fvo">
+                                <rect key="frame" x="65" y="583" width="244" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="convexity2Slider:" destination="1kO-7z-Fn5" eventType="valueChanged" id="CrT-yO-rLs"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nnx-yP-gVX">
+                                <rect key="frame" x="65" y="617" width="244" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="inertia2Slider:" destination="1kO-7z-Fn5" eventType="valueChanged" id="9cs-Ii-oRj"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bI-wR-M6N">
+                                <rect key="frame" x="16" y="8" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="1kO-7z-Fn5" eventType="touchUpInside" id="dFI-Se-Tin"/>
+                                    <segue destination="0of-1u-J7S" kind="show" identifier="back" id="5oq-1E-j4T"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYi-hA-ZIh">
+                                <rect key="frame" x="132" y="344" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstScrollView" destination="nVE-i5-Coh" id="K4q-Fi-NdI"/>
+                        <outlet property="secondScrollView" destination="Fr9-Ul-7KF" id="6aW-0E-fN8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TT4-1w-i7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2132" y="1872"/>
         </scene>
         <!--Second Crop View Controller-->
         <scene sceneID="F0R-MI-bdK">
@@ -1193,7 +1304,8 @@
         <image name="step4.png" width="821" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6z7-dL-FMf"/>
+        <segue reference="5oq-1E-j4T"/>
         <segue reference="TfG-FJ-QFv"/>
+        <segue reference="6z7-dL-FMf"/>
     </inferredMetricsTieBreakers>
 </document>

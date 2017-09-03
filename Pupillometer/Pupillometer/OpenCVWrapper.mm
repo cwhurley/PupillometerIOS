@@ -23,8 +23,48 @@ double point;
 double point2;
 double difference;
 
+double areaC = 400;
+double thresholdC = 200;
+double circularityC = 0.1;
+double convexityC = 0.4;
+double inertiaC = 0.1;
+
 @implementation OpenCVWrapper : NSObject
 
++(double) setArea:(double) area;
+{
+    areaC = area;
+    
+    return areaC;
+}
+
++(double) setThresh:(double) thresholds;
+{
+    thresholdC = thresholds;
+    
+    return thresholdC;
+}
+
++(double) setCir:(double) circularity;
+{
+    circularityC = circularity;
+    
+    return circularityC;
+}
+
++(double) setConv:(double) convexity;
+{
+    convexityC = convexity;
+    
+    return convexityC;
+}
+
++(double) setIner:(double) inertia;
+{
+    inertiaC = inertia;
+    
+    return inertiaC;
+}
 +(UIImage *) makeGrayFromImage:(UIImage *)image;
 {
     
@@ -34,33 +74,39 @@ double difference;
     UIImageToMat(image, imageMat);
     if(imageMat.channels() == 1) return image;
     cv::Mat grayMat;
+    //cv::cvtColor(imageMat, imageMat, CV_BGR2HSV);
     cv::cvtColor(imageMat, grayMat, CV_BGR2GRAY);
     // Setup SimpleBlobDetector parameters.
     SimpleBlobDetector::Params params;
     
     // Change thresholds
     params.minThreshold = 10;
-    params.maxThreshold = 200;
+    //params.maxThreshold = 200;
+    params.maxThreshold = thresholdC;
     //params.thresholdStep = 0;
     
     // Filter by Area.
     params.filterByArea = true;
-    params.minArea = 400;
+    //params.minArea = 200;
+    params.minArea = areaC;
     //params.maxArea = 0;
     
     // Filter by Circularity
     params.filterByCircularity = true;
-    params.minCircularity = 0.1;
+    //params.minCircularity = 0.1;
+    params.minCircularity = circularityC;
     //params.maxCircularity = 0;
     
     // Filter by Convexity
     params.filterByConvexity = true;
-    params.minConvexity = 0.4;
+    //params.minConvexity = 0.4;
+    params.minConvexity = convexityC;
     //params.maxConvexity = 0;
     
     // Filter by Inertia
     params.filterByInertia = true;
-    params.minInertiaRatio = 0.1;
+    //params.minInertiaRatio = 0.1;
+    params.minInertiaRatio = inertiaC;
     //params.maxInertiaRatio = 0;
     
     params.filterByColor = true;
@@ -75,7 +121,7 @@ double difference;
     // Storage for blobs
     vector<KeyPoint> keypoints;
     
-    
+    //cv::threshold (grayMat, grayMat, 70, 255, CV_THRESH_BINARY_INV);
     //cv::Canny(grayMat, grayMat, 30, 60);
     // Set up detector with params
     Ptr<SimpleBlobDetector> detector = SimpleBlobDetector::create(params);

@@ -13,6 +13,7 @@ class SecondCropViewController: UIViewController, UIScrollViewDelegate {
     var secondPassed = UIImage()
     var firstImage = UIImageView()
     var secondImage = UIImageView()
+    var fromPage = 1
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -105,6 +106,8 @@ class SecondCropViewController: UIViewController, UIScrollViewDelegate {
         let ResultsViewController = segue.destination as! ResultsViewController
         ResultsViewController.firstPassed = firstImage.image!
         ResultsViewController.secondPassed = secondImage.image!
+            fromPage = 1
+            ResultsViewController.fromPage = fromPage
         }
     }
 }

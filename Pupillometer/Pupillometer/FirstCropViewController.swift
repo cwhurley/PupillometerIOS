@@ -45,7 +45,7 @@ class FirstCropViewController: UIViewController, UIScrollViewDelegate {
         scrollView.zoomScale = minScale
         
         centerScrollViewContents()
-        
+        //firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
         
         // Do any additional setup after loading the view.
     }

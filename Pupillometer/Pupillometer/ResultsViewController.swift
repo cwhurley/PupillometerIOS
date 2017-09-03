@@ -17,12 +17,22 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     
     @IBOutlet weak var firstScroll: UIScrollView!
     @IBOutlet weak var secondScroll: UIScrollView!
+    
+    var firstImageDefault = UIImageView()
+    var secondimageDefault = UIImageView()
     var firstImage = UIImageView()
     var secondImage = UIImageView()
     var firstResult = 0.0
     var secondResult = 0.0
     var difference = 0.0
     var result = ""
+    
+    var firstResultsPassed = 0.0
+    var secondResultsPassed = 0.0
+    var fromPage = 0
+    var pageNumber = 0
+    
+    
     @IBOutlet var nameText: UITextField!
     @IBOutlet var ageText: UITextField!
     @IBOutlet var genderText: UITextField!
@@ -34,6 +44,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     @IBOutlet weak var firstResultLabel: UILabel!
     @IBOutlet weak var secondResultLabel: UILabel!
     @IBOutlet weak var differenceLabel: UILabel!
+    @IBOutlet weak var manuelButton: UIButton!
     
     
         var firstPassed = UIImage()
@@ -49,15 +60,17 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE, MMM d, yyyy"
         result = formatter.string(from: date)
-
+        pageNumber = fromPage
+        print(pageNumber)
+        detectPupil()
         
         firstScroll.tag = 1
         secondScroll.tag = 2
         
         firstImage.frame = CGRect(x: 0, y: 0, width: firstScroll.frame.size.width, height: firstScroll.frame.size.height)
-        firstImage.image = firstPassed
+        //firstImage.image = firstPassed
         secondImage.frame = CGRect(x: 0, y: 0, width: secondScroll.frame.size.width, height: secondScroll.frame.size.height)
-        secondImage.image = secondPassed
+        //secondImage.image = secondPassed
         
         firstScroll.addSubview(firstImage)
         secondScroll.addSubview(secondImage)
@@ -97,16 +110,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
             //secondImage.image = secondPassed
         // Do any additional setup after loading the view.
         
-        firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
-        firstResult = OpenCVWrapper.firstResult()
-        secondImage.image = OpenCVWrapper.makeGray(from: secondImage.image)
-        secondResult = OpenCVWrapper.firstResult()
-        difference = firstResult - secondResult
-        
-        firstResultLabel.text = String(format: "%.2f", firstResult)
-        secondResultLabel.text = String(format: "%.2f", secondResult)
-        differenceLabel.text = String(format: "%.2f", difference)
-    }
+            }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         if scrollView.tag == 1 {
@@ -174,9 +178,37 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
         
     }
     
-
+    func detectPupil() {
+        
+        if (pageNumber == 1)
+        {
+            firstImageDefault.image = firstPassed
+            secondimageDefault.image = secondPassed
+            
+            firstImage.image = firstPassed
+            secondImage.image = secondPassed
+            firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
+            firstResult = OpenCVWrapper.firstResult()
+            secondImage.image = OpenCVWrapper.makeGray(from: secondImage.image)
+            secondResult = OpenCVWrapper.firstResult()
+            difference = firstResult - secondResult
+            
+            firstResultLabel.text = String(format: "%.2f", firstResult)
+            secondResultLabel.text = String(format: "%.2f", secondResult)
+            differenceLabel.text = String(format: "%.2f", difference)
+        }
+        else {
+            manuelButton.isHidden = true
+            firstImage.image = firstPassed
+            secondImage.image = secondPassed
+            
+            firstResultLabel.text = String(format: "%.2f", firstResultsPassed)
+            secondResultLabel.text = String(format: "%.2f", secondResultsPassed)
+            difference = firstResultsPassed - secondResultsPassed
+            differenceLabel.text = String(format: "%.2f", difference)
+        }
+    }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -185,7 +217,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     func textFieldDidBeginEditing(_ textField: UITextField) {
         scrollView.setContentOffset(CGPoint(x: 0,y: 200), animated: true)
     }
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -197,21 +228,6 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
         scrollView.setContentOffset(CGPoint(x: 0,y: 0), animated: true)
     }
-    
-
-//    @IBAction func detectButton(_ sender: Any) {
-//        firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
-//        firstResult = OpenCVWrapper.firstResult()
-//        secondImage.image = OpenCVWrapper.makeGray(from: secondImage.image)
-//        secondResult = OpenCVWrapper.firstResult()
-//        difference = firstResult - secondResult
-//        
-//        firstResultLabel.text = String(format: "%.2f", firstResult)
-//        secondResultLabel.text = String(format: "%.2f", secondResult)
-//        differenceLabel.text = String(format: "%.2f", difference)
-//        
-//
-//    }
     
     @IBAction func saveButton(_ sender: Any) {
         
@@ -245,6 +261,20 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
         
     }
 
+    @IBAction func manuelButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "manuel", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "manuel")
+        {
+            let sliderViewController = segue.destination as! sliderViewController
+            sliderViewController.firstPassed = firstImageDefault.image!
+            sliderViewController.secondPassed = secondimageDefault.image!
+            
+        }
+        
+    }
         
 }
 

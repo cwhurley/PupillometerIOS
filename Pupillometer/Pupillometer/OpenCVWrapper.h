@@ -16,4 +16,10 @@
 +(double) firstResult;
 +(double) secondResult;
 +(double) difference;
+
++(double) setArea:(double) area;
++(double) setThresh:(double) thresholds;
++(double) setCir:(double) circularity;
++(double) setConv:(double) convexity;
++(double) setIner:(double) inertia;
 @end
