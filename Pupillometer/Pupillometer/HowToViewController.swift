@@ -39,7 +39,9 @@ class HowToViewController: UIViewController, UITableViewDelegate, UITableViewDat
         "There is an email function that once pressed will open the default email app on your IPhone. It will bring across all the patients information. You can then fill in the sections as necessary.",
         "By swiping across on someone’s name you will show the delete button. By taping this you will completely remove this information from your phone."
         ]
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

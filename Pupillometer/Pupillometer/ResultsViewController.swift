@@ -52,7 +52,9 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

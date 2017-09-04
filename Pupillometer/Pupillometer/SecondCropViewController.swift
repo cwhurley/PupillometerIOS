@@ -16,7 +16,9 @@ class SecondCropViewController: UIViewController, UIScrollViewDelegate {
     var fromPage = 1
     
     @IBOutlet weak var scrollView: UIScrollView!
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self

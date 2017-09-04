@@ -15,7 +15,9 @@ class FirstCropViewController: UIViewController, UIScrollViewDelegate {
     var secondImage = UIImageView()
 
     @IBOutlet weak var scrollView: UIScrollView!
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self

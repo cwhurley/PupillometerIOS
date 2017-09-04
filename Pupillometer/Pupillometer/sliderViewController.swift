@@ -29,7 +29,9 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
     
     var firstResult = 0.0
     var secondResult = 0.0
-
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

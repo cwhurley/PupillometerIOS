@@ -15,7 +15,9 @@ class ImportViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var secondImage: UIImageView!
     
     var imageNumber = 0
-
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

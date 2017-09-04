@@ -31,7 +31,9 @@ class PersonPageViewController: UIViewController, MFMailComposeViewControllerDel
     var first = ""
     var second = ""
     var diff = ""
-
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
