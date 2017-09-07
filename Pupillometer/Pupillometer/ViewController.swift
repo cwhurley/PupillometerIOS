@@ -19,10 +19,15 @@ class ViewController: UIViewController {
     let minimumZoom: CGFloat = 1.0
     let maximumZoom: CGFloat = 3.0
     var lastZoomFactor: CGFloat = 1.0
+    var stringTest = "auto"
     
     var seconds = 6 //This variable will hold a starting value of seconds. It could be any amount above 0.
     var timer = Timer()
     var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
+    var myInt = Int()
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     
     
     @IBOutlet weak var startButton: UIButton!
@@ -48,6 +53,22 @@ class ViewController: UIViewController {
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
     }
+    
+    @IBAction func detectionType(_ sender: UISegmentedControl) {
+        
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            stringTest = "auto"
+            
+        case 1:
+            stringTest = "manual"
+        default:
+            break;
+        }
+        
+    }
+    
     
     func updateTimer() {
         seconds -= 1
@@ -196,6 +217,8 @@ class ViewController: UIViewController {
         let FirstCropViewController = segue.destination as! FirstCropViewController
         FirstCropViewController.firstPassed = firstImage.image!
         FirstCropViewController.secondPassed = secondImage.image!
+        FirstCropViewController.intPassed = myInt
+        FirstCropViewController.stringPassed = stringTest
     }
     
     

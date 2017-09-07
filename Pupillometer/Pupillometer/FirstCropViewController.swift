@@ -13,13 +13,31 @@ class FirstCropViewController: UIViewController, UIScrollViewDelegate {
     var secondPassed = UIImage()
     var firstImage = UIImageView()
     var secondImage = UIImageView()
-
+    var intPassed = Int()
+    var option = Int()
+    var stringPassed = String()
+    
+    @IBOutlet weak var manualView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("option number:")
+        print(intPassed)
+        option = intPassed
+        //let option = intPassed
+        print(stringPassed)
+        if stringPassed == "auto"
+        {
+            manualView.isHidden = true
+        }
+        else if stringPassed == "manual" {
+            manualView.isHidden = false
+        }
+        
+        
         scrollView.delegate = self
         
         firstImage.frame = CGRect(x: 0, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
@@ -28,7 +46,7 @@ class FirstCropViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.addSubview(firstImage)
         
-
+        
     
         firstImage.contentMode = UIViewContentMode.center
 

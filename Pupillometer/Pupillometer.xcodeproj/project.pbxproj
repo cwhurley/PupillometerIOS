@@ -213,17 +213,17 @@
 				83960DF91F32A7E30075F490 /* OpenCVWrapper.h */,
 				83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */,
 				83960DF81F32A7E30075F490 /* Pupillometer-Bridging-Header.h */,
+				EBB042451F49322200061432 /* Pupillometer.xcdatamodeld */,
+				EBB042431F49273100061432 /* HistoryTableViewController.swift */,
+				EBB042481F4937E000061432 /* PersonPageViewController.swift */,
 				838D6CCB1F15B42F00747CA4 /* ViewController.swift */,
 				EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */,
 				EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */,
 				EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */,
-				EB26083F1F3FCF8100DEEFD0 /* ImportViewController.swift */,
-				EBB042431F49273100061432 /* HistoryTableViewController.swift */,
-				EBB042481F4937E000061432 /* PersonPageViewController.swift */,
-				EB8FC6651F542B83009E30BC /* HowToViewController.swift */,
-				EBB042451F49322200061432 /* Pupillometer.xcdatamodeld */,
-				EB8FC6671F542D4F009E30BC /* customCell.swift */,
 				EB7356C11F5BA096009E0241 /* sliderViewController.swift */,
+				EB8FC6651F542B83009E30BC /* HowToViewController.swift */,
+				EB26083F1F3FCF8100DEEFD0 /* ImportViewController.swift */,
+				EB8FC6671F542D4F009E30BC /* customCell.swift */,
 			);
 			path = Pupillometer;
 			sourceTree = "<group>";
@@ -314,7 +314,7 @@
 				TargetAttributes = {
 					838D6CC51F15B42F00747CA4 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = AUWN9RB58T;
+						DevelopmentTeam = 6758HC2X28;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -573,7 +573,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = AUWN9RB58T;
+				DEVELOPMENT_TEAM = 6758HC2X28;
 				Deployment = "";
 				"Deployment[arch=*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -583,7 +583,7 @@
 				INFOPLIST_FILE = Pupillometer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tom.Pupillometer;
+				PRODUCT_BUNDLE_IDENTIFIER = christest.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -596,7 +596,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = AUWN9RB58T;
+				DEVELOPMENT_TEAM = 6758HC2X28;
 				Deployment = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -605,7 +605,7 @@
 				INFOPLIST_FILE = Pupillometer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tom.Pupillometer;
+				PRODUCT_BUNDLE_IDENTIFIER = christest.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

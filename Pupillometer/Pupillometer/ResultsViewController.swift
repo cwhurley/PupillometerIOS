@@ -192,7 +192,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
             firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
             firstResult = OpenCVWrapper.firstResult()
             secondImage.image = OpenCVWrapper.makeGray(from: secondImage.image)
-            secondResult = OpenCVWrapper.firstResult()
+            secondResult = OpenCVWrapper.secondResult()
             difference = firstResult - secondResult
             
             firstResultLabel.text = String(format: "%.2f", firstResult)
@@ -240,9 +240,18 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
             newPerson.setValue(self.genderText!.text, forKey: "gender")
             newPerson.setValue(self.eyeText!.text, forKey: "eye")
             newPerson.setValue(self.notesText!.text, forKey: "notes")
-            newPerson.setValue(self.firstResult, forKey: "firstResult")
-            newPerson.setValue(self.secondResult, forKey: "secondResult")
-            newPerson.setValue(self.difference, forKey: "difference")
+            if pageNumber == 1
+            {
+                newPerson.setValue(self.firstResult, forKey: "firstResult")
+                newPerson.setValue(self.secondResult, forKey: "secondResult")
+                newPerson.setValue(self.difference, forKey: "difference")
+            }
+            else
+            {
+                newPerson.setValue(self.firstResultsPassed, forKey: "firstResult")
+                newPerson.setValue(self.secondResultsPassed, forKey: "secondResult")
+                newPerson.setValue(self.difference, forKey: "difference")
+            }
             newPerson.setValue(self.firstImage.image, forKey: "firstImage")
             newPerson.setValue(self.secondImage.image, forKey: "secondImage")
             newPerson.setValue(self.result, forKey: "date")

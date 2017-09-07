@@ -143,7 +143,7 @@ double inertiaC = 0.1;
         //cout<<keyPoints[i].response<<endl;
         //cout<<keyPoints[i].angle<<endl;
         //keypoints[i].size;
-        
+        point = 0;
         point = keypoints[i].size;
         
         
@@ -153,7 +153,7 @@ double inertiaC = 0.1;
     }
     
     difference = point - point2;
-    
+    cout<<point2<<endl;
     // Show blobs
     
     return MatToUIImage(im_with_keypoints);
