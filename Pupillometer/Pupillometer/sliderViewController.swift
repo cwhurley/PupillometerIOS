@@ -10,25 +10,24 @@ import UIKit
 
 class sliderViewController: UIViewController, UIScrollViewDelegate {
     
+    // Variables
     var firstPassed = UIImage()
     var secondPassed = UIImage()
-    
     var firstImage = UIImageView()
     var secondImage = UIImageView()
-    
     var fromPage = 2
-    
-    @IBOutlet weak var firstScrollView: UIScrollView!
-    @IBOutlet weak var secondScrollView: UIScrollView!
-    
     var area = 0.0
     var thresholds = 0.0
     var circularity = 0.0
     var inertia = 0.0
     var convexity = 0.0
-    
     var firstResult = 0.0
     var secondResult = 0.0
+    
+    // Outlets
+    @IBOutlet weak var firstScrollView: UIScrollView!
+    @IBOutlet weak var secondScrollView: UIScrollView!
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -42,9 +41,7 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
         secondScrollView.tag = 2
         
         firstImage.frame = CGRect(x: 0, y: 0, width: firstScrollView.frame.size.width, height: secondScrollView.frame.size.height)
-        //firstImage.image = firstPassed
         secondImage.frame = CGRect(x: 0, y: 0, width: secondScrollView.frame.size.width, height: secondScrollView.frame.size.height)
-        //secondImage.image = secondPassed
         
         firstScrollView.addSubview(firstImage)
         secondScrollView.addSubview(secondImage)
@@ -54,7 +51,6 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
         
         firstImage.frame = CGRect(x: 0, y: 0, width: firstPassed.size.width, height: firstPassed.size.height)
         firstScrollView.contentSize = firstPassed.size
-        //firstScroll.center =
         secondImage.frame = CGRect(x: 0, y: 0, width: secondPassed.size.width, height: secondPassed.size.height)
         secondScrollView.contentSize = secondPassed.size
         
@@ -68,12 +64,9 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
         let scaleHeight = scrollViewFrame.size.height / secondScrollView.contentSize.height
         let minScale = min(scaleHeight, scaleWidth)
         
-        
         firstScrollView.minimumZoomScale = minScale1
         firstScrollView.maximumZoomScale = 1
         firstScrollView.zoomScale = minScale1
-        
-        
         
         secondScrollView.minimumZoomScale = minScale
         secondScrollView.maximumZoomScale = 1
@@ -81,26 +74,23 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
         
         centerScrollViewContents1()
         centerScrollViewContents2()
-        
-
-        // Do any additional setup after loading the view.
-        
-
-
-        // Do any additional setup after loading the view.
     }
     
+    // Zoomable scroll views
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        if scrollView.tag == 1 {
+        if scrollView.tag == 1
+        {
             firstScrollView.delegate = self
             return firstImage
         }
-        else{
+        else
+        {
             secondScrollView.delegate = self
             return secondImage
         }
     }
     
+    // Centering scroll view
     func centerScrollViewContents1(){
         
         
@@ -125,6 +115,7 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    // Cenering scroll view
     func centerScrollViewContents2(){
         
         
@@ -148,6 +139,7 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    // When scroll view is zoomed
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
         
         centerScrollViewContents1()
@@ -156,12 +148,12 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
         
     }
 
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // These handle each paramater change for when the slider changes value for the first image
     @IBAction func circularity1Slider(_ sender: UISlider) {
         circularity = Double(Float(sender.value))
         let circularity2 = Double(OpenCVWrapper.setCir(Double(circularity)))
@@ -195,6 +187,7 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
 
     }
     
+    // Handles each paramater change for the second image
     @IBAction func circularity2Slider(_ sender: UISlider) {
         circularity = Double(Float(sender.value))
         let circularity2 = Double(OpenCVWrapper.setCir(Double(circularity)))
@@ -228,11 +221,12 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
 
     }
     
+    // Back button that goes to the results page
     @IBAction func backButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "back", sender: self)
-
     }
     
+    // Handles the sending of data to the next page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "back")
         {
@@ -246,18 +240,4 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
         }
         
     }
-
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

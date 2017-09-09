@@ -14,6 +14,7 @@ import MessageUI
 
 class PersonPageViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
+    // Outlets
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var genderLabel: UILabel!
     @IBOutlet var eyeLabel: UILabel!
@@ -22,15 +23,17 @@ class PersonPageViewController: UIViewController, MFMailComposeViewControllerDel
     @IBOutlet var firstImage: UIImageView!
     @IBOutlet var secondImage: UIImageView!
     @IBOutlet weak var resultsLabel: UILabel!
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var differenceLabel: UILabel!
+    
+    // Variables
     var personData: Person!
-    var email = ""
-    var subject = ""
-    var first = ""
-    var second = ""
-    var diff = ""
+    var email = String()
+    var subject = String()
+    var first = String()
+    var second = String()
+    var diff = String()
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -56,6 +59,7 @@ class PersonPageViewController: UIViewController, MFMailComposeViewControllerDel
         // Do any additional setup after loading the view.
     }
     
+    // Scroll view settings
     func scrollViewDidScroll(scrollView: UIScrollView) {
         if scrollView.contentOffset.x>0 {
             scrollView.contentOffset.x = 0
@@ -71,9 +75,11 @@ class PersonPageViewController: UIViewController, MFMailComposeViewControllerDel
         // Dispose of any resources that can be recreated.
     }
     
+    // Email button
     @IBAction func sendEmailButtonTapped(sender: AnyObject) {
         
-        if !MFMailComposeViewController.canSendMail() {
+        if !MFMailComposeViewController.canSendMail()
+        {
             print("Mail services are not available")
             return
         }
@@ -92,20 +98,14 @@ class PersonPageViewController: UIViewController, MFMailComposeViewControllerDel
         composeVC.addAttachmentData(imageData as Data, mimeType: "image/png", fileName: "firstImage")
         composeVC.addAttachmentData(imageData2 as Data, mimeType: "image/png", fileName: "secondImage")
         
-
         // Present the view controller modally.
         self.present(composeVC, animated: true, completion: nil)
-        
-        
-        
-        
-
     }
     
+    // Calling email function
     func mailComposeController(_ controller: MFMailComposeViewController,
                                didFinishWith result: MFMailComposeResult, error: Error?) {
-        // Check the result or perform other tasks.
-        
+
         // Dismiss the mail compose view controller.
         controller.dismiss(animated: true, completion: nil)
     }

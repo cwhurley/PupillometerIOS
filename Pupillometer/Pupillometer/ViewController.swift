@@ -9,8 +9,9 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
     
+    // Variables
     var captureSession = AVCaptureSession()
     var previewLayer = AVCaptureVideoPreviewLayer()
     var captureDevice: AVCaptureDevice?
@@ -19,25 +20,25 @@ class ViewController: UIViewController {
     let minimumZoom: CGFloat = 1.0
     let maximumZoom: CGFloat = 3.0
     var lastZoomFactor: CGFloat = 1.0
-    var stringTest = "auto"
-    
-    var seconds = 6 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var stringPassing = "auto"
+    var firstImage = UIImageView()
+    var secondImage = UIImageView()
+    var seconds = 6
     var timer = Timer()
-    var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
-    var myInt = Int()
+    var isTimerRunning = false
     
+    // Outlets
+    @IBOutlet weak var firstScrollView: UIScrollView!
+    @IBOutlet weak var secondScrollView: UIScrollView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
-    
-    
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet var cameraView: UIView!
-    @IBOutlet weak var firstImage: UIImageView!
-    @IBOutlet weak var secondImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstScrollView.isHidden = true
+        secondScrollView.isHidden = true
         timerLabel.isHidden = true
         firstImage.isHidden = true
         secondImage.isHidden = true
@@ -49,32 +50,43 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    // Timer function
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
     }
     
+    // Segment controller for user to select either auto or manual
     @IBAction func detectionType(_ sender: UISegmentedControl) {
         
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-            stringTest = "auto"
+            stringPassing = "auto"
             
         case 1:
-            stringTest = "manual"
+            stringPassing = "manual"
         default:
             break;
         }
         
     }
     
+    // Help button that calls UIAlert
+    @IBAction func helpButton(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Help", message: "If this is the first time using our app or you are unsure about a specific function, please head over to our How To Use page.", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Thanks!", style: .default, handler: nil)
+        
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)    }
     
+    // Updating timer function
     func updateTimer() {
         seconds -= 1
         timerLabel.text = "\(seconds)"
     }
     
+    // For beggining the camera session
     func beginSession(){
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.cameraView.layer.addSublayer(previewLayer)
@@ -125,7 +137,6 @@ class ViewController: UIViewController {
         }
     }
     
-       
     // torch function
     func toggleTorch(on: Bool) {
         guard let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) else { return }
@@ -160,6 +171,7 @@ class ViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -210,20 +222,133 @@ class ViewController: UIViewController {
             })
         }
         }
+        
+        
+        
+        firstScrollView.tag = 1
+        secondScrollView.tag = 2
+        
+        firstImage.frame = CGRect(x: 0, y: 0, width: firstScrollView.frame.size.width, height: secondScrollView.frame.size.height)
+        
+        secondImage.frame = CGRect(x: 0, y: 0, width: secondScrollView.frame.size.width, height: secondScrollView.frame.size.height)
+        
+        
+        firstScrollView.addSubview(firstImage)
+        secondScrollView.addSubview(secondImage)
+        
+        firstImage.contentMode = UIViewContentMode.center
+        secondImage.contentMode = UIViewContentMode.center
+        
+        firstImage.frame = CGRect(x: 0, y: 0, width: firstImage.frame.size.width, height: firstImage.frame.size.height)
+        firstScrollView.contentSize = firstImage.frame.size
+        //firstScroll.center =
+        secondImage.frame = CGRect(x: 0, y: 0, width: secondImage.frame.size.width, height: secondImage.frame.size.height)
+        secondScrollView.contentSize = secondImage.frame.size
+        
+        let scrollViewFrame1 = firstScrollView.frame
+        let scaleWidth1 = scrollViewFrame1.size.width / firstScrollView.contentSize.width
+        let scaleHeight1 = scrollViewFrame1.size.height / firstScrollView.contentSize.height
+        let minScale1 = min(scaleHeight1, scaleWidth1)
+        
+        let scrollViewFrame = secondScrollView.frame
+        let scaleWidth = scrollViewFrame.size.width / secondScrollView.contentSize.width
+        let scaleHeight = scrollViewFrame.size.height / secondScrollView.contentSize.height
+        let minScale = min(scaleHeight, scaleWidth)
+        
+        
+        firstScrollView.minimumZoomScale = minScale1
+        firstScrollView.maximumZoomScale = 1
+        firstScrollView.zoomScale = minScale1
+        
+        
+        
+        secondScrollView.minimumZoomScale = minScale
+        secondScrollView.maximumZoomScale = 1
+        secondScrollView.zoomScale = minScale
+        
+        centerScrollViewContents1()
+        centerScrollViewContents2()
+        
+        UIGraphicsBeginImageContextWithOptions(firstScrollView.bounds.size, true, UIScreen.main.scale)
+        var offset = firstScrollView.contentOffset
+        
+        UIGraphicsGetCurrentContext()?.translateBy(x: -offset.x, y: -offset.y)
+        firstScrollView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        
+        firstImage.image = UIGraphicsGetImageFromCurrentImageContext()!
+        
+        UIGraphicsEndImageContext()
+        
+        UIGraphicsBeginImageContextWithOptions(secondScrollView.bounds.size, true, UIScreen.main.scale)
+        offset = secondScrollView.contentOffset
+        
+        UIGraphicsGetCurrentContext()?.translateBy(x: -offset.x, y: -offset.y)
+        secondScrollView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        
+        secondImage.image = UIGraphicsGetImageFromCurrentImageContext()!
+        
+        UIGraphicsEndImageContext()
     }
     
-    // Send both images to the EditImageViewController page
+    // For scroll view
+    func centerScrollViewContents1(){
+        
+        
+        let boundsSize = firstScrollView.bounds.size
+        var contentsFrame = firstImage.frame
+        
+        if contentsFrame.size.width < boundsSize.width{
+            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
+        }else{
+            contentsFrame.origin.x = 0
+        }
+        
+        if contentsFrame.size.height < boundsSize.height {
+            
+            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
+        }else{
+            contentsFrame.origin.y = 0
+        }
+        
+        firstImage.frame = contentsFrame
+        
+        
+    }
+    
+    // For scroll view
+    func centerScrollViewContents2(){
+        
+        
+        let boundsSize = secondScrollView.bounds.size
+        var contentsFrame = secondImage.frame
+        
+        if contentsFrame.size.width < boundsSize.width{
+            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
+        }else{
+            contentsFrame.origin.x = 0
+        }
+        
+        if contentsFrame.size.height < boundsSize.height {
+            
+            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
+        }else{
+            contentsFrame.origin.y = 0
+        }
+        
+        secondImage.frame = contentsFrame
+        
+    }
+    
+    // Send both images to the FirstCropViewController page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let FirstCropViewController = segue.destination as! FirstCropViewController
         FirstCropViewController.firstPassed = firstImage.image!
         FirstCropViewController.secondPassed = secondImage.image!
-        FirstCropViewController.intPassed = myInt
-        FirstCropViewController.stringPassed = stringTest
+        FirstCropViewController.stringPassed = stringPassing
     }
     
-    
     // Camera zoom in function
-    @IBAction func testThing(_ pinch: UIPinchGestureRecognizer) {
+    @IBAction func cameraZoom(_ pinch: UIPinchGestureRecognizer) {
         guard let device = captureDevice else { return }
         
         // Return zoom value between the minimum and maximum zoom values

@@ -10,6 +10,7 @@ import UIKit
 
 class customCell: UITableViewCell {
     
+    // Outlets
     @IBOutlet weak var imageOne: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,6 +18,7 @@ class customCell: UITableViewCell {
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var heightConstraintSecondView: NSLayoutConstraint!
     @IBOutlet weak var summaryLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,67 +7,69 @@
 //
 
 import UIKit
+import CoreGraphics
 
-class FirstCropViewController: UIViewController, UIScrollViewDelegate {
+class FirstCropViewController: UIViewController, UIGestureRecognizerDelegate {
+    
+    // Variables
     var firstPassed = UIImage()
     var secondPassed = UIImage()
-    var firstImage = UIImageView()
     var secondImage = UIImageView()
-    var intPassed = Int()
-    var option = Int()
     var stringPassed = String()
+    var passingImage = UIImage()
+    var circleCenter: CGPoint!
+    var firstWidth = 0.0
     
+    // Outlets
+    @IBOutlet weak var circleImage: UIImageView!
+    @IBOutlet weak var firstImage: UIImageView!
+    @IBOutlet weak var firstImageManual: UIImageView!
     @IBOutlet weak var manualView: UIView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var autoView: UIView!
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("option number:")
-        print(intPassed)
-        option = intPassed
-        //let option = intPassed
-        print(stringPassed)
+
         if stringPassed == "auto"
         {
             manualView.isHidden = true
+            autoView.isHidden = false
+            firstImage.image = firstPassed
+            passingImage = firstImage.image!
         }
-        else if stringPassed == "manual" {
+        else if stringPassed == "manual"
+        {
             manualView.isHidden = false
+            autoView.isHidden = true
+            firstImageManual.image = firstPassed
+            passingImage = firstImageManual.image!
+            circleImage.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragCircle)))
         }
-        
-        
-        scrollView.delegate = self
-        
-        firstImage.frame = CGRect(x: 0, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
-        firstImage.image = firstPassed
         secondImage.image = secondPassed
-        
-        scrollView.addSubview(firstImage)
-        
-        
+    }
     
-        firstImage.contentMode = UIViewContentMode.center
-
+    // Function for dragging the circle image around the view
+    func dragCircle(gesture: UIPanGestureRecognizer) {
+        let target = gesture.view!
         
-        firstImage.frame = CGRect(x: 0, y: 0, width: firstPassed.size.width, height: firstPassed.size.height)
-        scrollView.contentSize = firstPassed.size
+        switch gesture.state {
+        case .began, .ended:
+            circleCenter = target.center
+        case .changed:
+            let translation = gesture.translation(in: self.view)
+            target.center = CGPoint(x: circleCenter!.x + translation.x, y: circleCenter!.y + translation.y)
+        default: break
+        }
+    }
+    
+    // Called on when the slider has changed value
+    @IBAction func scaleSlider(_ sender: UISlider) {
+        circleImage.transform = CGAffineTransform(scaleX: CGFloat(sender.value), y: CGFloat(sender.value))
+        firstWidth = Double(circleImage.frame.width)
         
-        
-        let scrollViewFrame = scrollView.frame
-        let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
-        let scaleHeight = scrollViewFrame.size.height / scrollView.contentSize.height
-        let minScale = min(scaleHeight, scaleWidth)
-        
-        scrollView.minimumZoomScale = minScale
-        scrollView.maximumZoomScale = 1
-        scrollView.zoomScale = minScale
-        
-        centerScrollViewContents()
-        //firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,58 +77,22 @@ class FirstCropViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
-    func centerScrollViewContents(){
-        let boundsSize = scrollView.bounds.size
-        var contentsFrame = firstImage.frame
-        
-        if contentsFrame.size.width < boundsSize.width{
-            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
-        }else{
-            contentsFrame.origin.x = 0
-        }
-        
-        if contentsFrame.size.height < boundsSize.height {
-            
-            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
-        }else{
-            contentsFrame.origin.y = 0
-        }
-        
-        firstImage.frame = contentsFrame
-        
-    }
-
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        centerScrollViewContents()
-    }
-    
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return firstImage
-    }
-    
+    // Next button calls on the next view controller
     @IBAction func nextButton(_ sender: UIButton) {
-        UIGraphicsBeginImageContextWithOptions(scrollView.bounds.size, true, UIScreen.main.scale)
-        let offset = scrollView.contentOffset
-        
-        UIGraphicsGetCurrentContext()?.translateBy(x: -offset.x, y: -offset.y)
-        scrollView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        
-        firstImage.image = UIGraphicsGetImageFromCurrentImageContext()!
-        
-        UIGraphicsEndImageContext()
-        
-        
-            self.performSegue(withIdentifier: "second", sender: self)
+        self.performSegue(withIdentifier: "second", sender: self)
         
     }
     
+    // Sends the data to the next view controller
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "second")
         {
         let SecondCropViewController = segue.destination as! SecondCropViewController
-        SecondCropViewController.firstPassed = firstImage.image!
+        SecondCropViewController.firstPassed = passingImage
         SecondCropViewController.secondPassed = secondImage.image!
+        SecondCropViewController.stringPassed = stringPassed
+            SecondCropViewController.firstResult = firstWidth
+            
         }
         
     }

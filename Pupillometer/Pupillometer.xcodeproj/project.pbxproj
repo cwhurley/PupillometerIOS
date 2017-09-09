@@ -34,6 +34,17 @@
 		EB47F2E01F39F4660044D926 /* FirstCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */; };
 		EB47F2E31F39F47C0044D926 /* SecondCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */; };
 		EB47F2E51F39F9FA0044D926 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */; };
+		EB7118FB1F61409700FEA14C /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7118FA1F61409700FEA14C /* circle.png */; };
+		EB7118FD1F629B8300FEA14C /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7118FC1F629B8300FEA14C /* download.png */; };
+		EB7118FF1F629CFA00FEA14C /* AboutPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7118FE1F629CFA00FEA14C /* AboutPersonViewController.swift */; };
+		EB7119011F629D0700FEA14C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7119001F629D0700FEA14C /* AboutViewController.swift */; };
+		EB7119051F62AAB300FEA14C /* Arpa.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7119021F62AAB300FEA14C /* Arpa.png */; };
+		EB7119061F62AAB300FEA14C /* chris.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7119031F62AAB300FEA14C /* chris.png */; };
+		EB7119071F62AAB300FEA14C /* josh.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7119041F62AAB300FEA14C /* josh.png */; };
+		EB71190C1F63A1C400FEA14C /* STEP_A1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB7119081F63A1C400FEA14C /* STEP_A1.PNG */; };
+		EB71190D1F63A1C400FEA14C /* STEP_M1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB7119091F63A1C400FEA14C /* STEP_M1.PNG */; };
+		EB71190E1F63A1C400FEA14C /* STEP_M2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB71190A1F63A1C400FEA14C /* STEP_M2.PNG */; };
+		EB71190F1F63A1C400FEA14C /* STEP_M3.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB71190B1F63A1C400FEA14C /* STEP_M3.PNG */; };
 		EB7356C21F5BA096009E0241 /* sliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7356C11F5BA096009E0241 /* sliderViewController.swift */; };
 		EB8FC6661F542B83009E30BC /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8FC6651F542B83009E30BC /* HowToViewController.swift */; };
 		EB8FC6681F542D4F009E30BC /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8FC6671F542D4F009E30BC /* customCell.swift */; };
@@ -105,6 +116,17 @@
 		EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCropViewController.swift; sourceTree = "<group>"; };
 		EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCropViewController.swift; sourceTree = "<group>"; };
 		EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		EB7118FA1F61409700FEA14C /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		EB7118FC1F629B8300FEA14C /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
+		EB7118FE1F629CFA00FEA14C /* AboutPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPersonViewController.swift; sourceTree = "<group>"; };
+		EB7119001F629D0700FEA14C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		EB7119021F62AAB300FEA14C /* Arpa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arpa.png; sourceTree = "<group>"; };
+		EB7119031F62AAB300FEA14C /* chris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chris.png; sourceTree = "<group>"; };
+		EB7119041F62AAB300FEA14C /* josh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = josh.png; sourceTree = "<group>"; };
+		EB7119081F63A1C400FEA14C /* STEP_A1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_A1.PNG; sourceTree = "<group>"; };
+		EB7119091F63A1C400FEA14C /* STEP_M1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_M1.PNG; sourceTree = "<group>"; };
+		EB71190A1F63A1C400FEA14C /* STEP_M2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_M2.PNG; sourceTree = "<group>"; };
+		EB71190B1F63A1C400FEA14C /* STEP_M3.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_M3.PNG; sourceTree = "<group>"; };
 		EB7356C11F5BA096009E0241 /* sliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sliderViewController.swift; sourceTree = "<group>"; };
 		EB8FC6651F542B83009E30BC /* HowToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
 		EB8FC6671F542D4F009E30BC /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
@@ -152,6 +174,15 @@
 		76F7A6AE1F29A5B500C51FE1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EB7119081F63A1C400FEA14C /* STEP_A1.PNG */,
+				EB7119091F63A1C400FEA14C /* STEP_M1.PNG */,
+				EB71190A1F63A1C400FEA14C /* STEP_M2.PNG */,
+				EB71190B1F63A1C400FEA14C /* STEP_M3.PNG */,
+				EB7119021F62AAB300FEA14C /* Arpa.png */,
+				EB7119031F62AAB300FEA14C /* chris.png */,
+				EB7119041F62AAB300FEA14C /* josh.png */,
+				EB7118FA1F61409700FEA14C /* circle.png */,
+				EB7118FC1F629B8300FEA14C /* download.png */,
 				764D1F941F5E2F83003F3776 /* default_photo.png */,
 				764D1F921F5E182D003F3776 /* about.png */,
 				EB8FC6691F556E73009E30BC /* STEP_2.PNG */,
@@ -224,6 +255,8 @@
 				EB8FC6651F542B83009E30BC /* HowToViewController.swift */,
 				EB26083F1F3FCF8100DEEFD0 /* ImportViewController.swift */,
 				EB8FC6671F542D4F009E30BC /* customCell.swift */,
+				EB7119001F629D0700FEA14C /* AboutViewController.swift */,
+				EB7118FE1F629CFA00FEA14C /* AboutPersonViewController.swift */,
 			);
 			path = Pupillometer;
 			sourceTree = "<group>";
@@ -368,13 +401,19 @@
 				833861F71F45270000C279CF /* eyeoutline.png in Resources */,
 				EB8FC6741F556E73009E30BC /* STEP_4.PNG in Resources */,
 				764D1F931F5E182D003F3776 /* about.png in Resources */,
+				EB7118FB1F61409700FEA14C /* circle.png in Resources */,
+				EB71190C1F63A1C400FEA14C /* STEP_A1.PNG in Resources */,
+				EB71190D1F63A1C400FEA14C /* STEP_M1.PNG in Resources */,
 				EB8FC6781F556E73009E30BC /* STEP_8.PNG in Resources */,
 				838D6CD11F15B42F00747CA4 /* Assets.xcassets in Resources */,
 				EB8FC6751F556E73009E30BC /* STEP_5.PNG in Resources */,
+				EB7119071F62AAB300FEA14C /* josh.png in Resources */,
 				764D1F951F5E2F83003F3776 /* default_photo.png in Resources */,
+				EB7118FD1F629B8300FEA14C /* download.png in Resources */,
 				76F7A6B61F29CCB300C51FE1 /* DELETE.png in Resources */,
 				EB8FC6731F556E73009E30BC /* STEP_3.PNG in Resources */,
 				EB8FC6721F556E73009E30BC /* STEP_2.PNG in Resources */,
+				EB71190E1F63A1C400FEA14C /* STEP_M2.PNG in Resources */,
 				83F2020F1F3AA8E5000CBC36 /* step3.png in Resources */,
 				83F2020D1F3AA8E5000CBC36 /* step1.png in Resources */,
 				EB8FC67A1F556E73009E30BC /* STEP_10.PNG in Resources */,
@@ -382,7 +421,10 @@
 				EB8FC6791F556E73009E30BC /* STEP_9.PNG in Resources */,
 				764D1F9A1F5E87FB003F3776 /* white_overlay .png in Resources */,
 				83F2020E1F3AA8E5000CBC36 /* step2.png in Resources */,
+				EB7119051F62AAB300FEA14C /* Arpa.png in Resources */,
 				EB8FC6761F556E73009E30BC /* STEP_6.PNG in Resources */,
+				EB71190F1F63A1C400FEA14C /* STEP_M3.PNG in Resources */,
+				EB7119061F62AAB300FEA14C /* chris.png in Resources */,
 				838D6CCF1F15B42F00747CA4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,8 +453,10 @@
 				EBB042441F49273100061432 /* HistoryTableViewController.swift in Sources */,
 				838D6CCC1F15B42F00747CA4 /* ViewController.swift in Sources */,
 				838D6CCA1F15B42F00747CA4 /* AppDelegate.swift in Sources */,
+				EB7119011F629D0700FEA14C /* AboutViewController.swift in Sources */,
 				EB8FC6681F542D4F009E30BC /* customCell.swift in Sources */,
 				EB8FC6661F542B83009E30BC /* HowToViewController.swift in Sources */,
+				EB7118FF1F629CFA00FEA14C /* AboutPersonViewController.swift in Sources */,
 				EB47F2E01F39F4660044D926 /* FirstCropViewController.swift in Sources */,
 				83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */,
 				EB47F2E31F39F47C0044D926 /* SecondCropViewController.swift in Sources */,

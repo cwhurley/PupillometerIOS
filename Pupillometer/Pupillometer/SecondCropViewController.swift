@@ -9,48 +9,50 @@
 import UIKit
 
 class SecondCropViewController: UIViewController, UIScrollViewDelegate {
+    
+    // Variables
     var firstPassed = UIImage()
     var secondPassed = UIImage()
     var firstImage = UIImageView()
-    var secondImage = UIImageView()
     var fromPage = 1
+    var stringPassed = String()
+    var passingImage = UIImage()
+    var circleCenter: CGPoint!
+    var firstResult = Double()
+    var secondResult = Double()
+    var secondWidth = Double()
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    // Outlets
+    @IBOutlet weak var secondImage: UIImageView!
+    @IBOutlet weak var autoView: UIView!
+    @IBOutlet weak var manualView: UIView!
+    @IBOutlet weak var secondImageManual: UIImageView!
+    @IBOutlet weak var circleImage: UIImageView!
+  
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.delegate = self
         
-        secondImage.frame = CGRect(x: 0, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height)
+        if stringPassed == "auto"
+        {
+            manualView.isHidden = true
+            autoView.isHidden = false
+            secondImage.image = secondPassed
+            passingImage = secondImage.image!
+        }
+        else if stringPassed == "manual"
+        {
+            manualView.isHidden = false
+            autoView.isHidden = true
+            secondImage.image = secondPassed
+            secondImageManual.image = secondPassed
+            passingImage = secondImageManual.image!
+            circleImage.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragCircle)))
+            
+        }
         firstImage.image = firstPassed
-        secondImage.image = secondPassed
-        
-        scrollView.addSubview(secondImage)
-        
-        
-        
-        secondImage.contentMode = UIViewContentMode.center
-        
-        
-        secondImage.frame = CGRect(x: 0, y: 0, width: secondPassed.size.width, height: secondPassed.size.height)
-        scrollView.contentSize = secondPassed.size
-        
-        
-        let scrollViewFrame = scrollView.frame
-        let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
-        let scaleHeight = scrollViewFrame.size.height / scrollView.contentSize.height
-        let minScale = min(scaleHeight, scaleWidth)
-        
-        scrollView.minimumZoomScale = minScale
-        scrollView.maximumZoomScale = 1
-        scrollView.zoomScale = minScale
-        
-        centerScrollViewContents()
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,58 +60,72 @@ class SecondCropViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // Called on when the slider has changed value
+    @IBAction func scaleSlider(_ sender: UISlider) {
+        circleImage.transform = CGAffineTransform(scaleX: CGFloat(sender.value), y: CGFloat(sender.value))
+        secondWidth = Double(circleImage.frame.width)
+    }
     
-    func centerScrollViewContents(){
-        let boundsSize = scrollView.bounds.size
-        var contentsFrame = secondImage.frame
+    // Function for dragging the circle image around the view
+    func dragCircle(gesture: UIPanGestureRecognizer) {
+        let target = gesture.view!
         
-        if contentsFrame.size.width < boundsSize.width{
-            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
-        }else{
-            contentsFrame.origin.x = 0
-        }
-        
-        if contentsFrame.size.height < boundsSize.height {
+        switch gesture.state {
+        case .began, .ended:
+            circleCenter = target.center
+        case .changed:
+            let translation = gesture.translation(in: self.view)
+            target.center = CGPoint(x: circleCenter!.x + translation.x, y: circleCenter!.y + translation.y)
+        default: break
             
-            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
-        }else{
-            contentsFrame.origin.y = 0
+            
         }
-        
-        secondImage.frame = contentsFrame
-        
     }
     
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        centerScrollViewContents()
-    }
-    
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return secondImage
-    }
-    
-    @IBAction func nextButton(_ sender: UIButton) {
-        UIGraphicsBeginImageContextWithOptions(scrollView.bounds.size, true, UIScreen.main.scale)
-        let offset = scrollView.contentOffset
+    // Used for resizing the image
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
         
-        UIGraphicsGetCurrentContext()?.translateBy(x: -offset.x, y: -offset.y)
-        scrollView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
         
-        secondImage.image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
         
+        
+        image.draw(in: CGRect(x: 0, y: 0,width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+    
+    func resizeToScreenSize(image: UIImage)->UIImage{
+        
+        let screenSize = self.view.bounds.size
+        
+        
+        return resizeImage(image: image, newWidth: screenSize.width)
+    }
+    
+    // Next button calls on the next view controller
+    @IBAction func nextButton(_ sender: UIButton) {
+        firstImage.image = resizeImage(image: firstImage.image!, newWidth: 350)
+        passingImage = resizeImage(image: secondImage.image!, newWidth: 350)
 
         self.performSegue(withIdentifier: "results", sender: self)
     }
     
+    // Sends the data to the next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "results")
         {
         let ResultsViewController = segue.destination as! ResultsViewController
         ResultsViewController.firstPassed = firstImage.image!
-        ResultsViewController.secondPassed = secondImage.image!
+        ResultsViewController.secondPassed = passingImage
             fromPage = 1
             ResultsViewController.fromPage = fromPage
+            ResultsViewController.stringPassed = stringPassed
+            ResultsViewController.firstResult = firstResult
+            ResultsViewController.secondResult = secondWidth
         }
     }
 }

@@ -19,7 +19,7 @@ using namespace cv;
 using namespace std;
 
 NSArray *hello;
-double point;
+double point = 0;
 double point2;
 double difference;
 
@@ -152,7 +152,7 @@ double inertiaC = 0.1;
        // cout<<keypoints[i].   <<endl;
     }
     
-    difference = point - point2;
+
     cout<<point2<<endl;
     // Show blobs
     
@@ -163,6 +163,7 @@ double inertiaC = 0.1;
 {
     double firstResult;
     firstResult = point;
+    point = 0;
     //NSString *test;
     //test = hello;
     return firstResult;
@@ -171,7 +172,7 @@ double inertiaC = 0.1;
 +(double) secondResult
 {
     double secondResult;
-    secondResult = point2;
+    secondResult = point;
     return secondResult;
 }
 
