@@ -14,6 +14,7 @@ class AboutPersonViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var aboutTextField: UITextView!
+    @IBOutlet weak var roleLabel: UILabel!
     
     // Variables
     var passedName = String()
@@ -24,18 +25,24 @@ class AboutPersonViewController: UIViewController {
         
         switch passedName {
         case "Arpa":
-            nameLabel.text = "Arpa"
+            nameLabel.text = "Arpa Barua Sumi"
             imageView.image = UIImage(named: "Arpa")
+            aboutTextField.text = ""
+            roleLabel.text = "Swift Programmer"
         case "Chris":
             nameLabel.text = "Chris Hurley"
             imageView.image = UIImage(named: "chris")
-
+            aboutTextField.text = ""
+            roleLabel.text = "Swift and OpenCV Programmer"
         case "Cameron":
-            nameLabel.text = "Cameron"
+            nameLabel.text = "Cameron Grey- \n Caminiti"
+            aboutTextField.text = ""
+            roleLabel.text = "OpenCV Programmer"
         case "Qiuchi":
-            nameLabel.text = "Qiuchi"
+            nameLabel.text = "Qiuchi Chen"
             imageView.image = UIImage(named: "josh")
-
+            aboutTextField.text = ""
+            roleLabel.text = "UI Designer"
         default:
             break
         }
