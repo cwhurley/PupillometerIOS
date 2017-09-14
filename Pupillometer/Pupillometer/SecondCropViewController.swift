@@ -72,6 +72,10 @@ class SecondCropViewController: UIViewController, UIScrollViewDelegate {
         
         switch gesture.state {
         case .began, .ended:
+            if (circleImage.frame.origin.y > secondImage.frame.origin.y + secondImage.frame.size.height || circleImage.frame.origin.y < secondImage.frame.origin.y || circleImage.frame.origin.x > secondImage.frame.origin.x + secondImage.frame.size.width || circleImage.frame.origin.x < secondImage.frame.origin.x)
+            {
+                target.center = CGPoint(x: secondImage.frame.origin.x + (secondImage.frame.size.width / 2), y: secondImage.frame.origin.y + (secondImage.frame.size.height / 2))
+            }
             circleCenter = target.center
         case .changed:
             let translation = gesture.translation(in: self.view)

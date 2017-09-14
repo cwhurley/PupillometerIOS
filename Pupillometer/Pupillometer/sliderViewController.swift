@@ -240,4 +240,13 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
         }
         
     }
+    
+    @IBAction func helpButton(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Paramaters", message: "The three sliders directly under each image will slightly adjust the search paramaters for the pupil.", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Thanks!", style: .default, handler: nil)
+        
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)        }
+    
 }

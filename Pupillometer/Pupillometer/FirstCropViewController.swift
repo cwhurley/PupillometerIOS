@@ -57,7 +57,12 @@ class FirstCropViewController: UIViewController, UIGestureRecognizerDelegate {
         
         switch gesture.state {
         case .began, .ended:
+            if (circleImage.frame.origin.y > firstImage.frame.origin.y + firstImage.frame.size.height || circleImage.frame.origin.y < firstImage.frame.origin.y || circleImage.frame.origin.x > firstImage.frame.origin.x + firstImage.frame.size.width || circleImage.frame.origin.x < firstImage.frame.origin.x)
+            {
+                target.center = CGPoint(x: firstImage.frame.origin.x + (firstImage.frame.size.width / 2), y: firstImage.frame.origin.y + (firstImage.frame.size.height / 2))
+            }
             circleCenter = target.center
+
         case .changed:
             let translation = gesture.translation(in: self.view)
             target.center = CGPoint(x: circleCenter!.x + translation.x, y: circleCenter!.y + translation.y)
