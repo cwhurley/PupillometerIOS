@@ -57,6 +57,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
         result = formatter.string(from: date)
         pageNumber = fromPage
         print(pageNumber)
+        print(stringPassed)
         detectPupil()
         
         firstScroll.tag = 1
@@ -186,13 +187,16 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
             secondImage.image = secondPassed
             firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
             firstResult = OpenCVWrapper.firstResult()
+                firstResult = firstResult * 0.2645833333333
             secondImage.image = OpenCVWrapper.makeGray(from: secondImage.image)
             secondResult = OpenCVWrapper.secondResult()
+                secondResult = secondResult * 0.2645833333333
             difference = firstResult - secondResult
+                
             
-            firstResultLabel.text = String(format: "%.2f", firstResult)
-            secondResultLabel.text = String(format: "%.2f", secondResult)
-            differenceLabel.text = String(format: "%.2f", difference)
+            firstResultLabel.text = String(format: "%.2f mm", firstResult)
+            secondResultLabel.text = String(format: "%.2f mm", secondResult)
+            differenceLabel.text = String(format: "%.2f mm", difference)
                 
             }
             else
@@ -200,22 +204,28 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
             manuelButton.isHidden = true
             firstImage.image = firstPassed
             secondImage.image = secondPassed
+            print("this is what I want")
+            print(firstResultsPassed)
+            firstResultsPassed = firstResultsPassed * 0.2645833333333
+            secondResultsPassed = secondResultsPassed * 0.2645833333333
             
-            firstResultLabel.text = String(format: "%.2f", firstResultsPassed)
-            secondResultLabel.text = String(format: "%.2f", secondResultsPassed)
+            firstResultLabel.text = String(format: "%.2 mmf", firstResultsPassed)
+            secondResultLabel.text = String(format: "%.2f mm", secondResultsPassed)
             difference = firstResultsPassed - secondResultsPassed
-            differenceLabel.text = String(format: "%.2f", difference)
+            differenceLabel.text = String(format: "%.2f mm", difference)
             }
         }
         else
         {
+            firstResult = firstResult * 0.2645833333333
+            secondResult = secondResult * 0.2645833333333
             manuelButton.isHidden = true
             firstImage.image = firstPassed
             secondImage.image = secondPassed
-            firstResultLabel.text = String(format: "%.2f", firstResult)
-            secondResultLabel.text = String(format: "%.2f", secondResult)
+            firstResultLabel.text = String(format: "%.2f mm", firstResult)
+            secondResultLabel.text = String(format: "%.2f mm", secondResult)
             difference = firstResult - secondResult
-            differenceLabel.text = String(format: "%.2f", difference)
+            differenceLabel.text = String(format: "%.2f mm", difference)
         }
     }
     

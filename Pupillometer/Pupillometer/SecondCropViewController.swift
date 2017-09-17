@@ -112,6 +112,14 @@ class SecondCropViewController: UIViewController, UIScrollViewDelegate {
     
     // Next button calls on the next view controller
     @IBAction func nextButton(_ sender: UIButton) {
+        if stringPassed == "manual"{
+            
+            UIGraphicsBeginImageContext(secondImage.frame.size)
+            manualView.layer.render(in: UIGraphicsGetCurrentContext()!)
+            secondImage.image = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+        }
+        
         firstImage.image = resizeImage(image: firstImage.image!, newWidth: 350)
         passingImage = resizeImage(image: secondImage.image!, newWidth: 350)
 

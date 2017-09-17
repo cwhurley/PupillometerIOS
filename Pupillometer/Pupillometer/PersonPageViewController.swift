@@ -40,9 +40,9 @@ class PersonPageViewController: UIViewController, MFMailComposeViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        first = String(format: "%.2f", personData.firstResult)
-        second = String(format: "%.2f", personData.secondResult)
-        diff = String(format: "%.2f", personData.difference)
+        first = String(format: "%.2f mm", personData.firstResult)
+        second = String(format: "%.2f mm", personData.secondResult)
+        diff = String(format: "%.2f mm", personData.difference)
         
         nameLabel.text = personData.name
         genderLabel.text = personData.gender

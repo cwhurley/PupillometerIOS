@@ -84,6 +84,14 @@ class FirstCropViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // Next button calls on the next view controller
     @IBAction func nextButton(_ sender: UIButton) {
+        
+        if stringPassed == "manual"{
+            
+            UIGraphicsBeginImageContext(firstImage.frame.size)
+            manualView.layer.render(in: UIGraphicsGetCurrentContext()!)
+            passingImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+        }
         self.performSegue(withIdentifier: "second", sender: self)
         
     }
