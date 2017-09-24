@@ -41,6 +41,8 @@ class SecondCropViewController: UIViewController, UIScrollViewDelegate {
             autoView.isHidden = false
             secondImage.image = secondPassed
             passingImage = secondImage.image!
+            autoView.center.x = self.view.center.x
+            autoView.center.y = self.view.center.y
         }
         else if stringPassed == "manual"
         {
@@ -50,6 +52,8 @@ class SecondCropViewController: UIViewController, UIScrollViewDelegate {
             secondImageManual.image = secondPassed
             passingImage = secondImageManual.image!
             circleImage.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragCircle)))
+            manualView.center.x = self.view.center.x
+            manualView.center.y = self.view.center.y
             
         }
         firstImage.image = firstPassed

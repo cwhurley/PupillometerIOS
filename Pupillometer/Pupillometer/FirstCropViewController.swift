@@ -39,6 +39,8 @@ class FirstCropViewController: UIViewController, UIGestureRecognizerDelegate {
             autoView.isHidden = false
             firstImage.image = firstPassed
             passingImage = firstImage.image!
+            autoView.center.x = self.view.center.x
+            autoView.center.y = self.view.center.y
         }
         else if stringPassed == "manual"
         {
@@ -47,10 +49,14 @@ class FirstCropViewController: UIViewController, UIGestureRecognizerDelegate {
             firstImageManual.image = firstPassed
             passingImage = firstImageManual.image!
             circleImage.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dragCircle)))
+            manualView.center.x = self.view.center.x
+            manualView.center.y = self.view.center.y
         }
         secondImage.image = secondPassed
+
     }
     
+
     // Function for dragging the circle image around the view
     func dragCircle(gesture: UIPanGestureRecognizer) {
         let target = gesture.view!

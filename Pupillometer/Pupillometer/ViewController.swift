@@ -34,6 +34,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet var cameraView: UIView!
+    @IBOutlet weak var eyeOutline: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,12 +43,21 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         timerLabel.isHidden = true
         firstImage.isHidden = true
         secondImage.isHidden = true
+        eyeOutline.isHidden = true
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         frontCamera(frontCamera)
+
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        eyeOutline.isHidden = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if captureDevice != nil
         {
             beginSession()
         }
+        eyeOutline.isHidden = false
     }
     
     // Timer function
@@ -90,7 +100,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func beginSession(){
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.cameraView.layer.addSublayer(previewLayer)
-        previewLayer.frame = self.cameraView.layer.bounds
+        let cameraViewBounds = CGRect(x: 0, y: 0, width: cameraView.frame.width, height: cameraView.frame.height)
+        previewLayer.frame = cameraViewBounds
         previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         captureSession.startRunning()
         stillImageOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
