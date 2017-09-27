@@ -32,7 +32,7 @@ class FirstCropViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(stringPassed)
         if stringPassed == "auto"
         {
             manualView.isHidden = true

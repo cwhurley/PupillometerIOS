@@ -56,7 +56,9 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
         formatter.dateFormat = "EEEE, MMM d, yyyy"
         result = formatter.string(from: date)
         pageNumber = fromPage
+        let test = stringPassed
         print(pageNumber)
+        
         print(stringPassed)
         detectPupil()
         
@@ -97,6 +99,14 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
         
         centerScrollViewContents1()
         centerScrollViewContents2()
+        
+        let firstXCenter = firstPassed.size.width / 2
+        let firstYCenter = firstPassed.size.height / 2
+        let secondXCenter = secondPassed.size.width / 2
+        let secondYCenter = secondPassed.size.height / 2
+        
+        firstScroll.contentOffset = CGPoint(x: firstXCenter / 2, y: firstYCenter / 2)
+        secondScroll.contentOffset = CGPoint(x: secondXCenter / 2, y: secondYCenter / 2)
         }
     
     // Function for handling the scroll view zoom
@@ -197,10 +207,12 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
             firstResultLabel.text = String(format: "%.2f mm", firstResult)
             secondResultLabel.text = String(format: "%.2f mm", secondResult)
             differenceLabel.text = String(format: "%.2f mm", difference)
+            
                 
             }
-            else
+            else if (pageNumber == 2)
             {
+                print("this means that the page thing is working")
             manuelButton.isHidden = true
             firstImage.image = firstPassed
             secondImage.image = secondPassed
@@ -209,7 +221,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
             firstResultsPassed = firstResultsPassed * 0.2645833333333
             secondResultsPassed = secondResultsPassed * 0.2645833333333
             
-            firstResultLabel.text = String(format: "%.2 mmf", firstResultsPassed)
+            firstResultLabel.text = String(format: "%.2f mm", firstResultsPassed)
             secondResultLabel.text = String(format: "%.2f mm", secondResultsPassed)
             difference = firstResultsPassed - secondResultsPassed
             differenceLabel.text = String(format: "%.2f mm", difference)
@@ -310,6 +322,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
             let sliderViewController = segue.destination as! sliderViewController
             sliderViewController.firstPassed = firstImageDefault.image!
             sliderViewController.secondPassed = secondimageDefault.image!
+            sliderViewController.stringPassed = stringPassed
             
         }
         
@@ -317,7 +330,7 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     
     // Checks for errors in the detection
     override func viewDidAppear(_ animated: Bool) {
-        if (firstResult == 0.0 || secondResult == 0.0)
+        if (pageNumber == 1 && (firstResult == 0.0 || secondResult == 0.0))
         {
             let resultAlertController = UIAlertController(title: "Error", message: "Nothing was detected in one of the images. Please try the paramater adjuster or try again using the manual option.", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -325,8 +338,18 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
             resultAlertController.addAction(defaultAction)
             
             present(resultAlertController, animated: true, completion: nil)
-        }    }
+        }
+        else if (pageNumber == 2 && (firstResultsPassed == 0.0 || secondResultsPassed == 0.0)){
+            
+            let resultAlertController = UIAlertController(title: "Error", message: "Nothing was detected in one of the images. Please try again using the manual option.", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            
+            resultAlertController.addAction(defaultAction)
+            
+            present(resultAlertController, animated: true, completion: nil)
+        }
+        
+    }
         
 }
-
 

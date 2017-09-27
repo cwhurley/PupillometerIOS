@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,14 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading6sp.png" translatesAutoresizingMaskIntoConstraints="NO" id="UZo-us-sJb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_uploaded_from_ios.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UZo-us-sJb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UZo-us-sJb" secondAttribute="trailing" id="CFr-Zh-sVh"/>
+                            <constraint firstItem="UZo-us-sJb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="G9B-CC-U7e"/>
+                            <constraint firstItem="UZo-us-sJb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="MaX-e2-10T"/>
+                            <constraint firstAttribute="trailing" secondItem="UZo-us-sJb" secondAttribute="trailing" id="cFs-FF-pgs"/>
                             <constraint firstItem="UZo-us-sJb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="cuq-gY-777"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="UZo-us-sJb" secondAttribute="bottom" id="fdL-yR-7Mi"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="UZo-us-sJb" secondAttribute="bottom" id="vyz-vJ-i2t"/>
                             <constraint firstItem="UZo-us-sJb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wBk-Bk-4Qw"/>
                         </constraints>
@@ -40,6 +44,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="loading6sp.png" width="375" height="667"/>
+        <image name="image_uploaded_from_ios.jpg" width="414" height="736"/>
     </resources>
 </document>

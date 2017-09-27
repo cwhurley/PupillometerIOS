@@ -47,6 +47,7 @@
 		EB71190F1F63A1C400FEA14C /* STEP_M3.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB71190B1F63A1C400FEA14C /* STEP_M3.PNG */; };
 		EB7119151F694D1F00FEA14C /* question-34499_1280.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7119141F694D1F00FEA14C /* question-34499_1280.png */; };
 		EB7356C21F5BA096009E0241 /* sliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7356C11F5BA096009E0241 /* sliderViewController.swift */; };
+		EB8D56A01F7A6B2600F3DE29 /* image_uploaded_from_ios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB8D569F1F7A6B2600F3DE29 /* image_uploaded_from_ios.jpg */; };
 		EB8FC6661F542B83009E30BC /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8FC6651F542B83009E30BC /* HowToViewController.swift */; };
 		EB8FC6681F542D4F009E30BC /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8FC6671F542D4F009E30BC /* customCell.swift */; };
 		EB8FC6721F556E73009E30BC /* STEP_2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC6691F556E73009E30BC /* STEP_2.PNG */; };
@@ -130,6 +131,7 @@
 		EB71190B1F63A1C400FEA14C /* STEP_M3.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_M3.PNG; sourceTree = "<group>"; };
 		EB7119141F694D1F00FEA14C /* question-34499_1280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question-34499_1280.png"; sourceTree = "<group>"; };
 		EB7356C11F5BA096009E0241 /* sliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sliderViewController.swift; sourceTree = "<group>"; };
+		EB8D569F1F7A6B2600F3DE29 /* image_uploaded_from_ios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_uploaded_from_ios.jpg; sourceTree = "<group>"; };
 		EB8FC6651F542B83009E30BC /* HowToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
 		EB8FC6671F542D4F009E30BC /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 		EB8FC6691F556E73009E30BC /* STEP_2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_2.PNG; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		76F7A6AE1F29A5B500C51FE1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EB8D569F1F7A6B2600F3DE29 /* image_uploaded_from_ios.jpg */,
 				EB7119141F694D1F00FEA14C /* question-34499_1280.png */,
 				EB7119081F63A1C400FEA14C /* STEP_A1.PNG */,
 				EB7119091F63A1C400FEA14C /* STEP_M1.PNG */,
@@ -350,7 +353,7 @@
 				TargetAttributes = {
 					838D6CC51F15B42F00747CA4 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 6758HC2X28;
+						DevelopmentTeam = AZ2BFERURX;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -404,6 +407,7 @@
 				833861F71F45270000C279CF /* eyeoutline.png in Resources */,
 				EB8FC6741F556E73009E30BC /* STEP_4.PNG in Resources */,
 				764D1F931F5E182D003F3776 /* about.png in Resources */,
+				EB8D56A01F7A6B2600F3DE29 /* image_uploaded_from_ios.jpg in Resources */,
 				EB7118FB1F61409700FEA14C /* circle.png in Resources */,
 				EB71190C1F63A1C400FEA14C /* STEP_A1.PNG in Resources */,
 				EB71190D1F63A1C400FEA14C /* STEP_M1.PNG in Resources */,
@@ -633,7 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 6758HC2X28;
+				DEVELOPMENT_TEAM = AZ2BFERURX;
 				Deployment = "";
 				"Deployment[arch=*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -644,7 +648,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = christest.Pupillometer;
+				PRODUCT_BUNDLE_IDENTIFIER = tomtest.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -657,7 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 6758HC2X28;
+				DEVELOPMENT_TEAM = AZ2BFERURX;
 				Deployment = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -667,7 +671,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = christest.Pupillometer;
+				PRODUCT_BUNDLE_IDENTIFIER = tomtest.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

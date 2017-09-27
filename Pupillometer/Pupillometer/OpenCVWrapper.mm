@@ -19,7 +19,7 @@ using namespace cv;
 using namespace std;
 
 NSArray *hello;
-double point = 0;
+double point;
 double point2;
 double difference;
 
@@ -145,6 +145,7 @@ double inertiaC = 0.1;
         //keypoints[i].size;
         point = 0;
         point = keypoints[i].size;
+        cout<<point<<endl;
         
         
         //cout<<keypoints[i].pt.x<<endl;

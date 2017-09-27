@@ -18,11 +18,11 @@ class HowToViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var selectedIndex = -1
     var dataArray : [[String:String]] =
     [
-        ["Step" : "Automatic Detection", "Title" : "What is automatic detection?", "Image" : "loading6sp.png"],
+        ["Step" : "Automatic Detection", "Title" : "What is automatic detection?", "Image" : "STEP_5.PNG"],
         ["Step" : "Step 1", "Title" : "Prepare", "Image" : "STEP_A1.PNG"],
-        ["Step" : "Step 2 + 3", "Title" : "Check first image", "Image" : "STEP_6.PNG"],
+        ["Step" : "Step 2 + 3", "Title" : "Check both images", "Image" : "STEP_6.PNG"],
         ["Step" : "Step 4", "Title" : "Results", "Image" : "STEP_4.PNG"],
-        ["Step" : "Manual Detection", "Title" : "What is manual detection?", "Image" : "loading6sp.png"],
+        ["Step" : "Manual Detection", "Title" : "What is manual detection?", "Image" : "STEP_5.PNG"],
         ["Step" : "Step 1", "Title" : "Prepare", "Image" : "STEP_2.PNG"],
         ["Step" : "Step 2 + 3", "Title" : "Line up circle", "Image" : "STEP_M2.PNG"],
         ["Step" : "Step 4", "Title" : "Results", "Image" : "STEP_4.PNG"],
@@ -34,7 +34,7 @@ class HowToViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
         /*[
-        ["Step" : "Step 1", "Title" : "Find the correct location", "Image" : "loading6sp.png"],
+        ["Step" : "Step 1", "Title" : "Find the correct location", "Image" : "STEP_5.PNG"],
         ["Step" : "Step 2", "Title" : "Line up the eye", "Image" : "STEP_2.PNG"],
         ["Step" : "Step 3", "Title" : "Take a long blink", "Image" : "STEP_3.PNG"],
         ["Step" : "Step 4", "Title" : "Press start", "Image" : "STEP_4.PNG"],
@@ -50,13 +50,13 @@ class HowToViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var summaryArray =
         [
-        "Find a well-lit area. It's important that there is enough light in the room so that the camera can clearly see the difference between iris and pupil. However, you must also be careful as too much light can also cause strong reflections in darker eyes or light sources can be too prominent in the pupil. An example of this is shown under Step 5.",
-        "Line up the circle on the camera view with the patient’s iris.",
-        "As the patient will need to keep their eye open for 5 seconds, it's best they take a long blink until you say ready. Then ask that they keep their eye open wide until you say done.",
+        "Automatic detection will use an algorithm to detect the pupil in the image. To do this, find a well-lit area. It's important that there is enough light in the room so that the camera can clearly see the difference between iris and pupil. However, you must also be careful as too much light can also cause strong reflections in darker eyes or light sources can be too prominent in the pupil. An example of this is shown below.",
+        "Line up the circle on the camera view with the patient’s iris. As the patient will need to keep their eye open for 5 seconds, it's best they take a long blink until you say ready. Then ask that they keep their eye open wide until you say done.",
+        "Check both images for anything you believe could cause issue with the detection process. If you're happy with the images, press Done, if not, press reset.",
         "The results page displays both images along with the results. The two numbers directly under the images are the diameters of the above image. The third number between the images is the difference between the diameters. Enter the patient’s information into the form if you wish to save the information to your phone. If the circle does not line up with the pupil in the image, please go to the paramater adjuster page. If this does not work please try manual detection.",
-        "Manual Detection",
-        "Step 1",
-        "Use the slider on screen to adjust the size of the green circle to match the pupil. You can also drag the circle to line it up with the pupil. When happy press Done,",
+        "Manual detection means that you will manually line up a circle with the users pupil to find its size. This can be less accurate to the true size of the pupil but is a good second option as the automatic detection doesn't always detect the pupil.",
+        "Line up the circle as you would in automatic detection.",
+        "Use the slider on screen to adjust the size of the green circle to match the pupil. You can also drag the circle to line it up with the pupil. When happy press Done.",
         "The results page displays both images along with the results. The two numbers directly under the images are the diameters of the above image. The third number between the images is the difference between the diameters. Enter the patient’s information into the form if you wish to save the information to your phone.",
         "Sometimes the detection can be slightly off target. Using these three sliders you can adjust the detection values making it possible for a more accurate detection. If this does not work please try the manual detection option.",
         "This table will show the list of saved patient information stored on your phone.",
@@ -123,6 +123,7 @@ class HowToViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     // Calculates the height for the row
+    // Bug occurs when the last few tables are open and you scroll up to the top quickly
     func calculateHeight(selectedIndexPath: IndexPath) -> CGFloat {
         let cell = self.expandTableView.cellForRow(at: selectedIndexPath) as! customCell
         cell.summaryLabel.frame = self.cellSummaryLabelFrame(cell: cell, selectedIndexPath: selectedIndexPath)

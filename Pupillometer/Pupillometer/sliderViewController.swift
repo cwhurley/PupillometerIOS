@@ -23,6 +23,7 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
     var convexity = 0.0
     var firstResult = 0.0
     var secondResult = 0.0
+    var stringPassed = String()
     
     // Outlets
     @IBOutlet weak var firstScrollView: UIScrollView!
@@ -162,6 +163,7 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
         firstImage.image = firstPassed
         firstImage.image = OpenCVWrapper.makeGray(from: firstImage.image)
         firstResult = OpenCVWrapper.firstResult()
+        print(firstResult, "this is what I want")
 
     }
     @IBAction func convexity1Slider(_ sender: UISlider) {
@@ -236,6 +238,7 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
             ResultsViewController.firstResultsPassed = firstResult
             ResultsViewController.secondResultsPassed = secondResult
             ResultsViewController.fromPage = fromPage
+            ResultsViewController.stringPassed = stringPassed
             
         }
         
