@@ -73,8 +73,13 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
         secondScrollView.maximumZoomScale = 1
         secondScrollView.zoomScale = minScale
         
-        centerScrollViewContents1()
-        centerScrollViewContents2()
+        let firstXCenter = firstPassed.size.width / 2
+        let firstYCenter = firstPassed.size.height / 2
+        let secondXCenter = secondPassed.size.width / 2
+        let secondYCenter = secondPassed.size.height / 2
+        
+        firstScrollView.contentOffset = CGPoint(x: firstXCenter / 2, y: firstYCenter / 2)
+        secondScrollView.contentOffset = CGPoint(x: secondXCenter / 2, y: secondYCenter / 2)
     }
     
     // Zoomable scroll views
@@ -89,64 +94,6 @@ class sliderViewController: UIViewController, UIScrollViewDelegate {
             secondScrollView.delegate = self
             return secondImage
         }
-    }
-    
-    // Centering scroll view
-    func centerScrollViewContents1(){
-        
-        
-        let boundsSize = firstScrollView.bounds.size
-        var contentsFrame = firstImage.frame
-        
-        if contentsFrame.size.width < boundsSize.width{
-            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
-        }else{
-            contentsFrame.origin.x = 0
-        }
-        
-        if contentsFrame.size.height < boundsSize.height {
-            
-            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
-        }else{
-            contentsFrame.origin.y = 0
-        }
-        
-        firstImage.frame = contentsFrame
-        
-        
-    }
-    
-    // Cenering scroll view
-    func centerScrollViewContents2(){
-        
-        
-        let boundsSize = secondScrollView.bounds.size
-        var contentsFrame = secondImage.frame
-        
-        if contentsFrame.size.width < boundsSize.width{
-            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
-        }else{
-            contentsFrame.origin.x = 0
-        }
-        
-        if contentsFrame.size.height < boundsSize.height {
-            
-            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
-        }else{
-            contentsFrame.origin.y = 0
-        }
-        
-        secondImage.frame = contentsFrame
-        
-    }
-    
-    // When scroll view is zoomed
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        
-        centerScrollViewContents1()
-        
-        centerScrollViewContents2()
-        
     }
 
     override func didReceiveMemoryWarning() {

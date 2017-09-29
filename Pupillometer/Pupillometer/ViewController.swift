@@ -44,12 +44,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         firstImage.isHidden = true
         secondImage.isHidden = true
         eyeOutline.isHidden = true
+        startButton.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         frontCamera(frontCamera)
 
     }
     override func viewDidDisappear(_ animated: Bool) {
         eyeOutline.isHidden = true
+        startButton.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,6 +61,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             beginSession()
         }
         eyeOutline.isHidden = false
+        startButton.isHidden = false
     }
     
     // Timer function
@@ -193,6 +197,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         self.runTimer()
         startButton.isHidden = true
         timerLabel.isHidden = false
+        self.tabBarController?.tabBar.isHidden = true
         
         // Take first image
         if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo){
@@ -233,121 +238,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             })
         }
         }
-        
-        
-        
-        firstScrollView.tag = 1
-        secondScrollView.tag = 2
-        
-        firstImage.frame = CGRect(x: 0, y: 0, width: firstScrollView.frame.size.width, height: secondScrollView.frame.size.height)
-        
-        secondImage.frame = CGRect(x: 0, y: 0, width: secondScrollView.frame.size.width, height: secondScrollView.frame.size.height)
-        
-        
-        firstScrollView.addSubview(firstImage)
-        secondScrollView.addSubview(secondImage)
-        
-        firstImage.contentMode = UIViewContentMode.center
-        secondImage.contentMode = UIViewContentMode.center
-        
-        firstImage.frame = CGRect(x: 0, y: 0, width: firstImage.frame.size.width, height: firstImage.frame.size.height)
-        firstScrollView.contentSize = firstImage.frame.size
-        //firstScroll.center =
-        secondImage.frame = CGRect(x: 0, y: 0, width: secondImage.frame.size.width, height: secondImage.frame.size.height)
-        secondScrollView.contentSize = secondImage.frame.size
-        
-        let scrollViewFrame1 = firstScrollView.frame
-        let scaleWidth1 = scrollViewFrame1.size.width / firstScrollView.contentSize.width
-        let scaleHeight1 = scrollViewFrame1.size.height / firstScrollView.contentSize.height
-        let minScale1 = min(scaleHeight1, scaleWidth1)
-        
-        let scrollViewFrame = secondScrollView.frame
-        let scaleWidth = scrollViewFrame.size.width / secondScrollView.contentSize.width
-        let scaleHeight = scrollViewFrame.size.height / secondScrollView.contentSize.height
-        let minScale = min(scaleHeight, scaleWidth)
-        
-        
-        firstScrollView.minimumZoomScale = minScale1
-        firstScrollView.maximumZoomScale = 1
-        firstScrollView.zoomScale = minScale1
-        
-        
-        
-        secondScrollView.minimumZoomScale = minScale
-        secondScrollView.maximumZoomScale = 1
-        secondScrollView.zoomScale = minScale
-        
-        centerScrollViewContents1()
-        centerScrollViewContents2()
-        
-        UIGraphicsBeginImageContextWithOptions(firstScrollView.bounds.size, true, UIScreen.main.scale)
-        var offset = firstScrollView.contentOffset
-        
-        UIGraphicsGetCurrentContext()?.translateBy(x: -offset.x, y: -offset.y)
-        firstScrollView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        
-        firstImage.image = UIGraphicsGetImageFromCurrentImageContext()!
-        
-        UIGraphicsEndImageContext()
-        
-        UIGraphicsBeginImageContextWithOptions(secondScrollView.bounds.size, true, UIScreen.main.scale)
-        offset = secondScrollView.contentOffset
-        
-        UIGraphicsGetCurrentContext()?.translateBy(x: -offset.x, y: -offset.y)
-        secondScrollView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        
-        secondImage.image = UIGraphicsGetImageFromCurrentImageContext()!
-        
-        UIGraphicsEndImageContext()
-    }
-    
-    // For scroll view
-    func centerScrollViewContents1(){
-        
-        
-        let boundsSize = firstScrollView.bounds.size
-        var contentsFrame = firstImage.frame
-        
-        if contentsFrame.size.width < boundsSize.width{
-            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
-        }else{
-            contentsFrame.origin.x = 0
-        }
-        
-        if contentsFrame.size.height < boundsSize.height {
-            
-            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
-        }else{
-            contentsFrame.origin.y = 0
-        }
-        
-        firstImage.frame = contentsFrame
-        
-        
-    }
-    
-    // For scroll view
-    func centerScrollViewContents2(){
-        
-        
-        let boundsSize = secondScrollView.bounds.size
-        var contentsFrame = secondImage.frame
-        
-        if contentsFrame.size.width < boundsSize.width{
-            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
-        }else{
-            contentsFrame.origin.x = 0
-        }
-        
-        if contentsFrame.size.height < boundsSize.height {
-            
-            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
-        }else{
-            contentsFrame.origin.y = 0
-        }
-        
-        secondImage.frame = contentsFrame
-        
     }
     
     // Send both images to the FirstCropViewController page

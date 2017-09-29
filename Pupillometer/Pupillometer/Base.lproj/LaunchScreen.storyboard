@@ -21,20 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_uploaded_from_ios.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UZo-us-sJb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_uploaded_from_ios.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BdR-kw-L5H">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="UZo-us-sJb" secondAttribute="trailing" id="CFr-Zh-sVh"/>
-                            <constraint firstItem="UZo-us-sJb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="G9B-CC-U7e"/>
-                            <constraint firstItem="UZo-us-sJb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="MaX-e2-10T"/>
-                            <constraint firstAttribute="trailing" secondItem="UZo-us-sJb" secondAttribute="trailing" id="cFs-FF-pgs"/>
-                            <constraint firstItem="UZo-us-sJb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="cuq-gY-777"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="UZo-us-sJb" secondAttribute="bottom" id="fdL-yR-7Mi"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="UZo-us-sJb" secondAttribute="bottom" id="vyz-vJ-i2t"/>
-                            <constraint firstItem="UZo-us-sJb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wBk-Bk-4Qw"/>
+                            <constraint firstItem="BdR-kw-L5H" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="3JN-PB-yGy"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="BdR-kw-L5H" secondAttribute="bottom" id="LTK-kA-5UK"/>
+                            <constraint firstItem="BdR-kw-L5H" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="bbC-4v-auB"/>
+                            <constraint firstAttribute="trailing" secondItem="BdR-kw-L5H" secondAttribute="trailing" id="h5h-p1-gft"/>
                         </constraints>
                     </view>
                 </viewController>

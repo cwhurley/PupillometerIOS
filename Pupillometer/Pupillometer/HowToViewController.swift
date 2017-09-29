@@ -31,23 +31,7 @@ class HowToViewController: UIViewController, UITableViewDelegate, UITableViewDat
         ["Step" : "Email", "Title" : "How to email", "Image" : "STEP_9.PNG"],
         ["Step" : "Delete", "Title" : "Delete a record", "Image" : "STEP_10.PNG"]
     ]
-        
-        
-        /*[
-        ["Step" : "Step 1", "Title" : "Find the correct location", "Image" : "STEP_5.PNG"],
-        ["Step" : "Step 2", "Title" : "Line up the eye", "Image" : "STEP_2.PNG"],
-        ["Step" : "Step 3", "Title" : "Take a long blink", "Image" : "STEP_3.PNG"],
-        ["Step" : "Step 4", "Title" : "Press start", "Image" : "STEP_4.PNG"],
-        ["Step" : "Step 5", "Title" : "Check the image", "Image" : "STEP_5.PNG"],
-        ["Step" : "Step 6", "Title" : "Press done if happy", "Image" : "STEP_6.PNG"],
-        ["Step" : "Step 7", "Title" : "Enter patients information", "Image" : "STEP_7.PNG"],
-        ["Step" : "Records", "Title" : "Records Table", "Image" : "STEP_8.PNG"],
-        ["Step" : "Email", "Title" : "How to Email", "Image" : "STEP_9.PNG"],
-        ["Step" : "Delete", "Title" : "Deleting a Record", "Image" : "STEP_10.PNG"]
-        ]*/
-    
 
-    
     var summaryArray =
         [
         "Automatic detection will use an algorithm to detect the pupil in the image. To do this, find a well-lit area. It's important that there is enough light in the room so that the camera can clearly see the difference between iris and pupil. However, you must also be careful as too much light can also cause strong reflections in darker eyes or light sources can be too prominent in the pupil. An example of this is shown below.",

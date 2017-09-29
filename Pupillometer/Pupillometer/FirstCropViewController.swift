@@ -18,7 +18,7 @@ class FirstCropViewController: UIViewController, UIGestureRecognizerDelegate {
     var stringPassed = String()
     var passingImage = UIImage()
     var circleCenter: CGPoint!
-    var firstWidth = 0.0
+    var firstWidth = 10.0
     
     // Outlets
     @IBOutlet weak var circleImage: UIImageView!

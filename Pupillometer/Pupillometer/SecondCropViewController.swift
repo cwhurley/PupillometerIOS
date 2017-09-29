@@ -20,7 +20,7 @@ class SecondCropViewController: UIViewController, UIScrollViewDelegate {
     var circleCenter: CGPoint!
     var firstResult = Double()
     var secondResult = Double()
-    var secondWidth = Double()
+    var secondWidth = 10.0
     
     // Outlets
     @IBOutlet weak var secondImage: UIImageView!
