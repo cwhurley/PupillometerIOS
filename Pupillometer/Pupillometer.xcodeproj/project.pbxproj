@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		764D1F931F5E182D003F3776 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 764D1F921F5E182D003F3776 /* about.png */; };
+		764D1F9A1F5E87FB003F3776 /* white_overlay .png in Resources */ = {isa = PBXBuildFile; fileRef = 764D1F991F5E87FB003F3776 /* white_overlay .png */; };
+		76F7A6AD1F29171F00C51FE1 /* bgc.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6AC1F29171F00C51FE1 /* bgc.png */; };
+		76F7A6B01F29CC9F00C51FE1 /* DETECT.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6AF1F29CC9F00C51FE1 /* DETECT.png */; };
+		76F7A6B21F29CCA600C51FE1 /* HISTORY.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6B11F29CCA600C51FE1 /* HISTORY.png */; };
+		76F7A6B41F29CCAD00C51FE1 /* HOWTOUSE.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6B31F29CCAD00C51FE1 /* HOWTOUSE.png */; };
+		76F7A6B61F29CCB300C51FE1 /* DELETE.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6B51F29CCB300C51FE1 /* DELETE.png */; };
+		76F7A6B81F29CCC200C51FE1 /* connectivity-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F7A6B71F29CCC200C51FE1 /* connectivity-bar.png */; };
+		833861F71F45270000C279CF /* eyeoutline.png in Resources */ = {isa = PBXBuildFile; fileRef = 833861F61F45270000C279CF /* eyeoutline.png */; };
 		838D6CCA1F15B42F00747CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CC91F15B42F00747CA4 /* AppDelegate.swift */; };
 		838D6CCC1F15B42F00747CA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CCB1F15B42F00747CA4 /* ViewController.swift */; };
 		838D6CCF1F15B42F00747CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838D6CCD1F15B42F00747CA4 /* Main.storyboard */; };
@@ -14,6 +23,43 @@
 		838D6CD41F15B42F00747CA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838D6CD21F15B42F00747CA4 /* LaunchScreen.storyboard */; };
 		838D6CDF1F15B42F00747CA4 /* PupillometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CDE1F15B42F00747CA4 /* PupillometerTests.swift */; };
 		838D6CEA1F15B42F00747CA4 /* PupillometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D6CE91F15B42F00747CA4 /* PupillometerUITests.swift */; };
+		83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */; };
+		83F2020D1F3AA8E5000CBC36 /* step1.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F202091F3AA8E5000CBC36 /* step1.png */; };
+		83F2020E1F3AA8E5000CBC36 /* step2.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F2020A1F3AA8E5000CBC36 /* step2.png */; };
+		83F2020F1F3AA8E5000CBC36 /* step3.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F2020B1F3AA8E5000CBC36 /* step3.png */; };
+		83F202101F3AA8E5000CBC36 /* step4.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F2020C1F3AA8E5000CBC36 /* step4.png */; };
+		EB21295E1F7E22C100859D4A /* DETECT BUTTON.png in Resources */ = {isa = PBXBuildFile; fileRef = EB21295C1F7E22C100859D4A /* DETECT BUTTON.png */; };
+		EB21295F1F7E22C100859D4A /* cameron.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB21295D1F7E22C100859D4A /* cameron.jpeg */; };
+		EB2608401F3FCF8100DEEFD0 /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB26083F1F3FCF8100DEEFD0 /* ImportViewController.swift */; };
+		EB47F2E01F39F4660044D926 /* FirstCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */; };
+		EB47F2E31F39F47C0044D926 /* SecondCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */; };
+		EB47F2E51F39F9FA0044D926 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */; };
+		EB7118FB1F61409700FEA14C /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7118FA1F61409700FEA14C /* circle.png */; };
+		EB7118FD1F629B8300FEA14C /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7118FC1F629B8300FEA14C /* download.png */; };
+		EB7118FF1F629CFA00FEA14C /* AboutPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7118FE1F629CFA00FEA14C /* AboutPersonViewController.swift */; };
+		EB7119011F629D0700FEA14C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7119001F629D0700FEA14C /* AboutViewController.swift */; };
+		EB7119051F62AAB300FEA14C /* Arpa.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7119021F62AAB300FEA14C /* Arpa.png */; };
+		EB7119061F62AAB300FEA14C /* chris.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7119031F62AAB300FEA14C /* chris.png */; };
+		EB7119071F62AAB300FEA14C /* josh.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7119041F62AAB300FEA14C /* josh.png */; };
+		EB71190C1F63A1C400FEA14C /* STEP_A1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB7119081F63A1C400FEA14C /* STEP_A1.PNG */; };
+		EB71190E1F63A1C400FEA14C /* STEP_M2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB71190A1F63A1C400FEA14C /* STEP_M2.PNG */; };
+		EB7119151F694D1F00FEA14C /* question-34499_1280.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7119141F694D1F00FEA14C /* question-34499_1280.png */; };
+		EB7356C21F5BA096009E0241 /* sliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7356C11F5BA096009E0241 /* sliderViewController.swift */; };
+		EB8D56A01F7A6B2600F3DE29 /* image_uploaded_from_ios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB8D569F1F7A6B2600F3DE29 /* image_uploaded_from_ios.jpg */; };
+		EB8FC6661F542B83009E30BC /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8FC6651F542B83009E30BC /* HowToViewController.swift */; };
+		EB8FC6681F542D4F009E30BC /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8FC6671F542D4F009E30BC /* customCell.swift */; };
+		EB8FC6721F556E73009E30BC /* STEP_2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC6691F556E73009E30BC /* STEP_2.PNG */; };
+		EB8FC6741F556E73009E30BC /* STEP_4.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC66B1F556E73009E30BC /* STEP_4.PNG */; };
+		EB8FC6751F556E73009E30BC /* STEP_5.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC66C1F556E73009E30BC /* STEP_5.PNG */; };
+		EB8FC6761F556E73009E30BC /* STEP_6.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC66D1F556E73009E30BC /* STEP_6.PNG */; };
+		EB8FC6771F556E73009E30BC /* STEP_7.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC66E1F556E73009E30BC /* STEP_7.PNG */; };
+		EB8FC6781F556E73009E30BC /* STEP_8.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC66F1F556E73009E30BC /* STEP_8.PNG */; };
+		EB8FC6791F556E73009E30BC /* STEP_9.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC6701F556E73009E30BC /* STEP_9.PNG */; };
+		EB8FC67A1F556E73009E30BC /* STEP_10.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB8FC6711F556E73009E30BC /* STEP_10.PNG */; };
+		EBB042441F49273100061432 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB042431F49273100061432 /* HistoryTableViewController.swift */; };
+		EBB042471F49322200061432 /* Pupillometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBB042451F49322200061432 /* Pupillometer.xcdatamodeld */; };
+		EBB042491F4937E000061432 /* PersonPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB042481F4937E000061432 /* PersonPageViewController.swift */; };
+		EBB0424B1F495AC400061432 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB0424A1F495AC400061432 /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +80,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		764D1F921F5E182D003F3776 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
+		764D1F991F5E87FB003F3776 /* white_overlay .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_overlay .png"; sourceTree = "<group>"; };
+		76F7A6AC1F29171F00C51FE1 /* bgc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgc.png; sourceTree = "<group>"; };
+		76F7A6AF1F29CC9F00C51FE1 /* DETECT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DETECT.png; sourceTree = "<group>"; };
+		76F7A6B11F29CCA600C51FE1 /* HISTORY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HISTORY.png; sourceTree = "<group>"; };
+		76F7A6B31F29CCAD00C51FE1 /* HOWTOUSE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOWTOUSE.png; sourceTree = "<group>"; };
+		76F7A6B51F29CCB300C51FE1 /* DELETE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DELETE.png; sourceTree = "<group>"; };
+		76F7A6B71F29CCC200C51FE1 /* connectivity-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bar.png"; sourceTree = "<group>"; };
+		833861F61F45270000C279CF /* eyeoutline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeoutline.png; sourceTree = "<group>"; };
 		838D6CC61F15B42F00747CA4 /* Pupillometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pupillometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838D6CC91F15B42F00747CA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838D6CCB1F15B42F00747CA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +102,45 @@
 		838D6CE51F15B42F00747CA4 /* PupillometerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupillometerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		838D6CE91F15B42F00747CA4 /* PupillometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupillometerUITests.swift; sourceTree = "<group>"; };
 		838D6CEB1F15B42F00747CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83960DF81F32A7E30075F490 /* Pupillometer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pupillometer-Bridging-Header.h"; sourceTree = "<group>"; };
+		83960DF91F32A7E30075F490 /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		83F202091F3AA8E5000CBC36 /* step1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step1.png; sourceTree = "<group>"; };
+		83F2020A1F3AA8E5000CBC36 /* step2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step2.png; sourceTree = "<group>"; };
+		83F2020B1F3AA8E5000CBC36 /* step3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step3.png; sourceTree = "<group>"; };
+		83F2020C1F3AA8E5000CBC36 /* step4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step4.png; sourceTree = "<group>"; };
+		EB21295C1F7E22C100859D4A /* DETECT BUTTON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DETECT BUTTON.png"; sourceTree = "<group>"; };
+		EB21295D1F7E22C100859D4A /* cameron.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cameron.jpeg; sourceTree = "<group>"; };
+		EB26083F1F3FCF8100DEEFD0 /* ImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
+		EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCropViewController.swift; sourceTree = "<group>"; };
+		EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCropViewController.swift; sourceTree = "<group>"; };
+		EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		EB7118FA1F61409700FEA14C /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		EB7118FC1F629B8300FEA14C /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
+		EB7118FE1F629CFA00FEA14C /* AboutPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPersonViewController.swift; sourceTree = "<group>"; };
+		EB7119001F629D0700FEA14C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		EB7119021F62AAB300FEA14C /* Arpa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arpa.png; sourceTree = "<group>"; };
+		EB7119031F62AAB300FEA14C /* chris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chris.png; sourceTree = "<group>"; };
+		EB7119041F62AAB300FEA14C /* josh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = josh.png; sourceTree = "<group>"; };
+		EB7119081F63A1C400FEA14C /* STEP_A1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_A1.PNG; sourceTree = "<group>"; };
+		EB71190A1F63A1C400FEA14C /* STEP_M2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_M2.PNG; sourceTree = "<group>"; };
+		EB7119141F694D1F00FEA14C /* question-34499_1280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question-34499_1280.png"; sourceTree = "<group>"; };
+		EB7356C11F5BA096009E0241 /* sliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sliderViewController.swift; sourceTree = "<group>"; };
+		EB8D569F1F7A6B2600F3DE29 /* image_uploaded_from_ios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_uploaded_from_ios.jpg; sourceTree = "<group>"; };
+		EB8FC6651F542B83009E30BC /* HowToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
+		EB8FC6671F542D4F009E30BC /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
+		EB8FC6691F556E73009E30BC /* STEP_2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_2.PNG; sourceTree = "<group>"; };
+		EB8FC66B1F556E73009E30BC /* STEP_4.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_4.PNG; sourceTree = "<group>"; };
+		EB8FC66C1F556E73009E30BC /* STEP_5.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_5.PNG; sourceTree = "<group>"; };
+		EB8FC66D1F556E73009E30BC /* STEP_6.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_6.PNG; sourceTree = "<group>"; };
+		EB8FC66E1F556E73009E30BC /* STEP_7.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_7.PNG; sourceTree = "<group>"; };
+		EB8FC66F1F556E73009E30BC /* STEP_8.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_8.PNG; sourceTree = "<group>"; };
+		EB8FC6701F556E73009E30BC /* STEP_9.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_9.PNG; sourceTree = "<group>"; };
+		EB8FC6711F556E73009E30BC /* STEP_10.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STEP_10.PNG; sourceTree = "<group>"; };
+		EBB042431F49273100061432 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		EBB042461F49322200061432 /* Pupillometer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pupillometer.xcdatamodel; sourceTree = "<group>"; };
+		EBB042481F4937E000061432 /* PersonPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPageViewController.swift; sourceTree = "<group>"; };
+		EBB0424A1F495AC400061432 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB0424B1F495AC400061432 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +169,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76F7A6AE1F29A5B500C51FE1 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				EB21295D1F7E22C100859D4A /* cameron.jpeg */,
+				EB21295C1F7E22C100859D4A /* DETECT BUTTON.png */,
+				EB8D569F1F7A6B2600F3DE29 /* image_uploaded_from_ios.jpg */,
+				EB7119141F694D1F00FEA14C /* question-34499_1280.png */,
+				EB7119081F63A1C400FEA14C /* STEP_A1.PNG */,
+				EB71190A1F63A1C400FEA14C /* STEP_M2.PNG */,
+				EB7119021F62AAB300FEA14C /* Arpa.png */,
+				EB7119031F62AAB300FEA14C /* chris.png */,
+				EB7119041F62AAB300FEA14C /* josh.png */,
+				EB7118FA1F61409700FEA14C /* circle.png */,
+				EB7118FC1F629B8300FEA14C /* download.png */,
+				764D1F921F5E182D003F3776 /* about.png */,
+				EB8FC6691F556E73009E30BC /* STEP_2.PNG */,
+				EB8FC66B1F556E73009E30BC /* STEP_4.PNG */,
+				EB8FC66C1F556E73009E30BC /* STEP_5.PNG */,
+				EB8FC66D1F556E73009E30BC /* STEP_6.PNG */,
+				EB8FC66E1F556E73009E30BC /* STEP_7.PNG */,
+				EB8FC66F1F556E73009E30BC /* STEP_8.PNG */,
+				EB8FC6701F556E73009E30BC /* STEP_9.PNG */,
+				EB8FC6711F556E73009E30BC /* STEP_10.PNG */,
+				764D1F991F5E87FB003F3776 /* white_overlay .png */,
+				833861F61F45270000C279CF /* eyeoutline.png */,
+				83F202091F3AA8E5000CBC36 /* step1.png */,
+				83F2020A1F3AA8E5000CBC36 /* step2.png */,
+				83F2020B1F3AA8E5000CBC36 /* step3.png */,
+				83F2020C1F3AA8E5000CBC36 /* step4.png */,
+				76F7A6B71F29CCC200C51FE1 /* connectivity-bar.png */,
+				76F7A6B51F29CCB300C51FE1 /* DELETE.png */,
+				76F7A6B31F29CCAD00C51FE1 /* HOWTOUSE.png */,
+				76F7A6B11F29CCA600C51FE1 /* HISTORY.png */,
+				76F7A6AF1F29CC9F00C51FE1 /* DETECT.png */,
+				76F7A6AC1F29171F00C51FE1 /* bgc.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		838D6CBD1F15B42F00747CA4 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +231,29 @@
 		838D6CC81F15B42F00747CA4 /* Pupillometer */ = {
 			isa = PBXGroup;
 			children = (
+				EBB0424A1F495AC400061432 /* opencv2.framework */,
+				76F7A6AE1F29A5B500C51FE1 /* images */,
 				838D6CC91F15B42F00747CA4 /* AppDelegate.swift */,
-				838D6CCB1F15B42F00747CA4 /* ViewController.swift */,
 				838D6CCD1F15B42F00747CA4 /* Main.storyboard */,
 				838D6CD01F15B42F00747CA4 /* Assets.xcassets */,
 				838D6CD21F15B42F00747CA4 /* LaunchScreen.storyboard */,
 				838D6CD51F15B42F00747CA4 /* Info.plist */,
+				83960DF91F32A7E30075F490 /* OpenCVWrapper.h */,
+				83960DFA1F32A7E30075F490 /* OpenCVWrapper.mm */,
+				83960DF81F32A7E30075F490 /* Pupillometer-Bridging-Header.h */,
+				EBB042451F49322200061432 /* Pupillometer.xcdatamodeld */,
+				EBB042431F49273100061432 /* HistoryTableViewController.swift */,
+				EBB042481F4937E000061432 /* PersonPageViewController.swift */,
+				838D6CCB1F15B42F00747CA4 /* ViewController.swift */,
+				EB47F2DE1F39F4660044D926 /* FirstCropViewController.swift */,
+				EB47F2E21F39F47C0044D926 /* SecondCropViewController.swift */,
+				EB47F2E41F39F9FA0044D926 /* ResultsViewController.swift */,
+				EB7356C11F5BA096009E0241 /* sliderViewController.swift */,
+				EB8FC6651F542B83009E30BC /* HowToViewController.swift */,
+				EB26083F1F3FCF8100DEEFD0 /* ImportViewController.swift */,
+				EB8FC6671F542D4F009E30BC /* customCell.swift */,
+				EB7119001F629D0700FEA14C /* AboutViewController.swift */,
+				EB7118FE1F629CFA00FEA14C /* AboutPersonViewController.swift */,
 			);
 			path = Pupillometer;
 			sourceTree = "<group>";
@@ -188,12 +339,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Chris Hurley";
 				TargetAttributes = {
 					838D6CC51F15B42F00747CA4 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 24SM6522LU;
+						DevelopmentTeam = AZ2BFERURX;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					838D6CD91F15B42F00747CA4 = {
@@ -235,8 +387,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F7A6AD1F29171F00C51FE1 /* bgc.png in Resources */,
+				EB8FC6771F556E73009E30BC /* STEP_7.PNG in Resources */,
+				76F7A6B21F29CCA600C51FE1 /* HISTORY.png in Resources */,
+				76F7A6B01F29CC9F00C51FE1 /* DETECT.png in Resources */,
+				EB21295F1F7E22C100859D4A /* cameron.jpeg in Resources */,
 				838D6CD41F15B42F00747CA4 /* LaunchScreen.storyboard in Resources */,
+				76F7A6B41F29CCAD00C51FE1 /* HOWTOUSE.png in Resources */,
+				83F202101F3AA8E5000CBC36 /* step4.png in Resources */,
+				833861F71F45270000C279CF /* eyeoutline.png in Resources */,
+				EB8FC6741F556E73009E30BC /* STEP_4.PNG in Resources */,
+				764D1F931F5E182D003F3776 /* about.png in Resources */,
+				EB8D56A01F7A6B2600F3DE29 /* image_uploaded_from_ios.jpg in Resources */,
+				EB7118FB1F61409700FEA14C /* circle.png in Resources */,
+				EB71190C1F63A1C400FEA14C /* STEP_A1.PNG in Resources */,
+				EB8FC6781F556E73009E30BC /* STEP_8.PNG in Resources */,
 				838D6CD11F15B42F00747CA4 /* Assets.xcassets in Resources */,
+				EB8FC6751F556E73009E30BC /* STEP_5.PNG in Resources */,
+				EB7119071F62AAB300FEA14C /* josh.png in Resources */,
+				EB7118FD1F629B8300FEA14C /* download.png in Resources */,
+				76F7A6B61F29CCB300C51FE1 /* DELETE.png in Resources */,
+				EB8FC6721F556E73009E30BC /* STEP_2.PNG in Resources */,
+				EB71190E1F63A1C400FEA14C /* STEP_M2.PNG in Resources */,
+				83F2020F1F3AA8E5000CBC36 /* step3.png in Resources */,
+				83F2020D1F3AA8E5000CBC36 /* step1.png in Resources */,
+				EB8FC67A1F556E73009E30BC /* STEP_10.PNG in Resources */,
+				76F7A6B81F29CCC200C51FE1 /* connectivity-bar.png in Resources */,
+				EB21295E1F7E22C100859D4A /* DETECT BUTTON.png in Resources */,
+				EB8FC6791F556E73009E30BC /* STEP_9.PNG in Resources */,
+				764D1F9A1F5E87FB003F3776 /* white_overlay .png in Resources */,
+				83F2020E1F3AA8E5000CBC36 /* step2.png in Resources */,
+				EB7119051F62AAB300FEA14C /* Arpa.png in Resources */,
+				EB8FC6761F556E73009E30BC /* STEP_6.PNG in Resources */,
+				EB7119151F694D1F00FEA14C /* question-34499_1280.png in Resources */,
+				EB7119061F62AAB300FEA14C /* chris.png in Resources */,
 				838D6CCF1F15B42F00747CA4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,8 +446,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB042441F49273100061432 /* HistoryTableViewController.swift in Sources */,
 				838D6CCC1F15B42F00747CA4 /* ViewController.swift in Sources */,
 				838D6CCA1F15B42F00747CA4 /* AppDelegate.swift in Sources */,
+				EB7119011F629D0700FEA14C /* AboutViewController.swift in Sources */,
+				EB8FC6681F542D4F009E30BC /* customCell.swift in Sources */,
+				EB8FC6661F542B83009E30BC /* HowToViewController.swift in Sources */,
+				EB7118FF1F629CFA00FEA14C /* AboutPersonViewController.swift in Sources */,
+				EB47F2E01F39F4660044D926 /* FirstCropViewController.swift in Sources */,
+				83960DFB1F32A7E30075F490 /* OpenCVWrapper.mm in Sources */,
+				EB47F2E31F39F47C0044D926 /* SecondCropViewController.swift in Sources */,
+				EBB042491F4937E000061432 /* PersonPageViewController.swift in Sources */,
+				EB7356C21F5BA096009E0241 /* sliderViewController.swift in Sources */,
+				EBB042471F49322200061432 /* Pupillometer.xcdatamodeld in Sources */,
+				EB47F2E51F39F9FA0044D926 /* ResultsViewController.swift in Sources */,
+				EB2608401F3FCF8100DEEFD0 /* ImportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,14 +518,16 @@
 		838D6CEC1F15B42F00747CA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -336,7 +535,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -371,14 +574,16 @@
 		838D6CED1F15B42F00747CA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -386,7 +591,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -415,11 +624,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 24SM6522LU;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = AZ2BFERURX;
+				Deployment = "";
+				"Deployment[arch=*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pupillometer",
+				);
 				INFOPLIST_FILE = Pupillometer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = tom.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -428,11 +648,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 24SM6522LU;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = AZ2BFERURX;
+				Deployment = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pupillometer",
+				);
 				INFOPLIST_FILE = Pupillometer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = chris.Pupillometer;
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = tom.Pupillometer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pupillometer/Pupillometer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -514,6 +743,7 @@
 				838D6CF01F15B42F00747CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		838D6CF11F15B42F00747CA4 /* Build configuration list for PBXNativeTarget "PupillometerTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +752,7 @@
 				838D6CF31F15B42F00747CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		838D6CF41F15B42F00747CA4 /* Build configuration list for PBXNativeTarget "PupillometerUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,8 +761,22 @@
 				838D6CF61F15B42F00747CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EBB042451F49322200061432 /* Pupillometer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EBB042461F49322200061432 /* Pupillometer.xcdatamodel */,
+			);
+			currentVersion = EBB042461F49322200061432 /* Pupillometer.xcdatamodel */;
+			path = Pupillometer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 838D6CBE1F15B42F00747CA4 /* Project object */;
 }
