@@ -10,7 +10,7 @@
 import UIKit
 import CoreData
 
-class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
+class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, UIPickerViewDataSource,UIPickerViewDelegate {
     
     // Variables
     var firstImageDefault = UIImageView()
@@ -29,14 +29,15 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     var secondResultsPassed = 0.0
     var fromPage = Int()
     var pageNumber = Int()
+    
 
     // Outlets
     @IBOutlet weak var firstScroll: UIScrollView!
     @IBOutlet weak var secondScroll: UIScrollView!
     @IBOutlet var nameText: UITextField!
-    @IBOutlet var ageText: UITextField!
-    @IBOutlet var genderText: UITextField!
-    @IBOutlet var eyeText: UITextField!
+    @IBOutlet weak var ageText: UITextField!
+    @IBOutlet weak var genderText: UITextField!
+    @IBOutlet weak var eyeText: UITextField!
     @IBOutlet var notesText: UITextField!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var firstResultLabel: UILabel!
@@ -48,8 +49,85 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
         return .lightContent
     }
     
+    let GenderOption = ["Male", "Female", "Other"]
+    
+    let AgeOption = ["1", "2", "3", "4", "5", "6", "7", "8", "9","10", "11", "12", "13", "14", "15", "16", "17", "18","19", "20", "21", "22", "23", "24", "25", "26", "27","28", "29", "30", "31", "32", "33", "34", "35", "36","37", "38", "39", "40", "41", "42", "43", "44", "45","46", "47", "48", "49", "50", "51", "52", "53", "54","55", "56", "57", "58", "59", "60", "61", "62", "63","64", "65", "66", "67", "68", "69", "70", "71", "72","73", "74", "75", "76", "77", "78", "79", "80", "81","82", "83", "84", "85", "86", "87", "88", "89", "90","91", "92", "93", "94", "95", "96", "97", "98", "99","100"]
+    
+    let EyeOption = ["Left", "Right"]
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let GenderPickerView = UIPickerView()
+        
+        GenderPickerView.delegate = self
+        
+        GenderPickerView.tag = 1
+        
+        genderText.inputView = GenderPickerView
+        
+        
+        
+        let AgePickerView = UIPickerView()
+        
+        AgePickerView.delegate = self
+        
+        AgePickerView.tag = 2
+        
+        ageText.inputView = AgePickerView
+        
+        
+        
+        let EyePickerView = UIPickerView()
+        
+        EyePickerView.delegate = self
+        
+        EyePickerView.tag = 3
+        
+        eyeText.inputView = EyePickerView
+        
+        
+        
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height/6, width: self.view.frame.size.width, height: 40.0))
+        
+        toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
+        
+        toolBar.barStyle = UIBarStyle.blackTranslucent
+        
+        toolBar.tintColor = UIColor.white
+        
+        toolBar.backgroundColor = UIColor.white
+        
+        
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(ResultsViewController.donePressed))
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width / 3, height: self.view.frame.size.height))
+        
+        label.font = UIFont(name: "Helvetica", size: 12)
+        
+        label.backgroundColor = UIColor.clear
+        
+        label.textColor = UIColor.white
+        
+        label.textAlignment = NSTextAlignment.center
+        
+        let textBtn = UIBarButtonItem(customView: label)
+        
+        toolBar.setItems([flexSpace,textBtn,flexSpace,doneButton], animated: true)
+        
+        ageText.inputAccessoryView = toolBar
+        genderText.inputAccessoryView = toolBar
+        eyeText.inputAccessoryView = toolBar
+
+        
+        
+       
         
         let date = Date()
         let formatter = DateFormatter()
@@ -108,6 +186,11 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
         firstScroll.contentOffset = CGPoint(x: firstXCenter / 2, y: firstYCenter / 2)
         secondScroll.contentOffset = CGPoint(x: secondXCenter / 2, y: secondYCenter / 2)
         }
+    
+    
+
+    
+    
     
     // Function for handling the scroll view zoom
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -263,6 +346,104 @@ class ResultsViewController: UIViewController, UITextFieldDelegate, UIScrollView
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
         scrollView.setContentOffset(CGPoint(x: 0,y: 0), animated: true)
     }
+    
+    // picker view settings
+     func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        if pickerView.tag == 1 {
+            
+            return GenderOption.count
+            
+        }
+        
+        if pickerView.tag == 2 {
+            
+            return AgeOption.count
+            
+        }
+        
+        if pickerView.tag == 3 {
+            
+            return EyeOption.count
+            
+        }
+        
+        return 0
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        if pickerView.tag == 1 {
+            
+            return GenderOption[row]
+            
+        }
+        
+        if pickerView.tag == 2 {
+            
+            return AgeOption[row]
+            
+        }
+        
+        if pickerView.tag == 3 {
+            
+            return EyeOption[row]
+            
+        }
+        
+        return nil
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if pickerView.tag == 1 {
+            
+            genderText.text = GenderOption[row]
+            
+        }
+        
+        if pickerView.tag == 2 {
+            
+            ageText.text = AgeOption[row]
+            
+        }
+        
+        if pickerView.tag == 3 {
+            
+            eyeText.text = EyeOption[row]
+            
+        }
+    }
+
+    
+    
+    func donePressed(_ sender: UIBarButtonItem) {
+       
+        
+            
+            genderText.resignFirstResponder()
+            
+      
+            
+            ageText.resignFirstResponder()
+            
+        
+            
+            eyeText.resignFirstResponder()
+        
+
+        
+       
+        
+    }
+    
+    
     
     // Checks for correct data and saves it if the form has all been filled in
     @IBAction func saveButton(_ sender: Any) {
