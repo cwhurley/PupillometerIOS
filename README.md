@@ -9,7 +9,18 @@ Once the file is downloaded, move it to the project directory.
 ...PupillometerIOS/Pupillometer/Pupillometer
 
 xCode 9:
-Do the same thing as xCode 8 instructions with an extra step. If the project wont launch due to errors such as IMAGE then you will simply need to comment out any sections of code from the OpenCV framework files that are causing the errors. Comment out the whole method, not just the line of code IMAGE.
+Do the same thing as xCode 8 instructions with an extra step. If the project wont launch due to errors such as..
+
+<a href="https://imgbb.com/"><img src="https://image.ibb.co/b1kzQb/Screen_Shot_2017_10_06_at_9_01_22_pm.png" alt="Screen_Shot_2017_10_06_at_9_01_22_pm" border="0"></a>
+
+..then you will simply need to comment out any sections of code from the OpenCV framework files that are causing the errors. Comment out the whole method, not just the line of code. Do it for each error you get in the OpenCV files.
+
+<a href="https://ibb.co/bsGjrG"><img src="https://preview.ibb.co/gGLAWG/Screen_Shot_2017_10_06_at_9_01_41_pm.png" alt="Screen_Shot_2017_10_06_at_9_01_41_pm" border="0"></a>
+<a href="https://ibb.co/hECPrG"><img src="https://preview.ibb.co/dbRjrG/Screen_Shot_2017_10_06_at_9_01_57_pm.png" alt="Screen_Shot_2017_10_06_at_9_01_57_pm" border="0"></a>
+<a href="https://ibb.co/f7y8Jw"><img src="https://preview.ibb.co/igHPrG/Screen_Shot_2017_10_06_at_9_02_24_pm.png" alt="Screen_Shot_2017_10_06_at_9_02_24_pm" border="0"></a>
+<a href="https://ibb.co/fYCDkb"><img src="https://preview.ibb.co/i0oVWG/Screen_Shot_2017_10_06_at_9_02_40_pm.png" alt="Screen_Shot_2017_10_06_at_9_02_40_pm" border="0"></a>
+
+
 
 Here are some videos of the app in action:
 Test 1: https://www.youtube.com/watch?v=2_J80i4GHX4
@@ -35,3 +46,4 @@ For this test, the eye is again a lighter coloured eye but this time with no ref
 Test 6: https://www.youtube.com/watch?v=jmoOVyaoPxQ
 
 In this test, the same eye was used as test 5, but manual detection was utilised. This is an option for people to use when automatic detection isn’t working. The user simply lines up the circle with the pupil as accurately as they can.
+
